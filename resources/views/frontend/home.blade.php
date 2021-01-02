@@ -1,6 +1,6 @@
 @extends('frontend_master')
 @section('content')
-
+<h1>Black live matter</h1>
 		<!--// Main Banner \\-->
 		<div class="sportsmagazine-banner">
 
