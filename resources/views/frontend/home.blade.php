@@ -1,10 +1,10 @@
 @extends('frontend_master')
 @section('content')
-
+<h2>NEW YEAR</h2>
 		<!--// Main Banner \\-->
-		<!-- <div class="sportsmagazine-banner">
+		<div class="sportsmagazine-banner">
 
-            
+            <!--// Slider \\-->
             <div class="sportsmagazine-banner-one">
                 <div class="sportsmagazine-banner-one-layer">
                     <img src="{{ asset ('frontend_asset/extra-images/banner-1.jpg')}}" alt="">
@@ -18,14 +18,14 @@
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante Curabitur lacinia diam tempus tempor consectetur. Sed vitae dignissim purueget aliquam libero.</p>
                                         <a href="404.html" class="sportsmagazine-banner-btn">Read More <span></span></a>
                                     </div>
-                                    <div class="sportsmagazine-banner-thumb"> <img src="{{ asset ('frontend_asset/extra-images/neymarjs.jpg')}}" alt=""> </div>
+                                    <div class="sportsmagazine-banner-thumb"> <img src="{{ asset ('frontend_asset/extra-images/banner-thumb-1.png')}}" alt=""> </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="sportsmagazine-banner-one-layer">
-                    <img src="{{asset('frontend_asset/extra-images/bg.jpg')}}" alt="">
+                    <img src="{{asset('frontend_asset/extra-images/banner-2.jpg')}}" alt="">
                     <span class="sportsmagazine-banner-pattren"></span>
                     <div class="sportsmagazine-banner-caption">
                         <div class="container">
@@ -36,18 +36,18 @@
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante Curabitur lacinia diam tempus tempor consectetur. Sed vitae dignissim purueget aliquam libero.</p>
                                         <a href="404.html" class="sportsmagazine-banner-btn">Read More <span></span></a>
                                     </div>
-                                    <div class="sportsmagazine-banner-thumb"> <img src="{{ asset ('frontend_asset/extra-images/maradona1.jpg')}}" alt=""> </div>
+                                    <div class="sportsmagazine-banner-thumb"> <img src="{{ asset ('frontend_asset/extra-images/banner-thumb-1.png')}}" alt=""> </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
-        </div> -->
+            <!--// Slider \\-->
+
+        </div>
 		<!--// Main Banner \\-->
-     
+
 		<!--// Main Content \\-->
 		<div class="sportsmagazine-main-content">
 
@@ -55,20 +55,74 @@
 			<div class="sportsmagazine-main-section">
 				<div class="container">
 					<div class="row">
-						
+
                         <!--// Fixture Slider \\-->
-						
+						<div class="col-md-12">
+                            <div class="sportsmagazine-fixture-slider">
+
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">August 23, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">ARS <span>03</span></li>
+                                        <li>CHL <span>02</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">August 25, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">BRC <span>05</span></li>
+                                        <li>RM <span>02</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">August 28, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">CIT <span>03</span></li>
+                                        <li>KIN <span>03</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">August 31, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">ST <span>00</span></li>
+                                        <li>FRA <span>01</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
+                                    <time datetime="2008-02-14 20:00">September 03, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child"><small>SPA</small> VS <span>RM</span></li>
+                                        <li>Full Booked</li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">September 05, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">ARS <span>03</span></li>
+                                        <li>CHL <span>02</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
+                                    <time datetime="2008-02-14 20:00">December 31, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child"><small>SPA</small> VS <span>RM</span></li>
+                                        <li>Full Booked</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
                         <!--// Fixture Slider \\-->
-         
-                        
-                        
+
+
+
                         <!--// SideBar \\-->
-                       
+
                         <!--// SideBar \\-->
 
                         <!--// Content \\-->
                         <div class="col-md-8">
-                            
+
                             <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Featured News</h2></div> <!--// Fancy Title \\-->
                             <!--// Featured Slider \\-->
                             <!-- <div class="sportsmagazine-featured-slider">
@@ -99,7 +153,7 @@
                                 </div>
                                 <ul>
                                     <li>
-                                        <img src="{{ asset ('frontend_asset/extra-images/mancity.jpg')}}"  width="100px" alt="">
+                                        <img src="{{ asset ('frontend_asset/extra-images/latest-result-logo-1.png')}}" alt="">
                                         <h4><a href="fixture-detail.html">Yorkshire</a></h4>
                                         <span>03 Mark Baily (21)</span>
                                     </li>
@@ -108,7 +162,7 @@
                                         <p><strong class="sportsmagazine-color">79</strong> <small>:</small> 73</p>
                                     </li>
                                     <li>
-                                        <img src="{{ asset ('frontend_asset/extra-images/manunited.jpg')}}" width="100px" alt="">
+                                        <img src="{{ asset ('frontend_asset/extra-images/latest-result-logo-2.png')}}" alt="">
                                         <h4><a href="fixture-detail.html">Sharks Club</a></h4>
                                         <span>03 Mark Baily (21)</span>
                                     </li>
@@ -120,17 +174,18 @@
                             <!--// Blog's \\-->
                             <div class="sportsmagazine-blog sportsmagazine-blog-grid">
                                 <ul class="row">
+                                    @foreach($posts as $post)
                                     <li class="col-md-6">
                                         <figure>
-                                            <a href="blog-detail.html"><img src="{{ asset ('frontend_asset/extra-images/new1.jpg ')}}" alt=""></a>
+                                            <a href="blog-detail.html"><img src="{{ $post->photo }}" alt=""></a>
                                             <figcaption>
                                                 <span><small>Featured</small></span>
                                                 <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
                                             </figcaption>
                                         </figure>
                                         <section>
-                                            <h2><a href="blog-detail.html">The new eco friendly stadium won a Leafy Award in 2016</a></h2>
-                                            <p>Lorem ipsum dolor sit amet, consecttur adipis elit. Vestibulum a nunc dui. Curabitr dignissi luctus nisi id euismod. feugiat eros. Pellentesque tempus tortor.</p>
+                                            <h2><a href="blog-detail.html">{{ $post->name }}</a></h2>
+                                                <p>{{ Str::limit($post->description, 200) }}</p>
                                         </section>
                                         <div class="sportsmagazine-blog-grid-options">
                                             <a href="blog-detail.html" class="sportsmagazine-blog-grid-thumb"><img src="{{ asset ('frontend_asset/extra-images/blog-thumb-1.jpg ')}}" alt=""> Julia Martyn</a>
@@ -141,9 +196,10 @@
                                             </ul>
                                         </div>
                                     </li>
+                                    @endforeach
                                     <li class="col-md-6 sportsmagazine-the-league">
                                         <figure>
-                                            <a href="blog-detail.html"><img src="{{ asset ('frontend_asset/extra-images/new2.jpg ') }}" alt=""></a>
+                                            <a href="blog-detail.html"><img src="{{ asset ('frontend_asset/extra-images/latest-blog-2.jpg ') }}" alt=""></a>
                                             <figcaption>
                                                 <span><small>The League</small></span>
                                                 <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
@@ -170,7 +226,7 @@
                                         <ul class="row">
                                             <li class="col-md-12 sportsmagazine-the-team">
                                                 <figure>
-                                                    <a href="blog-detail.html"><img src="{{ asset ('frontend_asset/extra-images/new3.jpg')}}" alt=""></a>
+                                                    <a href="blog-detail.html"><img src="{{ asset ('frontend_asset/extra-images/latest-blog-3.jpg')}}" alt=""></a>
                                                     <figcaption>
                                                         <span><small>The Team</small></span>
                                                         <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
@@ -197,7 +253,7 @@
                                         <ul class="row">
                                             <li class="col-md-12 sportsmagazine-the-team">
                                                 <figure>
-                                                    <a href="blog-detail.html"><img src="{{ asset ('frontend_asset/extra-images/new4.jpg')}}" alt=""></a>
+                                                    <a href="blog-detail.html"><img src="{{ asset ('frontend_asset/extra-images/latest-blog-3.jpg')}}" alt=""></a>
                                                     <figcaption>
                                                         <span><small>The Team</small></span>
                                                         <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
@@ -269,7 +325,7 @@
 
                                 <div class="sportsmagazine-player-slider-image">
                                     <div class="sportsmagazine-player-image-layer">
-                                        <img src="{{ asset ('frontend_asset/extra-images/pele.jpg ')}}"  alt="">
+                                        <img src="{{ asset ('frontend_asset/extra-images/player-slider-image-1.png ')}}" alt="">
                                         <div class="sportsmagazine-player-slider-caption">
                                             <span>97</span>
                                             <section>
@@ -279,7 +335,7 @@
                                         </div>
                                     </div>
                                     <div class="sportsmagazine-player-image-layer">
-                                        <img src="{{ asset ('frontend_asset/extra-images/maradona.jpg')}}" style="overflow:hidden" alt="">
+                                        <img src="{{ asset ('frontend_asset/extra-images/player-slider-image-2.png ')}}" alt="">
                                         <div class="sportsmagazine-player-slider-caption">
                                             <span>38</span>
                                             <section>
@@ -393,7 +449,7 @@
                                             </figcaption>
                                         </figure>
                                     </li>
-                                   
+
                                 </ul>
                             </div>
 
@@ -402,7 +458,7 @@
 
                         <!--// SideBaar \\-->
                         <aside class="col-md-4">
-                            
+
                             <!--// Widget TeamRanking \\-->
                            <!--  <div class="widget widget_team_ranking">
                                 <div class="sportsmagazine-fancy-title"><h2>Team Rankings</h2></div>
@@ -493,9 +549,7 @@
                             <div class="widget widget_popular_news">
                                 <div class="sportsmagazine-fancy-title"><h2>Popular News</h2></div>
                                 <ul>
-                                    <li>   
-
-                                       <img src="{{asset('frontend_asset/extra-images/news2.jpg')}}"  alt="">
+                                    <li>
                                         <span>01</span>
                                         <div class="popular_news_text">
                                             <small>The Team</small>
@@ -504,8 +558,6 @@
                                         </div>
                                     </li>
                                     <li class="widget-injuries">
-
-                                        <img src="{{asset('frontend_asset/extra-images/news/new1.jpg')}}"  alt="">
                                         <span>02</span>
                                         <div class="popular_news_text">
                                             <small>Injuries</small>
@@ -514,8 +566,6 @@
                                         </div>
                                     </li>
                                     <li class="widget-theleague">
-
-                                       <img src="{{asset('frontend_asset/extra-images/news/new2.jpg')}}"  alt="">
                                         <span>03</span>
                                         <div class="popular_news_text">
                                             <small>The League</small>
@@ -524,8 +574,6 @@
                                         </div>
                                     </li>
                                     <li>
-
-                                       <img src="{{asset('frontend_asset/extra-images/news/new3.jpg')}}"  alt="">
                                         <span>04</span>
                                         <div class="popular_news_text">
                                             <small>The Team</small>
@@ -534,8 +582,6 @@
                                         </div>
                                     </li>
                                     <li>
-
-                                        <img src="{{asset('frontend_asset/extra-images/news/new4.jpg')}}"  alt="">
                                         <span>05</span>
                                         <div class="popular_news_text">
                                             <small>The Team</small>
@@ -675,14 +721,14 @@
                             <!--// Widget Trending News \\-->
 
                             <!--// Widget Next Match \\-->
-                           
+
                             <!--// Widget Next Match \\-->
 
                             <!--// Widget Newsletter \\-->
                             <div class="widget widget_newsletter">
                                 <div class="sportsmagazine-fancy-title"><h2>Our Newsletter</h2></div>
                                 <form>
-                                    
+
                                     <!-- <input type="text" value="Your Name" onblur="if(this.value == '') { this.value ='Your Name'; }" onfocus="if(this.value =='Your Name') { this.value = ''; }">
                                     <input type="text" value="Enter Your email" onblur="if(this.value == '') { this.value ='Enter Your email'; }" onfocus="if(this.value =='Enter Your email') { this.value = ''; }">
                                     <label class="widget_newsletter_btn"><input type="submit" value="Subscribe"></label> -->
@@ -697,7 +743,7 @@
 
 
 
-                            
+
                             <!--// Widget Add \\-->
                             <div class="widget widget_add">
                                 <img src="{{ asset ('frontend_asset/extra-images/add.jpg')}}" alt="">
@@ -706,62 +752,6 @@
 
                         </aside>
                         <!--// SideBaar \\-->
-
-                        <div class="col-md-12">
-                            <div class="sportsmagazine-fixture-slider">
-                                
-                                <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">August 23, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">ARS <span>03</span></li>
-                                        <li>CHL <span>02</span></li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">August 25, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">BRC <span>05</span></li>
-                                        <li>RM <span>02</span></li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">August 28, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">CIT <span>03</span></li>
-                                        <li>KIN <span>03</span></li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">August 31, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">ST <span>00</span></li>
-                                        <li>FRA <span>01</span></li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
-                                    <time datetime="2008-02-14 20:00">September 03, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child"><small>SPA</small> VS <span>RM</span></li>
-                                        <li>Full Booked</li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">September 05, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">ARS <span>03</span></li>
-                                        <li>CHL <span>02</span></li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
-                                    <time datetime="2008-02-14 20:00">December 31, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child"><small>SPA</small> VS <span>RM</span></li>
-                                        <li>Full Booked</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
 
 
 					</div>
@@ -772,5 +762,5 @@
 		</div>
 		<!--// Main Content \\-->
 
-      			
+
 @endsection

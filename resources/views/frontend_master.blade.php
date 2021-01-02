@@ -95,7 +95,7 @@
             <div class="sportsmagazine-main-header">
                 <div class="container">
                     <div class="row">
-                        <aside class="col-md-2"><a href="index-2.html" class="sportsmagazine-logo"><img src="{{ asset ('frontend_asset/images/logo-2.png ')}}" alt=""></a></aside>
+                        <aside class="col-md-2"><a href="index-2.html" class="sportsmagazine-logo"><img src="{{ asset ('frontend_asset/images/logo-1.png ')}}" alt=""></a></aside>
                         <div class="col-md-10">
                             <div class="sportsmagazine-right-section">
                                 <nav class="navbar navbar-default">
@@ -259,7 +259,7 @@
                     <div class="row">
                         <!--// Widget Contact Info \\-->
                         <aside class="col-md-4 widget widget_contact_info">
-                            <a href="index-2.html" class="footer-logo"><img src="{{ asset ('frontend_asset/images/logo-2.png')}}" alt=""></a>
+                            <a href="index-2.html" class="footer-logo"><img src="{{ asset ('frontend_asset/images/logo-1.png')}}" alt=""></a>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elUt ac malesuada ante.Sed gravida, ur quis tempus sollicitudin, tellus urna</p>
                             <ul class="sportsmagazine-social-network">
                                 <li><a href="https://www.facebook.com/" class="sportsmagazine-colorhover fa fa-facebook-official"></a></li>
