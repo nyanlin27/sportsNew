@@ -1,10 +1,10 @@
 @extends('frontend_master')
 @section('content')
-<h2>NEW YEAR</h2>
-		<!--// Main Banner \\-->
-		<div class="sportsmagazine-banner">
 
-            <!--// Slider \\-->
+		<!--// Main Banner \\-->
+		<!-- <div class="sportsmagazine-banner">
+
+          
             <div class="sportsmagazine-banner-one">
                 <div class="sportsmagazine-banner-one-layer">
                     <img src="{{ asset ('frontend_asset/extra-images/banner-1.jpg')}}" alt="">
@@ -43,9 +43,9 @@
                     </div>
                 </div>
             </div>
-            <!--// Slider \\-->
+           
 
-        </div>
+        </div> -->
 		<!--// Main Banner \\-->
 
 		<!--// Main Content \\-->
@@ -57,61 +57,7 @@
 					<div class="row">
 
                         <!--// Fixture Slider \\-->
-						<div class="col-md-12">
-                            <div class="sportsmagazine-fixture-slider">
-
-                                <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">August 23, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">ARS <span>03</span></li>
-                                        <li>CHL <span>02</span></li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">August 25, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">BRC <span>05</span></li>
-                                        <li>RM <span>02</span></li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">August 28, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">CIT <span>03</span></li>
-                                        <li>KIN <span>03</span></li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">August 31, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">ST <span>00</span></li>
-                                        <li>FRA <span>01</span></li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
-                                    <time datetime="2008-02-14 20:00">September 03, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child"><small>SPA</small> VS <span>RM</span></li>
-                                        <li>Full Booked</li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">September 05, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">ARS <span>03</span></li>
-                                        <li>CHL <span>02</span></li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
-                                    <time datetime="2008-02-14 20:00">December 31, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child"><small>SPA</small> VS <span>RM</span></li>
-                                        <li>Full Booked</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
+						
                         <!--// Fixture Slider \\-->
 
 
@@ -153,7 +99,7 @@
                                 </div>
                                 <ul>
                                     <li>
-                                        <img src="{{ asset ('frontend_asset/extra-images/latest-result-logo-1.png')}}" alt="">
+                                       <img src="{{ asset ('frontend_asset/extra-images/manunited.jpg')}}"  width="100px" alt="">
                                         <h4><a href="fixture-detail.html">Yorkshire</a></h4>
                                         <span>03 Mark Baily (21)</span>
                                     </li>
@@ -162,7 +108,7 @@
                                         <p><strong class="sportsmagazine-color">79</strong> <small>:</small> 73</p>
                                     </li>
                                     <li>
-                                        <img src="{{ asset ('frontend_asset/extra-images/latest-result-logo-2.png')}}" alt="">
+                                        <img src="{{ asset ('frontend_asset/extra-images/mancity.jpg')}}"  width="100px" alt="">
                                         <h4><a href="fixture-detail.html">Sharks Club</a></h4>
                                         <span>03 Mark Baily (21)</span>
                                     </li>
@@ -320,95 +266,98 @@
                             </figure> -->
                             <!--// Advertisement \\-->
 
-                            <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Popular Players</h2></div> <!--// Fancy Title \\-->
+                            <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Legend Players in History</h2></div> <!--// Fancy Title \\-->
                             <div class="sportsmagazine-player-slider">
 
                                 <div class="sportsmagazine-player-slider-image">
                                     <div class="sportsmagazine-player-image-layer">
-                                        <img src="{{ asset ('frontend_asset/extra-images/player-slider-image-1.png ')}}" alt="">
-                                        <div class="sportsmagazine-player-slider-caption">
-                                            <span>97</span>
-                                            <section>
-                                                <h6><a href="fixture-detail.html">Micheal Darren</a></h6>
-                                                <small>Forword</small>
-                                            </section>
-                                        </div>
-                                    </div>
-                                    <div class="sportsmagazine-player-image-layer">
-                                        <img src="{{ asset ('frontend_asset/extra-images/player-slider-image-2.png ')}}" alt="">
-                                        <div class="sportsmagazine-player-slider-caption">
-                                            <span>38</span>
-                                            <section>
-                                                <h6><a href="fixture-detail.html">sarena Jordan</a></h6>
-                                                <small>Defensive</small>
-                                            </section>
-                                        </div>
-                                    </div>
-                                    <div class="sportsmagazine-player-image-layer">
-                                        <img src="{{ asset ('frontend_asset/extra-images/player-slider-image-3.png ')}}" alt="">
-                                        <div class="sportsmagazine-player-slider-caption">
-                                            <span>97</span>
-                                            <section>
-                                                <h6><a href="fixture-detail.html">Micheal Darren</a></h6>
-                                                <small>Forword</small>
-                                            </section>
-                                        </div>
-                                    </div>
-                                    <div class="sportsmagazine-player-image-layer">
-                                        <img src="{{ asset ('frontend_asset/extra-images/player-slider-image-2.png ')}}" alt="">
+                                        <img src="{{ asset ('frontend_asset/extra-images/legend/pele.jpg')}}" style="height:396px;" alt="">
                                         <div class="sportsmagazine-player-slider-caption">
                                             <span>10</span>
                                             <section>
-                                                <h6><a href="fixture-detail.html">Chris Marlon</a></h6>
-                                                <small>Forword</small>
+                                                <h6><a href="fixture-detail.html">PELE</a></h6>
+                                                <small>Attacker</small>
                                             </section>
                                         </div>
                                     </div>
                                     <div class="sportsmagazine-player-image-layer">
-                                        <img src="{{ asset ('frontend_asset/extra-images/player-slider-image-1.png ')}}" alt="">
+                                        <img src="{{ asset ('frontend_asset/extra-images/legend/maradona.png')}}" style="height:396px" alt="">
                                         <div class="sportsmagazine-player-slider-caption">
-                                            <span>97</span>
+                                            <span>10</span>
                                             <section>
-                                                <h6><a href="fixture-detail.html">Micheal Darren</a></h6>
+                                                <h6><a href="fixture-detail.html">Maradona</a></h6>
+                                                <small>Forward</small>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="sportsmagazine-player-image-layer">
+                                        <img src="{{ asset ('frontend_asset/extra-images/legend/ronaldinho.jpg')}}" style="height:396px" alt="">
+                                        <div class="sportsmagazine-player-slider-caption">
+                                            <span>10</span>
+                                            <section>
+                                                <h6><a href="fixture-detail.html">Ronaldinho</a></h6>
+                                                <small>Middle</small>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="sportsmagazine-player-image-layer">
+                                        <img src="{{ asset ('frontend_asset/extra-images/legend/maldini.jpg')}}" style="height:396px;" alt="">
+                                        <div class="sportsmagazine-player-slider-caption">
+                                            <span>9</span>
+                                            <section>
+                                                <h6><a href="fixture-detail.html">PALO Malidni</a></h6>
                                                 <small>Forword</small>
+                                            </section>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="sportsmagazine-player-image-layer">
+                                        <img src="{{ asset ('frontend_asset/extra-images/legend/buffon.jpg')}}" style="height:396px;" alt="">
+                                        <div class="sportsmagazine-player-slider-caption">
+                                            <span>10</span>
+                                            <section>
+                                                <h6><a href="fixture-detail.html">buffon</a></h6>
+                                                <small>Middle</small>
                                             </section>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="sportsmagazine-player-slider-nav">
-                                    <div class="sportsmagazine-player-nav-layer">
-                                        <span>09</span>
-                                        <section>
-                                            <h6>Kieron strauss</h6>
-                                            <small>Forword</small>
-                                        </section>
-                                    </div>
+                                   
                                     <div class="sportsmagazine-player-nav-layer">
                                         <span>38</span>
                                         <section>
-                                            <h6>sarena Jordan</h6>
+                                            <h6>pele</h6>
                                             <small>Defensive</small>
                                         </section>
                                     </div>
                                     <div class="sportsmagazine-player-nav-layer">
                                         <span>97</span>
                                         <section>
-                                            <h6>Micheal Darren</h6>
+                                            <h6>maradona</h6>
                                             <small>Forword</small>
                                         </section>
                                     </div>
                                     <div class="sportsmagazine-player-nav-layer">
                                         <span>10</span>
                                         <section>
-                                            <h6>Chris Marlon</h6>
+                                            <h6>ronaldinho</h6>
+                                            <small>Forword</small>
+                                        </section>
+                                    </div>
+                                    <div class="sportsmagazine-player-nav-layer">
+                                        <span>10</span>
+                                        <section>
+                                            <h6>maldini</h6>
                                             <small>Forword</small>
                                         </section>
                                     </div>
                                     <div class="sportsmagazine-player-nav-layer">
                                         <span>09</span>
                                         <section>
-                                            <h6>Kieron strauss</h6>
+                                            <h6>buffon</h6>
                                             <small>Forword</small>
                                         </section>
                                     </div>
@@ -416,36 +365,36 @@
 
                             </div>
 
-                            <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Club Media</h2></div> <!--// Fancy Title \\-->
+                            <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Store Gallery</h2></div> <!--// Fancy Title \\-->
                             <div class="sportsmagazine-gallery sportsmagazine-fixture-gallery">
                                 <ul>
                                     <li>
                                         <figure>
-                                            <a data-fancybox-group="group" href="extra-images/gallery-modren-img1.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/gallery-modren-img1.jpg')}}" alt=""><i class="icon-signs23"></i></a>
-                                            <span>12 Photos</span>
+                                            <a data-fancybox-group="group" href="extra-images/gallery-modren-img1.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/shop-grid-img1.jpg')}}" alt=""><i class="icon-signs23"></i></a>
+                                            <span>Add to cart</span>
                                             <figcaption>
                                                 <h6><a href="#">The Champion Final will be played</a></h6>
-                                                <time datetime="2008-02-14 20:00">May 17th, 2017</time>
+                                                <a href=""><time datetime="2008-02-14 20:00">Add to cart</time></a>
                                             </figcaption>
                                         </figure>
                                     </li>
                                     <li>
                                         <figure>
-                                            <a data-fancybox-group="group" href="extra-images/gallery-modren-img2.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/gallery-modren-img2.jpg')}}" alt=""><i class="icon-signs23"></i></a>
-                                            <span>11 Photos</span>
+                                            <a data-fancybox-group="group" href="extra-images/gallery-modren-img2.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/shop-grid-img2.jpg')}}" alt=""><i class="icon-signs23"></i></a>
+                                            <span>Add to cart</span>
                                             <figcaption>
                                                 <h6><a href="#">The Champion Final will be played</a></h6>
-                                                <time datetime="2008-02-14 20:00">Feb 17th, 2017</time>
+                                                <time datetime="2008-02-14 20:00">Add to cart</time>
                                             </figcaption>
                                         </figure>
                                     </li>
                                     <li>
                                         <figure>
-                                            <a data-fancybox-group="group" href="extra-images/gallery-modren-img3.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/gallery-modren-img3.jpg')}}" alt=""><i class="icon-signs23"></i></a>
-                                            <span>7 Photos</span>
+                                            <a data-fancybox-group="group" href="extra-images/gallery-modren-img3.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/shop-grid-img3.jpg')}}" alt=""><i class="icon-signs23"></i></a>
+                                            <span>Add to cart</span>
                                             <figcaption>
                                                 <h6><a href="#">The Champion Final will be played</a></h6>
-                                                <time datetime="2008-02-14 20:00">May 17th, 2017</time>
+                                                <time datetime="2008-02-14 20:00">Add to cart</time>
                                             </figcaption>
                                         </figure>
                                     </li>
@@ -550,6 +499,7 @@
                                 <div class="sportsmagazine-fancy-title"><h2>Popular News</h2></div>
                                 <ul>
                                     <li>
+                                        <img src="{{asset('frontend_asset/extra-images/news2.jpg')}}"  alt="">
                                         <span>01</span>
                                         <div class="popular_news_text">
                                             <small>The Team</small>
@@ -558,6 +508,8 @@
                                         </div>
                                     </li>
                                     <li class="widget-injuries">
+
+                                        <img src="{{asset('frontend_asset/extra-images/news2.jpg')}}"  alt="">
                                         <span>02</span>
                                         <div class="popular_news_text">
                                             <small>Injuries</small>
@@ -566,6 +518,8 @@
                                         </div>
                                     </li>
                                     <li class="widget-theleague">
+
+                                        <img src="{{asset('frontend_asset/extra-images/news2.jpg')}}"  alt="">
                                         <span>03</span>
                                         <div class="popular_news_text">
                                             <small>The League</small>
@@ -574,6 +528,7 @@
                                         </div>
                                     </li>
                                     <li>
+                                        <img src="{{asset('frontend_asset/extra-images/news2.jpg')}}"  alt="">
                                         <span>04</span>
                                         <div class="popular_news_text">
                                             <small>The Team</small>
@@ -582,6 +537,7 @@
                                         </div>
                                     </li>
                                     <li>
+                                        <img src="{{asset('frontend_asset/extra-images/news2.jpg')}}"  alt="">  
                                         <span>05</span>
                                         <div class="popular_news_text">
                                             <small>The Team</small>
@@ -616,17 +572,11 @@
                                         <small>ST Paddy's Institute</small>
                                     </li>
                                 </ul>
-                               <!--  <div class="widget_match_countdown">
-                                    <h6>Game Countdown</h6>
-                                    <div id="sportsmagazine-countdown"></div>
-                                </div> -->
-                                <!-- <a href="fixture.html" class="widget_match_btn">Buy Ticket Now</a> -->
+                              
                             </div>
 
                             <!--// Widget Trending News \\-->
                             <div class="widget widget_trending_news">
-                                <!-- <div class="sportsmagazine-fancy-title"><h2>Top Trending News</h2></div> -->
-                                <!-- Nav tabs -->
                                 <ul class="nav-tabs" role="tablist">
                                     <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Newset</a></li>
                                     <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Most Commented</a></li>
@@ -718,40 +668,70 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--// Widget Trending News \\-->
-
-                            <!--// Widget Next Match \\-->
-
-                            <!--// Widget Next Match \\-->
-
-                            <!--// Widget Newsletter \\-->
-                            <div class="widget widget_newsletter">
-                                <div class="sportsmagazine-fancy-title"><h2>Our Newsletter</h2></div>
-                                <form>
-
-                                    <!-- <input type="text" value="Your Name" onblur="if(this.value == '') { this.value ='Your Name'; }" onfocus="if(this.value =='Your Name') { this.value = ''; }">
-                                    <input type="text" value="Enter Your email" onblur="if(this.value == '') { this.value ='Enter Your email'; }" onfocus="if(this.value =='Enter Your email') { this.value = ''; }">
-                                    <label class="widget_newsletter_btn"><input type="submit" value="Subscribe"></label> -->
-                                    <label>News One</label>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  anuttUt ac malesuada ante malesuada ante.</p>
-
-                                    <label>News One</label>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada malesuada ante.</p>
-                                </form>
-                            </div>
-                            <!--// Widget Newsletter \\-->
+                          
 
 
 
 
-                            <!--// Widget Add \\-->
-                            <div class="widget widget_add">
-                                <img src="{{ asset ('frontend_asset/extra-images/add.jpg')}}" alt="">
-                            </div>
-                            <!--// Widget Add \\-->
 
                         </aside>
                         <!--// SideBaar \\-->
+
+                        <div class="col-md-12">
+                            <div class="sportsmagazine-fixture-slider">
+
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">August 23, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">ARS <span>03</span></li>
+                                        <li>CHL <span>02</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">August 25, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">BRC <span>05</span></li>
+                                        <li>RM <span>02</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">August 28, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">CIT <span>03</span></li>
+                                        <li>KIN <span>03</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">August 31, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">ST <span>00</span></li>
+                                        <li>FRA <span>01</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
+                                    <time datetime="2008-02-14 20:00">September 03, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child"><small>SPA</small> VS <span>RM</span></li>
+                                        <li>Full Booked</li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer">
+                                    <time datetime="2008-02-14 20:00">September 05, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child">ARS <span>03</span></li>
+                                        <li>CHL <span>02</span></li>
+                                    </ul>
+                                </div>
+                                <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
+                                    <time datetime="2008-02-14 20:00">December 31, 2016</time>
+                                    <ul class="sportsmagazine-bgcolor">
+                                        <li class="first-child"><small>SPA</small> VS <span>RM</span></li>
+                                        <li>Full Booked</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
 
 
 					</div>
