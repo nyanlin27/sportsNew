@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 03, 2021 at 07:28 AM
+-- Generation Time: Jan 03, 2021 at 11:04 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -137,7 +137,40 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2020_12_27_033228_create_teams_table', 1),
 (7, '2020_12_27_033252_create_matches_table', 1),
 (8, '2020_12_30_043118_create_results_table', 1),
-(9, '2021_01_02_123639_create_items_table', 2);
+(9, '2021_01_02_123639_create_items_table', 2),
+(10, '2021_01_03_070707_create_permission_tables', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `model_has_permissions`
+--
+
+CREATE TABLE `model_has_permissions` (
+  `permission_id` bigint(20) UNSIGNED NOT NULL,
+  `model_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `model_id` bigint(20) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `model_has_roles`
+--
+
+CREATE TABLE `model_has_roles` (
+  `role_id` bigint(20) UNSIGNED NOT NULL,
+  `model_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `model_id` bigint(20) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `model_has_roles`
+--
+
+INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
+(1, 'App\\User', 3),
+(2, 'App\\User', 1);
 
 -- --------------------------------------------------------
 
@@ -149,6 +182,20 @@ CREATE TABLE `password_resets` (
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `permissions`
+--
+
+CREATE TABLE `permissions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `guard_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -173,7 +220,9 @@ CREATE TABLE `posts` (
 INSERT INTO `posts` (`id`, `name`, `description`, `photo`, `created_at`, `updated_at`) VALUES
 (1, 'Premier League News', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum blanditiis quaerat aperiam voluptate porro repudiandae labore fugiat non. Dolor deleniti excepturi dolores accusamus neque, voluptatum mollitia error ullam commodi?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum blanditiis quaerat aperiam voluptate porro repudiandae labore fugiat non. Dolor deleniti excepturi dolores accusamus neque, voluptatum mollitia error ullam commodi?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum blanditiis quaerat aperiam voluptate porro repudiandae labore fugiat non. Dolor deleniti excepturi dolores accusamus neque, voluptatum mollitia error ullam commodi?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum blanditiis quaerat aperiam voluptate porro repudiandae labore fugiat non. Dolor deleniti excepturi dolores accusamus neque, voluptatum mollitia error ullam commodi?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum blanditiis quaerat aperiam voluptate porro repudiandae labore fugiat non. Dolor deleniti excepturi dolores accusamus neque, voluptatum mollitia error ullam commodi? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum blanditiis quaerat aperiam voluptate porro repudiandae labore fugiat non. Dolor deleniti excepturi dolores accusamus neque, voluptatum mollitia error ullam commodi?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum blanditiis quaerat aperiam voluptate porro repudiandae labore fugiat non. Dolor deleniti excepturi dolores accusamus neque, voluptatum mollitia error ullam commodi?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum blanditiis quaerat aperiam voluptate porro repudiandae labore fugiat non. Dolor deleniti excepturi dolores accusamus neque, voluptatum mollitia error ullam commodi?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum blanditiis quaerat aperiam voluptate porro repudiandae labore fugiat non. Dolor deleniti excepturi dolores accusamus neque, voluptatum mollitia error ullam commodi?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum blanditiis quaerat aperiam voluptate porro repudiandae labore fugiat non. Dolor deleniti excepturi dolores accusamus neque, voluptatum mollitia error ullam commodi?', '/storage/postimg/1609585352_37328636-9092419-image-a-33_1609155301000_0.jpg', '2021-01-02 04:32:32', '2021-01-02 06:02:45'),
 (2, 'Arsenal can now play with \'the handbrake off\' says Arteta', 'Mikel Arteta believes Arsenal can express themselves now they have strung together three straight wins in a week.\r\nMikel Arteta believes Arsenal can play with freedom now they have turned the corner on their dismal run of form.\r\n\r\nThe Gunners made it three Premier League wins in the space of eight days with a 4-0 triumph against struggling West Bromwich Albion at a snow-covered Hawthorns.\r\n\r\nAlexandre Lacazette hit a second-half double in the space of four minutes to send Arsenal 11th in the table, after Kieran Tierney and Bukayo Saka had opened up a half-time lead.\r\n\r\nThe three-win streak puts an end to a run of seven matches without a victory and Arteta hopes he has seen the back of his team\'s miserable stretch of results.\r\n\r\n\"I hope so, at least the energy and the convincing momentum that you get from everybody that is involved, it\'s much more positive,\" Arteta said.\r\n\r\n\"At the end of the day, I wasn\'t that concerned with the performances.\r\n\r\n\"I think we lost games when we were really unlucky and most of them it was our own fault because we made some errors and we lack some discipline in certain moments.\r\n\r\n\"But you need to win football matches and now this brings a different momentum, a different energy, and now the players get the handbrake off and you can see that they are more free to play.\"', '/storage/postimg/1609642015_arsenal-manager-mikel-arteta_stzolcz4nkpe19em7pxqyrkdr.jpg', '2021-01-02 20:16:55', '2021-01-02 20:16:55'),
-(3, 'Mauricio Pochettino is back - but why has he chosen Paris St-Germain?', 'As a former player who enjoyed two and a half seasons at PSG, the decision to take the job may well be a no-brainer, but that\'s a long way from saying it is going to be a walk in the park, as the former incumbent at the club Thomas Tuchel would no doubt tell him.\r\n\r\nTuchel had already told the club he wasn\'t going to be staying on next season.\r\n\r\nTuchel is one of those modern German managers who has always understood football as a game in which the collective is far more important than the individual, whereas at a club like PSG the importance of the star is paramount, to the extent that players like Kylian Mbappe and Neymar have a direct line of communication with the president.\r\n\r\nUnsurprisingly therefore, you sense Tuchel felt his authority was being constantly undermined.\r\n\r\nDespite being runners-up in last year\'s Champions League, he leaves with the club - French champions in seven of the previous eight seasons - in a recently unprecedented third place in Ligue 1.\r\n\r\nThey are still just a point off top spot and very much in with a chance of winning the league, but it is their worst return at this stage since the 2013-14 season.\r\n\r\nFourteen points from a possible 24 might be good enough at any other club, but Tuchel leaves with PSG having lost four of their first 17 games.\r\n\r\nLast season, before the league was terminated after 27 games, they had lost just three. But the sacking had more to do with perception than numbers.\r\n\r\nThe main focus of the squad last season had been on the Champions League and they followed his instructions to the letter.\r\n\r\nDuring that campaign they showed unity particularly when, after a dinner at Marco Verratti\'s restaurant where they promised to work as a team, they came back from a 2-1 first-leg deficit against Borussia Dortmund to win the home game 2-0 and make their way into the quarter-finals just before the pandemic hit.\r\n\r\nBut this season it has proved impossible to recreate that spirit and the often tetchy and awkward relationship Tuchel had with director of football Leonardo meant he had to go.', '/storage/postimg/1609648873__116330606_gettyimages-1081656414.jpg', '2021-01-02 22:11:13', '2021-01-02 22:11:13');
+(3, 'Mauricio Pochettino is back - but why has he chosen Paris St-Germain?', 'As a former player who enjoyed two and a half seasons at PSG, the decision to take the job may well be a no-brainer, but that\'s a long way from saying it is going to be a walk in the park, as the former incumbent at the club Thomas Tuchel would no doubt tell him.\r\n\r\nTuchel had already told the club he wasn\'t going to be staying on next season.\r\n\r\nTuchel is one of those modern German managers who has always understood football as a game in which the collective is far more important than the individual, whereas at a club like PSG the importance of the star is paramount, to the extent that players like Kylian Mbappe and Neymar have a direct line of communication with the president.\r\n\r\nUnsurprisingly therefore, you sense Tuchel felt his authority was being constantly undermined.\r\n\r\nDespite being runners-up in last year\'s Champions League, he leaves with the club - French champions in seven of the previous eight seasons - in a recently unprecedented third place in Ligue 1.\r\n\r\nThey are still just a point off top spot and very much in with a chance of winning the league, but it is their worst return at this stage since the 2013-14 season.\r\n\r\nFourteen points from a possible 24 might be good enough at any other club, but Tuchel leaves with PSG having lost four of their first 17 games.\r\n\r\nLast season, before the league was terminated after 27 games, they had lost just three. But the sacking had more to do with perception than numbers.\r\n\r\nThe main focus of the squad last season had been on the Champions League and they followed his instructions to the letter.\r\n\r\nDuring that campaign they showed unity particularly when, after a dinner at Marco Verratti\'s restaurant where they promised to work as a team, they came back from a 2-1 first-leg deficit against Borussia Dortmund to win the home game 2-0 and make their way into the quarter-finals just before the pandemic hit.\r\n\r\nBut this season it has proved impossible to recreate that spirit and the often tetchy and awkward relationship Tuchel had with director of football Leonardo meant he had to go.', '/storage/postimg/1609648873__116330606_gettyimages-1081656414.jpg', '2021-01-02 22:11:13', '2021-01-02 22:11:13'),
+(4, 'Manchester United are ready to move on from Paul Pogba with Erling Haaland favoured over his Borussia Dortmund team-mate Jadon Sancho.', 'Jadon Sancho was once top of Manchester United \'s wish list but now Ole Gunnar Solskjaer wants to move for the Borussia Dortmund star\'s teammate  Erling Haaland .\r\n\r\nSolskjaer had solidified his position at United heading into the January window following a 10-match unbeaten run and the Norwegian manager is determined to recruit his countryman.\r\n\r\nAfter tracking ex-Manchester City youth product Sancho before the season, United are ready to switch their attention to Haaland, with reports suggesting he has a £70million release clause.', '/storage/postimg/1609666409_gettyimages-1193383499.jpg', '2021-01-03 03:03:29', '2021-01-03 03:03:29'),
+(5, 'Rumour Has It: Solskjaer wants Haaland over Sancho, Man Utd to sell Pogba', 'Jadon Sancho was once top of Manchester United \'s wish list but now Ole Gunnar Solskjaer wants to move for the Borussia Dortmund star\'s teammate  Erling Haaland .\r\n\r\nSolskjaer had solidified his position at United heading into the January window following a 10-match unbeaten run and the Norwegian manager is determined to recruit his countryman.\r\n\r\nAfter tracking ex-Manchester City youth product Sancho before the season, United are ready to switch their attention to Haaland, with reports suggesting he has a £70million release clause.', '/storage/postimg/1609666638_haaland-cropped_1si91af31yr171wbt5ccutt2ho.jpg', '2021-01-03 03:07:18', '2021-01-03 03:07:18');
 
 -- --------------------------------------------------------
 
@@ -190,6 +239,39 @@ CREATE TABLE `results` (
   `match_id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roles`
+--
+
+CREATE TABLE `roles` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `guard_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
+(1, 'customer', 'web', '2021-01-03 00:56:07', '2021-01-03 00:56:07'),
+(2, 'admin', 'web', '2021-01-03 00:56:07', '2021-01-03 00:56:07');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `role_has_permissions`
+--
+
+CREATE TABLE `role_has_permissions` (
+  `permission_id` bigint(20) UNSIGNED NOT NULL,
+  `role_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -251,6 +333,15 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Admin', 'admin@gmail.com', NULL, '$2y$10$sYoVd0YSu.4.WWguDZlDkuCfFQXPcx/4tEcQOJHw0/.i7.p5uuK7.', NULL, '2021-01-03 00:23:26', '2021-01-03 00:23:26'),
+(2, 'user1', 'user1@gmail.com', NULL, '$2y$10$YfZeJCHAc3N8ACN8R9yIb.2pp4/4bHu/QRznx/OYvoXiydefxxdJ.', NULL, '2021-01-03 00:30:13', '2021-01-03 00:30:13'),
+(3, 'user2', 'user2@gmail.com', NULL, '$2y$10$0NzYYhj2qDbWrqaO3vlgWeZ7HC0iduObBYst4Cmh8ssVkHzi/u/Gy', NULL, '2021-01-03 01:05:32', '2021-01-03 01:05:32');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -286,10 +377,30 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `model_has_permissions`
+--
+ALTER TABLE `model_has_permissions`
+  ADD PRIMARY KEY (`permission_id`,`model_id`,`model_type`),
+  ADD KEY `model_has_permissions_model_id_model_type_index` (`model_id`,`model_type`);
+
+--
+-- Indexes for table `model_has_roles`
+--
+ALTER TABLE `model_has_roles`
+  ADD PRIMARY KEY (`role_id`,`model_id`,`model_type`),
+  ADD KEY `model_has_roles_model_id_model_type_index` (`model_id`,`model_type`);
+
+--
 -- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
+
+--
+-- Indexes for table `permissions`
+--
+ALTER TABLE `permissions`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `posts`
@@ -303,6 +414,19 @@ ALTER TABLE `posts`
 ALTER TABLE `results`
   ADD PRIMARY KEY (`id`),
   ADD KEY `results_match_id_foreign` (`match_id`);
+
+--
+-- Indexes for table `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `role_has_permissions`
+--
+ALTER TABLE `role_has_permissions`
+  ADD PRIMARY KEY (`permission_id`,`role_id`),
+  ADD KEY `role_has_permissions_role_id_foreign` (`role_id`);
 
 --
 -- Indexes for table `teams`
@@ -350,19 +474,31 @@ ALTER TABLE `matches`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `permissions`
+--
+ALTER TABLE `permissions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `results`
 --
 ALTER TABLE `results`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `teams`
@@ -374,7 +510,7 @@ ALTER TABLE `teams`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
@@ -387,10 +523,29 @@ ALTER TABLE `matches`
   ADD CONSTRAINT `matches_team_id_foreign` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE CASCADE;
 
 --
+-- Constraints for table `model_has_permissions`
+--
+ALTER TABLE `model_has_permissions`
+  ADD CONSTRAINT `model_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `model_has_roles`
+--
+ALTER TABLE `model_has_roles`
+  ADD CONSTRAINT `model_has_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
+
+--
 -- Constraints for table `results`
 --
 ALTER TABLE `results`
   ADD CONSTRAINT `results_match_id_foreign` FOREIGN KEY (`match_id`) REFERENCES `matches` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `role_has_permissions`
+--
+ALTER TABLE `role_has_permissions`
+  ADD CONSTRAINT `role_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `role_has_permissions_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `teams`
