@@ -9,14 +9,9 @@
 			<div class="sportsmagazine-main-section">
 				<div class="container">
 					<div class="row">
-
-
                         <!--// Fixture Slider \\-->
 
                         <!--// Fixture Slider \\-->
-
-
-
                         <!--// SideBar \\-->
 
                         <!--// SideBar \\-->
@@ -75,10 +70,9 @@
                                         </div>
                                     </li>
                                     @endforeach
-
                                 </ul>
                             </div>
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="col-md-6">
                                     <div class="sportsmagazine-blog sportsmagazine-blog-grid">
                                         <ul class="row">
@@ -133,11 +127,12 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <!--// Blog's \\-->
 
 
-                            <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Legend Players in History</h2></div> <!--// Fancy Title \\-->
+                            <!--// Fancy Title \\-->
+                             <div class="sportsmagazine-fancy-title"><h2>Legend Players in History</h2></div> <!--// Fancy Title \\-->
                             <div class="sportsmagazine-player-slider">
 
                                 <div class="sportsmagazine-player-slider-image">
