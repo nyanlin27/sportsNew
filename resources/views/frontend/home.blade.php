@@ -9,14 +9,9 @@
 			<div class="sportsmagazine-main-section">
 				<div class="container">
 					<div class="row">
-
-
                         <!--// Fixture Slider \\-->
 
                         <!--// Fixture Slider \\-->
-
-
-
                         <!--// SideBar \\-->
 
                         <!--// SideBar \\-->
@@ -75,16 +70,80 @@
                                             </ul>
                                         </div> -->
                                     </li>
+<<<<<<< HEAD
                                 @endforeach
 
+=======
+                                    @endforeach
+>>>>>>> b28aeb65ed71e8feb681d41ae1ac39a48a6cf918
                                 </ul>
                                
                             </div>
+<<<<<<< HEAD
                          
+=======
+                            {{-- <div class="row">
+                                <div class="col-md-6">
+                                    <div class="sportsmagazine-blog sportsmagazine-blog-grid">
+                                        <ul class="row">
+                                            <li class="col-md-12 sportsmagazine-the-team">
+                                                <figure>
+                                                    <a href="blog-detail.html"><img src="{{ asset ('frontend_asset/extra-images/latest-blog-3.jpg')}}" alt=""></a>
+                                                    <figcaption>
+                                                        <span><small>The Team</small></span>
+                                                        <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
+                                                    </figcaption>
+                                                </figure>
+                                                <section>
+                                                    <h2><a href="blog-detail.html">The vicotory againts The Shark brings us close to the Final</a></h2>
+                                                    <p>Lorem ipsum dolor sit amet, consecttur adipis elit. Vestibulum a nunc dui. Curabitr dignissi luctus nisi id euismod. feugiat eros. Pellentesque tempus tortor.</p>
+                                                </section>
+                                                <div class="sportsmagazine-blog-grid-options">
+                                                    <a href="blog-detail.html" class="sportsmagazine-blog-grid-thumb"><img src="{{ asset ('frontend_asset/extra-images/blog-thumb-1.jpg ')}}" alt=""> Julia Martyn</a>
+                                                    <ul>
+                                                        <li><i class="fa fa-thumbs-o-up"></i> <a href="404.html">320</a></li>
+                                                        <li><i class="fa fa-eye"></i> <a href="404.html">840</a></li>
+                                                        <li><i class="fa fa-share-alt"></i> <a href="404.html">89</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                      <div class="sportsmagazine-blog sportsmagazine-blog-grid">
+                                        <ul class="row">
+                                            <li class="col-md-12 sportsmagazine-the-team">
+                                                <figure>
+                                                    <a href="blog-detail.html"><img src="{{ asset ('frontend_asset/extra-images/latest-blog-3.jpg')}}" alt=""></a>
+                                                    <figcaption>
+                                                        <span><small>The Team</small></span>
+                                                        <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
+                                                    </figcaption>
+                                                </figure>
+                                                <section>
+                                                    <h2><a href="blog-detail.html">The vicotory againts The Shark brings us close to the Final</a></h2>
+                                                    <p>Lorem ipsum dolor sit amet, consecttur adipis elit. Vestibulum a nunc dui. Curabitr dignissi luctus nisi id euismod. feugiat eros. Pellentesque tempus tortor.</p>
+                                                </section>
+                                                <div class="sportsmagazine-blog-grid-options">
+                                                    <a href="blog-detail.html" class="sportsmagazine-blog-grid-thumb"><img src="{{ asset ('frontend_asset/extra-images/blog-thumb-1.jpg ')}}" alt=""> Julia Martyn</a>
+                                                    <ul>
+                                                        <li><i class="fa fa-thumbs-o-up"></i> <a href="404.html">320</a></li>
+                                                        <li><i class="fa fa-eye"></i> <a href="404.html">840</a></li>
+                                                        <li><i class="fa fa-share-alt"></i> <a href="404.html">89</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> --}}
+>>>>>>> b28aeb65ed71e8feb681d41ae1ac39a48a6cf918
                             <!--// Blog's \\-->
 
 
-                            <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Legend Players in History</h2></div> <!--// Fancy Title \\-->
+                            <!--// Fancy Title \\-->
+                             <div class="sportsmagazine-fancy-title"><h2>Legend Players in History</h2></div> <!--// Fancy Title \\-->
                             <div class="sportsmagazine-player-slider">
 
                                 <div class="sportsmagazine-player-slider-image">
