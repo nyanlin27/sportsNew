@@ -1,53 +1,7 @@
 @extends('frontend_master')
 @section('content')
 
-<<<<<<< HEAD
-		<!--// Main Banner \\-->
-		<!-- <div class="sportsmagazine-banner">
-            <div class="sportsmagazine-banner-one">
-                <div class="sportsmagazine-banner-one-layer">
-                    <img src="{{ asset ('frontend_asset/extra-images/banner-1.jpg')}}" alt="">
-                    <span class="sportsmagazine-banner-pattren"></span>
-                    <div class="sportsmagazine-banner-caption">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="sportsmagazine-banner-wrap">
-                                        <h1><span>We Are</span> Developing The <strong class="sportsmagazine-color">Game</strong> <span>Be Our Partner</span></h1>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante Curabitur lacinia diam tempus tempor consectetur. Sed vitae dignissim purueget aliquam libero.</p>
-                                        <a href="404.html" class="sportsmagazine-banner-btn">Read More <span></span></a>
-                                    </div>
-                                    <div class="sportsmagazine-banner-thumb"> <img src="{{ asset ('frontend_asset/extra-images/banner-thumb-1.png')}}" alt=""> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sportsmagazine-banner-one-layer">
-                    <img src="{{asset('frontend_asset/extra-images/banner-2.jpg')}}" alt="">
-                    <span class="sportsmagazine-banner-pattren"></span>
-                    <div class="sportsmagazine-banner-caption">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="sportsmagazine-banner-wrap">
-                                        <h1><span>We Are</span> Developing The <strong class="sportsmagazine-color">Soccer</strong> <span>Be Our Partner</span></h1>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante Curabitur lacinia diam tempus tempor consectetur. Sed vitae dignissim purueget aliquam libero.</p>
-                                        <a href="404.html" class="sportsmagazine-banner-btn">Read More <span></span></a>
-                                    </div>
-                                    <div class="sportsmagazine-banner-thumb"> <img src="{{ asset ('frontend_asset/extra-images/banner-thumb-1.png')}}" alt=""> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-		<!--// Main Banner \\-->
 
-=======
-	
->>>>>>> dfcb50ceeb81da1cf4cf418db05c12bfebd4a7ce
 		<!--// Main Content \\-->
 		<div class="sportsmagazine-main-content">
 
@@ -56,7 +10,7 @@
 				<div class="container">
 					<div class="row">
 
-<<<<<<< HEAD
+
                         <!--// Fixture Slider \\-->
 
                         <!--// Fixture Slider \\-->
@@ -66,9 +20,6 @@
                         <!--// SideBar \\-->
 
                         <!--// SideBar \\-->
-
-=======
->>>>>>> dfcb50ceeb81da1cf4cf418db05c12bfebd4a7ce
                         <!--// Content \\-->
                         <div class="col-md-8">
 
@@ -124,27 +75,7 @@
                                         </div>
                                     </li>
                                     @endforeach
-                                    {{-- <li class="col-md-6 sportsmagazine-the-league">
-                                        <figure>
-                                            <a href="blog-detail.html"><img src="{{ asset ('frontend_asset/extra-images/latest-blog-2.jpg ') }}" alt=""></a>
-                                            <figcaption>
-                                                <span><small>The League</small></span>
-                                                <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
-                                            </figcaption>
-                                        </figure>
-                                        <section>
-                                            <h2><a href="blog-detail.html">Michael Bryan was chosen as best player with 45 points</a></h2>
-                                            <p>Lorem ipsum dolor sit amet, consecttur adipis elit. Vestibulum a nunc dui. Curabitr dignissi luctus nisi id euismod. feugiat eros. Pellentesque tempus tortor.</p>
-                                        </section>
-                                        <div class="sportsmagazine-blog-grid-options">
-                                            <a href="blog-detail.html" class="sportsmagazine-blog-grid-thumb"><img src="extra-images/blog-thumb-1.jpg" alt=""> Julia Martyn</a>
-                                            <ul>
-                                                <li><i class="fa fa-thumbs-o-up"></i> <a href="404.html">320</a></li>
-                                                <li><i class="fa fa-eye"></i> <a href="404.html">840</a></li>
-                                                <li><i class="fa fa-share-alt"></i> <a href="404.html">89</a></li>
-                                            </ul>
-                                        </div>
-                                    </li> --}}
+
                                 </ul>
                             </div>
                             <div class="row">
@@ -201,34 +132,6 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <!-- <div class="sportsmagazine-blog sportsmagazine-blog-list">
-                                        <ul class="row">
-                                            <li class="col-md-12">
-                                                <div class="sportsmagazine-blog-list-wrap">
-                                                    <span>The Team</span>
-                                                    <h6><a href="blog-detail.html">The victry againts The Shark bring us closer to the Final</a></h6>
-                                                    <time datetime="2008-02-14 20:00">August 23rd, 2017</time>
-                                                    <p>Lorem ipsum dolor sit amet, consecttur adipis elit. Vestibulum a nunc dui.</p>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-12 playoffs">
-                                                <div class="sportsmagazine-blog-list-wrap">
-                                                    <span>Playoffs</span>
-                                                    <h6><a href="blog-detail.html">The new eco friendly stadium won a Leafy Award in 2016</a></h6>
-                                                    <time datetime="2008-02-14 20:00">August 23rd, 2017</time>
-                                                    <p>Lorem ipsum dolor sit amet, consecttur adipis elit. Vestibulum a nunc dui.</p>
-                                                </div>
-                                            </li>
-                                            <li class="col-md-12 playoffs">
-                                                <div class="sportsmagazine-blog-list-wrap">
-                                                    <span>Playoffs</span>
-                                                    <h6><a href="blog-detail.html">The new eco friendly stadium won a Leafy Award in 2016</a></h6>
-                                                    <time datetime="2008-02-14 20:00">August 23rd, 2017</time>
-                                                    <p>Lorem ipsum dolor sit amet, consecttur adipis elit. Vestibulum a nunc dui.</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div> -->
                                 </div>
                             </div>
                             <!--// Blog's \\-->
@@ -430,7 +333,7 @@
                                     </li>
                                 </ul>
                             </div>
-<<<<<<< HEAD
+
                             <!--// Widget Popular News \\-->
                             <div class="widget widget_next_match">
                                 <div class="sportsmagazine-fancy-title"><h2>Next Match</h2></div>
@@ -458,10 +361,6 @@
                                 </ul>
 
                             </div>
-=======
-                         
->>>>>>> dfcb50ceeb81da1cf4cf418db05c12bfebd4a7ce
-
                             <!--// Widget Trending News \\-->
                             <div class="widget widget_trending_news">
                                 <ul class="nav-tabs" role="tablist">
@@ -555,63 +454,11 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
-
                         </aside>
                         <!--// SideBaar \\-->
 
                         <div class="col-md-12">
                             <div class="sportsmagazine-fixture-slider">
-
-                                {{-- @foreach($matches as $match)
-                                    <div class="sportsmagazine-fixture-slider-layer">
-                                        <time datetime="2008-02-14 20:00">{{ $match->match_date }}</time>
-                                        <ul class="sportsmagazine-bgcolor">
-                                            <li class="first-child"><img src="{{ $match->team->photo }}" alt="Team Logo" width="50px" height="50px"> <span>03</span></li>
-                                            <li> <img src="{{$match->otherteam->photo}}" alt="Team Logo" width="50px" height="50px"> <span>02</span></li>
-                                        </ul>
-                                    </div>
-                                @endforeach --}}
-
-                                {{-- <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">August 25, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">BRC <span>05</span></li>
-                                        <li>RM <span>02</span></li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">August 28, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">CIT <span>03</span></li>
-                                        <li>KIN <span>03</span></li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">August 31, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">ST <span>00</span></li>
-                                        <li>FRA <span>01</span></li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
-                                    <time datetime="2008-02-14 20:00">September 03, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child"><small>SPA</small> VS <span>RM</span></li>
-                                        <li>Full Booked</li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">September 05, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">ARS <span>03</span></li>
-                                        <li>CHL <span>02</span></li>
-                                    </ul>
-                                </div> --}}
                                 @foreach($matches as $match)
                                     <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
                                         <time datetime="2008-02-14 20:00">{{ $match->match_date }}</time>
