@@ -55,6 +55,9 @@ Route::get('champion_league_table','FrontendController@champion_league_table')->
 
 Route::get('europa_league_table','FrontendController@europa_league_table')->name('europa_league_table');
 
+
+Route::get('news_details','FrontendController@news_details')->name('news_details');
+
 // For Backend
 Route::get('dashboard', 'BackendController@dashboard')->name('dashboardpage');
 Route::resource('posts', 'PostController');

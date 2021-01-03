@@ -19,15 +19,6 @@
     <link href="{{ asset ('frontend_asset/css/responsive.css   ') }}"  rel="stylesheet">
 
    
-    <!--/!--[if lte IE 9]--> <link rel="stylesheet" href="../../css/chosen.html "> <!--[endif]--//-->
-    
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
   <body>
 	
@@ -135,9 +126,9 @@
                                                     <div class="col-md-2">
                                                         <h4>Shop</h4>
                                                         <ul class="sportsmagazine-megalist">
-                                                            <li><a href="fixture-detail-wls.html">Discount items</a></li>
-                                                            <li><a href="gallery.html">Gallery</a></li>
-                                                            <li><a href="404.html" data-toggle="modal" data-target="#signupModal">contact us</a></li>
+                                                            <li><a href="{{route('shop_discount')}}">Discount items</a></li>
+                                                            <li><a href="{{route('shop_gallery')}}">Gallery</a></li>
+                                                            <li><a href="{{route('contact')}}" >contact us</a></li>
                                                            
                                                             
                                                             
@@ -148,7 +139,7 @@
                                                         <ul class="sportsmagazine-megalist">
                                                             <li><a href="gallery-modren-wrs.html">Regiester </a></li>
                                                             <li><a href="login-register.html">Login</a></li>
-                                                            <li><a href="search-result.html">FAQ</a></li>
+                                                            <li><a href="{{route('faq')}}">FAQ</a></li>
                                                            
                                                         </ul>
                                                     </div>

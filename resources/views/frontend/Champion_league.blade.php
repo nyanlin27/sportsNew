@@ -4,8 +4,8 @@
 
 
 	<!--// SubHeader \\-->
-    <div class="sportsmagazine-subheader">
-            <span class="subheader-transparent"></span>
+    <div class="text-center">
+            <!-- <span class="subheader-transparent"></span> -->
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
