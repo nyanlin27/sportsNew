@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
+use App\Item;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class ItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        // $posts = Post::orderBy('id', 'desc')->get();
-        $posts = Post::latest()->paginate(4);
-        // dd($posts);
-        return view('backend.posts.index', compact('posts'));
+        $items = Item::orderBy('id', 'desc')->get();
+        return view('backend.items.index', compact('items'));
     }
 
     /**
@@ -27,7 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('backend.posts.create');
+        return view('backend.items.create');
     }
 
     /**
@@ -42,6 +40,7 @@ class PostController extends Controller
         // Validation
         $request->validate([
             'name' => 'required|min:3',
+            'price' => 'required|min:1',
             'description' => 'required|min:3',
             'photo' => 'required|mimes:png,jpg,jpeg'
         ]);
@@ -50,55 +49,56 @@ class PostController extends Controller
             // File Name Change
             $fileName = time() . '_' . $request->photo->getClientOriginalName();
             //categoryimg change
-            $filePath = $request->file('photo')->storeAs('postimg', $fileName, 'public');
+            $filePath = $request->file('photo')->storeAs('itemimg', $fileName, 'public');
             $path = '/storage/' . $filePath;
         }
         // Store Data
-        $post = new Post();
-        $post->name = $request->name;
-        $post->description = $request->description;
-        $post->photo = $path;
-        $post->save();
+        $item = new Item();
+        $item->name = $request->name;
+        $item->price = $request->price;
+        $item->description = $request->description;
+        $item->photo = $path;
+        $item->save();
         // redirect
-        return redirect()->route('posts.index');
+        return redirect()->route('items.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(Item $item)
     {
-        // return view('backend.posts.details', compact('post'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Item $item)
     {
-        return view('backend.posts.edit', compact('post'));
+        return view('backend.items.edit', compact('item'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Post  $post
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Item $item)
     {
-        // var_dumb
         // dd($request);
         // Validation
         $request->validate([
             'name' => 'required|min:3',
+            'price' => 'required|min:1',
             'description' => 'required|min:3',
             'photo' => 'sometimes|mimes:png,jpg,jpeg'
         ]);
@@ -107,27 +107,28 @@ class PostController extends Controller
             // File Name Change
             $fileName = time() . '_' . $request->photo->getClientOriginalName();
             //categoryimg change
-            $filePath = $request->file('photo')->storeAs('postimg', $fileName, 'public');
+            $filePath = $request->file('photo')->storeAs('itemimg', $fileName, 'public');
             $path = '/storage/' . $filePath;
-            $post->photo = $path;
+            $item->photo = $path;
         }
         // Store Data
-        $post->name = $request->name;
-        $post->description = $request->description;
-        $post->save();
-
-        return redirect()->route('posts.index');
+        $item->name = $request->name;
+        $item->price = $request->price;
+        $item->description = $request->description;
+        $item->save();
+        // redirect
+        return redirect()->route('items.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Item $item)
     {
-        $post->delete();
-        return redirect()->route('posts.index');
+        $item->delete();
+        return redirect()->route('items.index');
     }
 }

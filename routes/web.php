@@ -62,4 +62,6 @@ Route::resource('leagues', 'LeagueController');
 Route::resource('teams', 'TeamController');
 Route::resource('matches', 'MatchController');
 Route::resource('results', 'ResultController');
+Route::resource('items', 'ItemController');
+
 
