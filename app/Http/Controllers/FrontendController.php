@@ -115,5 +115,14 @@ class FrontendController extends Controller
     {
         return view('frontend.europa_league_table');
     }
+<<<<<<< HEAD
 
+=======
+    public function news_details($value = '')
+    {
+        return view('frontend.news_details');
+    }
+ 
+ 
+>>>>>>> dfcb50ceeb81da1cf4cf418db05c12bfebd4a7ce
 }

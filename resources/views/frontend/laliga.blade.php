@@ -2,17 +2,22 @@
 @section('content')
 
 	<!--// SubHeader \\-->
-        <div class="sportsmagazine-subheader">
-            <span class="subheader-transparent"></span>
+        <div class=" text-center" >
+            <!-- <span class="subheader-transparent"></span> -->
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <h1>Laliga</h1>
+                    <div class="col-md-12" >
+                        <img src="{{asset('frontend_asset/extra-images/league/laliga.jpg')}}" style="width:100px;">
+                        <!-- <h1 style="font-size: 45px;color: 
+                                   #28292b;font-weight: bold;
+                                   margin-bottom: 8px;
+                                   display: inline-block;
+                                   text-transform: uppercase;">Laliga</h1> -->
                     </div>
                     <div class="col-md-12">
                         <ul class="sportsmagazine-breadcrumb">
                             <li><a href="index-2.html">Home</a></li>
-                            <li>Matche</li>
+                            <li>Match</li>
                             <li>Laliga</li>
 
                         </ul>
@@ -44,6 +49,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="sportsmagazine-match-view">
+                                               
                                                     <h5>Pool Match # 1</h5>
                                                     <span>VS</span>
                                                 </div>
@@ -60,7 +66,7 @@
                                                     <h5>Country Durham, UK</h5>
                                                     <time datetime="2008-02-14 20:00">August 21st, 2017 <span>@ 9:00 PM</span></time>
                                                 </div>
-                                                <a href="404.html" class="ticket-buy-btn">Buy Ticket</a>
+                                              
                                             </div>
                                         </div>
                                     </li>

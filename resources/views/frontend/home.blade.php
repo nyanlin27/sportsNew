@@ -1,6 +1,7 @@
 @extends('frontend_master')
 @section('content')
 
+<<<<<<< HEAD
 		<!--// Main Banner \\-->
 		<!-- <div class="sportsmagazine-banner">
             <div class="sportsmagazine-banner-one">
@@ -44,6 +45,9 @@
         </div> -->
 		<!--// Main Banner \\-->
 
+=======
+	
+>>>>>>> dfcb50ceeb81da1cf4cf418db05c12bfebd4a7ce
 		<!--// Main Content \\-->
 		<div class="sportsmagazine-main-content">
 
@@ -52,6 +56,7 @@
 				<div class="container">
 					<div class="row">
 
+<<<<<<< HEAD
                         <!--// Fixture Slider \\-->
 
                         <!--// Fixture Slider \\-->
@@ -62,30 +67,10 @@
 
                         <!--// SideBar \\-->
 
+=======
+>>>>>>> dfcb50ceeb81da1cf4cf418db05c12bfebd4a7ce
                         <!--// Content \\-->
                         <div class="col-md-8">
-
-                            <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Featured News</h2></div> <!--// Fancy Title \\-->
-                            <!--// Featured Slider \\-->
-                            <!-- <div class="sportsmagazine-featured-slider">
-                                <div class="sportsmagazine-featured-slider-layer">
-                                    <img src="{{ asset ('frontend_asset/extra-images/featured-slider-1.jpg ')}}" alt="">
-                                    <span class="sportsmagazine-black-transparent"></span>
-                                    <div class="sportsmagazine-featured-caption">
-                                        <h2>Fusce at molestie elit, sit amet Curabitur in tellus non risu illa vitae non nunc</h2>
-                                        <span class="sportsmagazine-color">03 December 2017 / John Maxwell</span>
-                                    </div>
-                                </div>
-                                <div class="sportsmagazine-featured-slider-layer">
-                                    <img src="{{ asset ('frontend_asset/extra-images/featured-slider-2.jpg ')}}" alt="">
-                                    <span class="sportsmagazine-black-transparent"></span>
-                                    <div class="sportsmagazine-featured-caption">
-                                        <h2>Fusce at molestie elit, sit amet Curabitur in tellus non risu illa vitae non nunc</h2>
-                                        <span class="sportsmagazine-color">03 December 2017 / John Maxwell</span>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!--// Featured Slider \\-->
 
                             <!--// Latest Match Result \\-->
                             <div class="sportsmagazine-match-result">
@@ -119,18 +104,18 @@
                                     @foreach($posts as $post)
                                     <li class="col-md-6">
                                         <figure>
-                                            <a href="blog-detail.html"><img src="{{ $post->photo }}" alt=""></a>
+                                            <a href="{{route('news_details')}}"><img src="{{ $post->photo }}" alt=""></a>
                                             <figcaption>
                                                 <span><small>Featured</small></span>
-                                                <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
+                                                <a href="{{route('news_details')}}" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
                                             </figcaption>
                                         </figure>
                                         <section>
-                                            <h2><a href="blog-detail.html">{{ $post->name }}</a></h2>
+                                            <h2><a href="{{route('news_details')}}">{{ $post->name }}</a></h2>
                                                 <p>{{ Str::limit($post->description, 200) }}</p>
                                         </section>
                                         <div class="sportsmagazine-blog-grid-options">
-                                            <a href="blog-detail.html" class="sportsmagazine-blog-grid-thumb"><img src="{{ asset ('frontend_asset/extra-images/blog-thumb-1.jpg ')}}" alt=""> Julia Martyn</a>
+                                            <a href="{{route('news_details')}}" class="sportsmagazine-blog-grid-thumb"><img src="{{ asset ('frontend_asset/extra-images/blog-thumb-1.jpg ')}}" alt=""> Julia Martyn</a>
                                             <ul>
                                                 <li><i class="fa fa-thumbs-o-up"></i> <a href="404.html">320</a></li>
                                                 <li><i class="fa fa-eye"></i> <a href="404.html">840</a></li>
@@ -248,19 +233,6 @@
                             </div>
                             <!--// Blog's \\-->
 
-                            <!--// Advertisement \\-->
-                           <!--  <figure class="sportsmagazine-add-banner">
-                                <img src="{{ asset ('frontend_asset/extra-images/add-thumb-1.jpg ')}}" alt="">
-                                <span class="sportsmagazine-add-transparent"></span>
-                                <figcaption>
-                                    <div class="sportsmagazine-addbanner-caption">
-                                        <h2>Take a look at the brand New Uniforms for next season</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utac malesuada ante. Curabitur lacinia.</p>
-                                        <a href="404.html" class="sportsmagazine-banner-btn">Read More <span></span></a>
-                                    </div>
-                                </figcaption>
-                            </figure> -->
-                            <!--// Advertisement \\-->
 
                             <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Legend Players in History</h2></div> <!--// Fancy Title \\-->
                             <div class="sportsmagazine-player-slider">
@@ -404,91 +376,6 @@
                         <!--// SideBaar \\-->
                         <aside class="col-md-4">
 
-                            <!--// Widget TeamRanking \\-->
-                           <!--  <div class="widget widget_team_ranking">
-                                <div class="sportsmagazine-fancy-title"><h2>Team Rankings</h2></div>
-                                <div class="ranking-title-table">
-                                    <ul class="ranking-title-row">
-                                        <li>Team Rank</li>
-                                        <li>M</li>
-                                        <li>W</li>
-                                        <li>PTS</li>
-                                    </ul>
-                                </div>
-                                <div class="ranking-content-table">
-                                    <ul class="ranking-content-row">
-                                        <li>1</li>
-                                        <li> <img src="{{ asset ('frontend_asset/extra-images/ranking-widget-flag-1.png')}}" alt=""> <div class="ranking-logo"><span>L.A Pirates</span> <small>Bebop Institute</small> </div> </li>
-                                        <li>08</li>
-                                        <li>08</li>
-                                        <li>16</li>
-                                    </ul>
-                                </div>
-                                <div class="ranking-content-table">
-                                    <ul class="ranking-content-row">
-                                        <li>2</li>
-                                        <li> <img src="{{ asset ('frontend_asset/extra-images/ranking-widget-flag-2.png')}}" alt=""> <div class="ranking-logo"><span>Ocean Kings</span> <small>Icarus College</small> </div> </li>
-                                        <li>08</li>
-                                        <li>07</li>
-                                        <li>14</li>
-                                    </ul>
-                                </div>
-                                <div class="ranking-content-table">
-                                    <ul class="ranking-content-row">
-                                        <li>3</li>
-                                        <li> <img src="{{ asset ('frontend_asset/extra-images/ranking-widget-flag-3.png')}}" alt=""> <div class="ranking-logo"><span>Red Wings</span> <small>Marine College</small> </div> </li>
-                                        <li>07</li>
-                                        <li>07</li>
-                                        <li>14</li>
-                                    </ul>
-                                </div>
-                                <div class="ranking-content-table">
-                                    <ul class="ranking-content-row">
-                                        <li>4</li>
-                                        <li> <img src="{{ asset ('frontend_asset/extra-images/ranking-widget-flag-4.png')}}" alt=""> <div class="ranking-logo"><span>Lucky Clovers</span> <small>Elric Bros School</small> </div> </li>
-                                        <li>07</li>
-                                        <li>06</li>
-                                        <li>12</li>
-                                    </ul>
-                                </div>
-                                <div class="ranking-content-table">
-                                    <ul class="ranking-content-row">
-                                        <li>5</li>
-                                        <li> <img src="{{ asset ('frontend_asset/extra-images/ranking-widget-flag-5.png')}}" alt=""> <div class="ranking-logo"><span>Draconians</span> <small>Atlantic School</small> </div> </li>
-                                        <li>06</li>
-                                        <li>05</li>
-                                        <li>10</li>
-                                    </ul>
-                                </div>
-                                <div class="ranking-content-table">
-                                    <ul class="ranking-content-row">
-                                        <li>6</li>
-                                        <li> <img src="{{ asset ('frontend_asset/extra-images/ranking-widget-flag-6.png')}}" alt=""> <div class="ranking-logo"><span>Bloody Wave</span> <small>Marine College</small> </div> </li>
-                                        <li>06</li>
-                                        <li>04</li>
-                                        <li>08</li>
-                                    </ul>
-                                </div>
-                                <div class="ranking-content-table">
-                                    <ul class="ranking-content-row">
-                                        <li>7</li>
-                                        <li> <img src="{{ asset ('frontend_asset/extra-images/ranking-widget-flag-7.png')}}" alt=""> <div class="ranking-logo"><span>Ocean Kings</span> <small>St. Patrick’s Institute</small> </div> </li>
-                                        <li>06</li>
-                                        <li>04</li>
-                                        <li>08</li>
-                                    </ul>
-                                </div>
-                                <div class="ranking-content-table">
-                                    <ul class="ranking-content-row">
-                                        <li>8</li>
-                                        <li> <img src="{{ asset ('frontend_asset/extra-images/ranking-widget-flag-2.png')}}" alt=""> <div class="ranking-logo"><span>Sharks</span> <small>Icarus College</small> </div> </li>
-                                        <li>06</li>
-                                        <li>02</li>
-                                        <li>04</li>
-                                    </ul>
-                                </div>
-                            </div> -->
-                            <!--// Widget TeamRanking \\-->
 
                             <!--// Widget Popular News \\-->
                             <div class="widget widget_popular_news">
@@ -543,6 +430,7 @@
                                     </li>
                                 </ul>
                             </div>
+<<<<<<< HEAD
                             <!--// Widget Popular News \\-->
                             <div class="widget widget_next_match">
                                 <div class="sportsmagazine-fancy-title"><h2>Next Match</h2></div>
@@ -570,6 +458,9 @@
                                 </ul>
 
                             </div>
+=======
+                         
+>>>>>>> dfcb50ceeb81da1cf4cf418db05c12bfebd4a7ce
 
                             <!--// Widget Trending News \\-->
                             <div class="widget widget_trending_news">
