@@ -57,6 +57,7 @@ Route::get('europa_league_table','FrontendController@europa_league_table')->name
 
 
 Route::get('news_details','FrontendController@news_details')->name('news_details');
+// Route::get('itemdetail/{id}','FrontendController@itemdetail')->name('itemdetailpage');
 
 // For Backend
 Route::get('dashboard', 'BackendController@dashboard')->name('dashboardpage');

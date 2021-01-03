@@ -49,16 +49,25 @@ class FrontendController extends Controller
     }
 
     public function modern_news($value = '')
-    {
-        return view('frontend.modern_news');
+    {   
+        $posts = Post::all();
+        $matches = Match::all();
+        return view('frontend.modern_news', compact('posts', 'matches'));
+        // return view('frontend.modern_news');
     }
     public function blog_news($value = '')
-    {
-        return view('frontend.blog_news');
+    {   
+        $posts = Post::all();
+        $matches = Match::all();
+        return view('frontend.blog_news', compact('posts', 'matches'));
+        // return view('frontend.blog_news');
     }
     public function grid_news($value = '')
-    {
-        return view('frontend.Grid_news');
+    {   
+        $posts = Post::all();
+        $matches = Match::all();
+        return view('frontend.Grid_news', compact('posts', 'matches'));
+        // return view('frontend.Grid_news');
     }
 
 
@@ -117,7 +126,21 @@ class FrontendController extends Controller
     }
 
     public function news_details($value = '')
-    {
+    {   
+        // $posts = Post::all();
+        // $matches = Match::all();
+
+        // $posts = Post::orderBy('id','desc')->get();
+        // $news_details = Post::find($id);
+        // return view('frontend.news_details',compact('posts'));
         return view('frontend.news_details');
+
+        // $categories = Category::orderBy('id', 'desc')->get();
+        // $subcategories = Subcategory::orderBy('id', 'desc')->get();
+        // $brands = Brand::all();
+        // $items = Item::take(4)->get();
+        // $item_detail = Item::find($id);
+        // return view('frontend.itemdetail',compact('categories','subcategories','brands','items','item_detail'));
+       
     }
 }
