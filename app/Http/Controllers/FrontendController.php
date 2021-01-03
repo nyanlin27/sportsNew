@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\League;
+use App\Team;
+use App\Match;
+use App\Result;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -10,7 +14,8 @@ class FrontendController extends Controller
     public function index($value = '')
     {
         $posts = Post::all();
-        return view('frontend.home', compact('posts'));
+        $matches = Match::all();
+        return view('frontend.home', compact('posts', 'matches'));
     }
 
     public function championleague($value = '')
@@ -110,5 +115,5 @@ class FrontendController extends Controller
     {
         return view('frontend.europa_league_table');
     }
- 
+
 }

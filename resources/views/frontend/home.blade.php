@@ -3,8 +3,6 @@
 
 		<!--// Main Banner \\-->
 		<!-- <div class="sportsmagazine-banner">
-
-          
             <div class="sportsmagazine-banner-one">
                 <div class="sportsmagazine-banner-one-layer">
                     <img src="{{ asset ('frontend_asset/extra-images/banner-1.jpg')}}" alt="">
@@ -43,8 +41,6 @@
                     </div>
                 </div>
             </div>
-           
-
         </div> -->
 		<!--// Main Banner \\-->
 
@@ -57,7 +53,7 @@
 					<div class="row">
 
                         <!--// Fixture Slider \\-->
-						
+
                         <!--// Fixture Slider \\-->
 
 
@@ -143,7 +139,7 @@
                                         </div>
                                     </li>
                                     @endforeach
-                                    <li class="col-md-6 sportsmagazine-the-league">
+                                    {{-- <li class="col-md-6 sportsmagazine-the-league">
                                         <figure>
                                             <a href="blog-detail.html"><img src="{{ asset ('frontend_asset/extra-images/latest-blog-2.jpg ') }}" alt=""></a>
                                             <figcaption>
@@ -163,7 +159,7 @@
                                                 <li><i class="fa fa-share-alt"></i> <a href="404.html">89</a></li>
                                             </ul>
                                         </div>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                             <div class="row">
@@ -290,7 +286,7 @@
                                             </section>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="sportsmagazine-player-image-layer">
                                         <img src="{{ asset ('frontend_asset/extra-images/legend/ronaldinho.jpg')}}" style="height:396px" alt="">
                                         <div class="sportsmagazine-player-slider-caption">
@@ -311,7 +307,7 @@
                                             </section>
                                         </div>
                                     </div>
-                                   
+
                                     <div class="sportsmagazine-player-image-layer">
                                         <img src="{{ asset ('frontend_asset/extra-images/legend/buffon.jpg')}}" style="height:396px;" alt="">
                                         <div class="sportsmagazine-player-slider-caption">
@@ -325,7 +321,7 @@
                                 </div>
 
                                 <div class="sportsmagazine-player-slider-nav">
-                                   
+
                                     <div class="sportsmagazine-player-nav-layer">
                                         <span>38</span>
                                         <section>
@@ -537,7 +533,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <img src="{{asset('frontend_asset/extra-images/news2.jpg')}}"  alt="">  
+                                        <img src="{{asset('frontend_asset/extra-images/news2.jpg')}}"  alt="">
                                         <span>05</span>
                                         <div class="popular_news_text">
                                             <small>The Team</small>
@@ -572,7 +568,7 @@
                                         <small>ST Paddy's Institute</small>
                                     </li>
                                 </ul>
-                              
+
                             </div>
 
                             <!--// Widget Trending News \\-->
@@ -668,7 +664,7 @@
                                     </div>
                                 </div>
                             </div>
-                          
+
 
 
 
@@ -680,14 +676,17 @@
                         <div class="col-md-12">
                             <div class="sportsmagazine-fixture-slider">
 
-                                <div class="sportsmagazine-fixture-slider-layer">
-                                    <time datetime="2008-02-14 20:00">August 23, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child">ARS <span>03</span></li>
-                                        <li>CHL <span>02</span></li>
-                                    </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer">
+                                {{-- @foreach($matches as $match)
+                                    <div class="sportsmagazine-fixture-slider-layer">
+                                        <time datetime="2008-02-14 20:00">{{ $match->match_date }}</time>
+                                        <ul class="sportsmagazine-bgcolor">
+                                            <li class="first-child"><img src="{{ $match->team->photo }}" alt="Team Logo" width="50px" height="50px"> <span>03</span></li>
+                                            <li> <img src="{{$match->otherteam->photo}}" alt="Team Logo" width="50px" height="50px"> <span>02</span></li>
+                                        </ul>
+                                    </div>
+                                @endforeach --}}
+
+                                {{-- <div class="sportsmagazine-fixture-slider-layer">
                                     <time datetime="2008-02-14 20:00">August 25, 2016</time>
                                     <ul class="sportsmagazine-bgcolor">
                                         <li class="first-child">BRC <span>05</span></li>
@@ -721,14 +720,16 @@
                                         <li class="first-child">ARS <span>03</span></li>
                                         <li>CHL <span>02</span></li>
                                     </ul>
-                                </div>
-                                <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
-                                    <time datetime="2008-02-14 20:00">December 31, 2016</time>
-                                    <ul class="sportsmagazine-bgcolor">
-                                        <li class="first-child"><small>SPA</small> VS <span>RM</span></li>
-                                        <li>Full Booked</li>
-                                    </ul>
-                                </div>
+                                </div> --}}
+                                @foreach($matches as $match)
+                                    <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
+                                        <time datetime="2008-02-14 20:00">{{ $match->match_date }}</time>
+                                        <ul class="sportsmagazine-bgcolor">
+                                            <li class="first-child"><small><img src="{{ $match->team->photo }}" alt="Team Logo" width="50px" height="50px"></small> VS <span><img src="{{$match->otherteam->photo}}" alt="Team Logo" width="50px" height="50px"></span></li>
+                                            <li>{{ $match->match_time }}</li>
+                                        </ul>
+                                    </div>
+                                @endforeach
 
                             </div>
                         </div>
