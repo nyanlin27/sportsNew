@@ -5,30 +5,37 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{ route('posts.index') }}" class="btn btn-danger btn-sm my-2 float-right"> <i class="mdi mdi-chevron-double-left menu-icon
+                    <a href="{{ route('items.index') }}" class="btn btn-danger btn-sm my-2 float-right"> <i class="mdi mdi-chevron-double-left menu-icon
                         "></i> Back</a>
-                <h4 class="card-title">Edit Post</h4>
+                <h4 class="card-title">Edit Items</h4>
                 <p class="card-description">
-                    edit post
+                    edit items
                 </p>
-                <form class="forms-sample" method="POST" action="{{ route('posts.update', $post->id) }}"  enctype="multipart/form-data">
+
+                <form class="forms-sample" action="{{ route('items.update', $item->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    @method('PUT')
+                    @method('put')
                     <div class="form-group">
-                        <label for="exampleInputName1">Post Title</label>
-                        <input type="text" class="form-control @error('name') is-invalid @enderror" type="text" placeholder="Enter Post Title" name="name" value="{{ $post->name }}" id="exampleInputName1" placeholder="post title" name="name">
+                        <label for="exampleInputName1">Items Name</label>
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $item->name }}"id="exampleInputName1" placeholder="items name">
                             @error('name')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                     </div>
                     <div class="form-group">
+                        <label for="exampleInputName1">Items Price</label>
+                        <input type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ $item->price }}"id="exampleInputName1" placeholder="items price">
+                            @error('price')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                    </div>
+                    <div class="form-group">
                         <label for="exampleTextarea1">Description</label>
-                        <textarea class="form-control @error('description') is-invalid @enderror" type="text" placeholder="Enter Description" name="description" value="" id="exampleTextarea1" rows="20" placeholder="description" name="description">{{$post->description }} </textarea>
+                        <textarea type="text" name="description"  id="exampleTextarea1" rows="20" placeholder="description" class="form-control @error('description') is-invalid @enderror">{{ $item->description }}</textarea>
                         @error('description')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
-                    
                     <div class="form-group">
                         <label for="photo">Upload</label>
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -40,7 +47,7 @@
                             </li>
                           </ul>
                           <div class="tab-content my-2" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><img src="{{ asset($post->photo) }}"  width ="300px" alt="Old Photo"></div>
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><img src="{{ asset($item->photo) }}"  width ="300px" alt="Old Photo"></div>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <input type="file" name="photo" class="file-upload-default @error('photo') is-invalid @enderror" placeholder="Enter Post Photo" >
                                 <div class="input-group col-xs-12">
@@ -56,7 +63,8 @@
                           </div>
 
                     </div>
-                    <button type="submit" class="btn btn-primary mr-2">Update</button>
+
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
                 </form>
                 </div>

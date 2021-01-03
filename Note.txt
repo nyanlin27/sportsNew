@@ -76,6 +76,7 @@ SPORTS
                 -	name (String)
                 -   photo (String)
                 -	Price (String)
+                -   description(text)
                 -	date / time
             -   Order Table
                 -   id
