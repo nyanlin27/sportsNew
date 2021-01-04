@@ -148,12 +148,12 @@
                                                     <div class="col-md-2">
                                                         <h4>Shop</h4>
                                                         <ul class="sportsmagazine-megalist">
-                                                            <li><a href="{{route('shop_discount')}}"><img src="{{asset('frontend_asset/extra-images/league/champion_league.jpg')}}" width="30px">Discount items</a></li>
+                                                            <li><a href="{{route('shop_discount')}}">Discount items</a></li>
                                                             <li><a href="{{route('shop_gallery')}}">Gallery</a></li>
                                                             <li><a href="{{route('contact')}}" >contact us</a></li>
                                                         </ul>
                                                     </div>
-                                                    <!-- <div class="col-md-2"> -->
+                                                    <div class="col-md-2">
                                                         <h4>About us</h4>
                                                         <ul class="sportsmagazine-megalist">
                                                             <li><a href="gallery-modren-wrs.html">Regiester </a></li>
@@ -170,7 +170,8 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="sportsmagazine-megamenu-li"><a href="#">MATCHES</a>
+                                        <li><a href="#">MATCHES</a>
+                                            
                                             <ul class="sportsmagazine-dropdown-menu">
 
                                                 <li><a href="{{route('championleague')}}"><img src="{{asset('frontend_asset/extra-images/league/champion_league.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Champion league</a>
@@ -190,7 +191,7 @@
 
                                             </ul>
                                         </li>
-                                        <li class="sportsmagazine-megamenu-li"><a href="#">Tables</a>
+                                        <li><a href="#">Tables</a>
                                             <ul class="sportsmagazine-dropdown-menu">
                                                 <li><a href="{{route('champion_league_table')}}">Champion league</a>
                                                 </li>
@@ -210,7 +211,7 @@
 
                                             </ul>
                                         </li>
-                                        <li class="sportsmagazine-megamenu-li"><a href="#">OUR SHOP</a>
+                                        <li><a href="#">OUR SHOP</a>
                                             <ul class="sportsmagazine-dropdown-menu">
                                                 <li><a href="{{route('shop_discount')}}">Discount Item</a>
                                                 </li>
@@ -264,9 +265,9 @@
         <!--// Header \\-->
 
 
-	  @yield('content')
-		<!--// Footer \\-->
-		<footer id="sportsmagazine-footer" class="sportsmagazine-footer-one">
+      @yield('content')
+        <!--// Footer \\-->
+        <footer id="sportsmagazine-footer" class="sportsmagazine-footer-one">
 
             <!--// Footer Widget \\-->
             <div class="sportsmagazine-footer-widget">
@@ -344,10 +345,10 @@
             </div>
             <!--// CopyRight \\-->
 
-		</footer>
-		<!--// Footer \\-->
+        </footer>
+        <!--// Footer \\-->
 
-	<div class="clearfix"></div>
+    <div class="clearfix"></div>
     </div>
     <!--// Main Wrapper \\-->
 
@@ -419,8 +420,8 @@
     </div>
 
 
-	<!-- jQuery (necessary for JavaScript plugins) -->
-	<script type="text/javascript" src="{{ asset ('frontend_asset/script/jquery.js               ') }}"></script>
+    <!-- jQuery (necessary for JavaScript plugins) -->
+    <script type="text/javascript" src="{{ asset ('frontend_asset/script/jquery.js               ') }}"></script>
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/bootstrap.min.js        ') }}"></script>
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/slick.slider.min.js     ') }}"></script>
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/jquery.countdown.min.js ') }}"></script>

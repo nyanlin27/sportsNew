@@ -16,153 +16,25 @@
                 <div class="sportsmagazine-shop sportsmagazine-shop-grid">
                     <ul class="row">
                         @foreach($items as $item)
-                        
-                        <h1>{{ $item->name }}</h1>
-                        @endforeach
-
-                        {{-- <li class="col-md-3">
+                        <li class="col-md-3">
                             <figure>
-                                <a href="shop-detail.html"><img src="{{asset($item->photo)}}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                <a href=""><img src="{{asset($item->photo)}}" alt=""><i class="fa fa-shopping-cart"></i></a>
                                 <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
                             </figure>
                             <section>
-                                <h5><a href="shop-detail.html">{{ $item->name }}</a></h5>
+                                <h5><a href="{{route('item_details')}}">{{ $item->name }}</a></h5>
                                 <span class="price-cart"><del>$ 30.00</del> $ {{ $item->price }}</span>
                                 <span></span>
                             </section>
-                        </li> --}}
-                        {{-- <li class="col-md-3">
-                            <figure>
-                                <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img2.jpg ')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
-                                <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                            </figure>
-                            <section>
-                                <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                <span class="price-cart"><del>$ 30.00</del> $19.00</span>
-                                <span></span>
-                            </section>
                         </li>
-                        <li class="col-md-3">
-                            <figure>
-                                <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img3.jpg ')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
-                                <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                            </figure>
-                            <section>
-                                <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                <span class="price-cart"><del>$ 30.00</del> $19.00</span>
-                                <span></span>
-                            </section>
-                        </li>
-                        <li class="col-md-3">
-                            <figure>
-                                <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img4.jpg ')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
-                                <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                            </figure>
-                            <section>
-                                <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                <span class="price-cart"><del>$ 30.00</del> $19.00</span>
-                                <span></span>
-                            </section>
-                        </li>
-                        <li class="col-md-3">
-                            <figure>
-                                <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img5.jpg ')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
-                                <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                            </figure>
-                            <section>
-                                <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                <span class="price-cart"><del>$ 30.00</del> $19.00</span>
-                                <span></span>
-                            </section>
-                        </li>
-                        <li class="col-md-3">
-                            <figure>
-                                <a href="shop-detail.html"><img src=" {{asset('frontend_asset/extra-images/shop-grid-img6.jpg ')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
-                                <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                            </figure>
-                            <section>
-                                <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                <span class="price-cart"><del>$ 30.00</del> $19.00</span>
-                                <span></span>
-                            </section>
-                        </li>
-                        <li class="col-md-3">
-                            <figure>
-                                <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img7.jpg ')}}"  alt=""><i class="fa fa-shopping-cart"></i></a>
-                                <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                            </figure>
-                            <section>
-                                <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                <span class="price-cart"><del>$ 30.00</del> $19.00</span>
-                                <span></span>
-                            </section>
-                        </li>
-                        <li class="col-md-3">
-                            <figure>
-                                <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img8.jpg ')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
-                                <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                            </figure>
-                            <section>
-                                <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                <span class="price-cart"><del>$ 30.00</del> $19.00</span>
-                                <span></span>
-                            </section>
-                        </li>
-                        <li class="col-md-3">
-                            <figure>
-                                <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img2.jpg ')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
-                                <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                            </figure>
-                            <section>
-                                <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                <span class="price-cart"><del>$ 30.00</del> $19.00</span>
-                                <span></span>
-                            </section>
-                        </li>
-                        <li class="col-md-3">
-                            <figure>
-                                <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img4.jpg ')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
-                                <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                            </figure>
-                            <section>
-                                <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                <span class="price-cart"><del>$ 30.00</del> $19.00</span>
-                                <span></span>
-                            </section>
-                        </li>
-                        <li class="col-md-3">
-                            <figure>
-                                <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img5.jpg ')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
-                                <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                            </figure>
-                            <section>
-                                <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                <span class="price-cart"><del>$ 30.00</del> $19.00</span>
-                                <span></span>
-                            </section>
-                        </li>
-                        <li class="col-md-3">
-                            <figure>
-                                <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img1.jpg ')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
-                                <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                            </figure>
-                            <section>
-                                <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                <span class="price-cart"><del>$ 30.00</del> $19.00</span>
-                                <span></span>
-                            </section>
-                        </li> --}}
+                        @endforeach
                     </ul>
                 </div>
+
                 <!--// Pagination \\-->
                 <div class="sportsmagazine-pagination">
                   <ul class="page-numbers">
-                     <li><a class="previous page-numbers" href="404.html"><span aria-label="Next"><i class="fa fa-angle-left"></i></span></a></li>
-                     <li><span class="page-numbers current">1</span></li>
-                     <li><a class="page-numbers" href="404.html">2</a></li>
-                     <li><a class="page-numbers" href="404.html">3</a></li>
-                     <li><a class="page-numbers" href="404.html">4</a></li>
-                     <li><a class="next page-numbers" href="404.html"><span aria-label="Next"><i class="fa fa-angle-right"></i></span></a></li>
+                    {{ $items->links() }}{{-- For Paginate --}}
                   </ul>
                 </div>
                 <!--// Pagination \\-->
