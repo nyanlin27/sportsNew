@@ -17,17 +17,19 @@ class FrontendController extends Controller
     {
         // $posts = Post::all();
 
-        $posts = Post::take(4)->get();
-
         $posts = Post::take(2)->get();
+
+        // $post = Post::take(6)->get();
+        $populars= Post::take(5)->get();
         $theteams = Post::orderBy('id','desc')->take(2)->get();
+       
 
         $leagues = League::all();
         $teams = Team::all();
         $matches = Match::all();
         $items = Item::orderBy('id', 'desc')->take(3)->get();
 
-        return view('frontend.home', compact('posts', 'matches', 'leagues', 'teams','items','theteams'));
+        return view('frontend.home', compact('posts', 'matches', 'leagues', 'teams','items','theteams','populars'));
     }
 
 

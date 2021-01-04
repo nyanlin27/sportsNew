@@ -290,58 +290,23 @@
                             <div class="widget widget_popular_news">
                                 <div class="sportsmagazine-fancy-title"><h2>Popular News</h2></div>
                                 <ul>
+                                 @foreach($populars as $popular)
                                     <li>
-                                        <img src="{{asset('frontend_asset/extra-images/news2.jpg')}}"  alt="">
-                                        <span>01</span>
+                                        <img src="{{$popular->photo}}"  alt="">
+                                        <!-- <span>01</span> -->
                                         <div class="popular_news_text">
                                             <small>The Team</small>
-                                            <a href="blog-detail.html">Basketball Stadium will a max capacity for 5000 fans</a>
+                                            <a href="blog-detail.html">{{ Str::limit($popular->description, 100) }}</a>
                                             <time datetime="2008-02-14 20:00">December 21, 2017</time>
                                         </div>
                                     </li>
-                                    <li class="widget-injuries">
-
-                                        <img src="{{asset('frontend_asset/extra-images/news2.jpg')}}"  alt="">
-                                        <span>02</span>
-                                        <div class="popular_news_text">
-                                            <small>Injuries</small>
-                                            <a href="blog-detail.html">The Clovers defense must reinvent itself without</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                        </div>
-                                    </li>
-                                    <li class="widget-theleague">
-
-                                        <img src="{{asset('frontend_asset/extra-images/news2.jpg')}}"  alt="">
-                                        <span>03</span>
-                                        <div class="popular_news_text">
-                                            <small>The League</small>
-                                            <a href="blog-detail.html">Take look to the brand new helmets for next season</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="{{asset('frontend_asset/extra-images/news2.jpg')}}"  alt="">
-                                        <span>04</span>
-                                        <div class="popular_news_text">
-                                            <small>The Team</small>
-                                            <a href="blog-detail.html">The Basketball women division started training</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="{{asset('frontend_asset/extra-images/news2.jpg')}}"  alt="">
-                                        <span>05</span>
-                                        <div class="popular_news_text">
-                                            <small>The Team</small>
-                                            <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                        </div>
-                                    </li>
+                                 @endforeach
+                                    
                                 </ul>
                             </div>
 
                             <!--// Widget Popular News \\-->
-                            <div class="widget widget_next_match">
+                           <!--  <div class="widget widget_next_match">
                                 <div class="sportsmagazine-fancy-title"><h2>Next Match</h2></div>
                                 <div class="widget_next_match_title">
                                     <h5>Championship Quarter Finals</h5>
@@ -366,7 +331,7 @@
                                     </li>
                                 </ul>
 
-                            </div>
+                            </div> -->
                             <!--// Widget Trending News \\-->
                             <div class="widget widget_trending_news">
                                 <ul class="nav-tabs" role="tablist">
@@ -379,82 +344,49 @@
                                     <div role="tabpanel" class="tab-pane active" id="home">
                                         <div class="widget_popular_news">
                                             <ul>
+
+                                            @foreach($posts as $post)
                                                 <li>
                                                     <div class="popular_news_text">
                                                         <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
+                                                        <a href="blog-detail.html">{{ Str::limit($post->name, 20) }}</a>
                                                         <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
+                                                        <p>{{ Str::limit($post->description, 200) }}</p>
                                                     </div>
                                                 </li>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li class="widget-theleague">
-                                                    <div class="popular_news_text">
-                                                        <small>The League</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
+                                             @endforeach  
                                             </ul>
                                         </div>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="profile">
                                         <div class="widget_popular_news">
                                             <ul>
+                                             @foreach($posts as $post)
                                                 <li class="widget-injuries">
                                                     <div class="popular_news_text">
                                                         <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
+                                                        <a href="blog-detail.html">{{ Str::limit($post->name, 20) }}</a>
                                                         <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
+                                                        <p>{{ Str::limit($post->description, 200) }}</p>
                                                     </div>
                                                 </li>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
+                                             @endforeach  
                                             </ul>
                                         </div>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="messages">
                                         <div class="widget_popular_news">
                                             <ul>
+                                            @foreach($posts as $post)
                                                 <li class="widget-theleague">
                                                     <div class="popular_news_text">
                                                         <small>The League</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
+                                                        <a href="blog-detail.html">{{ Str::limit($post->name, 20) }}</a>
                                                         <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
+                                                        <p>{{ Str::limit($post->description, 730) }}</p>
                                                     </div>
                                                 </li>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
+                                             @endforeach  
                                             </ul>
                                         </div>
                                     </div>

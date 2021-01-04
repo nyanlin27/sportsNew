@@ -34,10 +34,10 @@
                     <div class="row">
                         <aside class="col-md-6">
                             <ul class="sportsmagazine-social-network">
-                                <li><a href="https://www.facebook.com/" class="sportsmagazine-colorhover fa fa-facebook-official"></a></li>
-                                <li><a href="https://twitter.com/login" class="sportsmagazine-colorhover fa fa-twitter-square"></a></li>
-                                <li><a href="https://pk.linkedin.com/" class="sportsmagazine-colorhover fa fa-linkedin-square"></a></li>
-                                <li><a href="https://plus.google.com/" class="sportsmagazine-colorhover fa fa-google-plus-square"></a></li>
+                                <li><a href="https://www.facebook.com/" class="sportsmagazine-colorhover fa fa-facebook-official" target="_blank"></a></li>
+                                <li><a href="https://twitter.com/login" class="sportsmagazine-colorhover fa fa-twitter-square" target="_blank"></a></li>
+                                <li><a href="https://pk.linkedin.com/" class="sportsmagazine-colorhover fa fa-linkedin-square"target="_blank"></a></li>
+                                <li><a href="https://plus.google.com/" class="sportsmagazine-colorhover fa fa-google-plus-square"target="_blank"></a></li>
                             </ul>
                         </aside>
 
