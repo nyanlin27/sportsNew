@@ -27,8 +27,11 @@ class FrontendController extends Controller
         return view('frontend.europa_league');
     }
     public function premierleague($value = '')
-    {
-        return view('frontend.premier_league');
+    {   
+
+        $matches = Match::all();
+        return view('frontend.premier_league', compact('matches'));
+        // return view('frontend.premier_league');
     }
 
     public function laliga($value = '')
@@ -44,8 +47,10 @@ class FrontendController extends Controller
         return view('frontend.bundesliga');
     }
     public function ligue_1($value = '')
-    {
-        return view('frontend.ligue_1');
+    {   
+        $matches = Match::all();
+        return view('frontend.ligue_1', compact('matches'));
+        // return view('frontend.ligue_1');
     }
 
     public function modern_news($value = '')

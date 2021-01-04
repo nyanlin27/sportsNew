@@ -126,7 +126,7 @@
                                                     <div class="col-md-2">
                                                         <h4>Shop</h4>
                                                         <ul class="sportsmagazine-megalist">
-                                                            <li><a href="{{route('shop_discount')}}">Discount items</a></li>
+                                                            <li><a href="{{route('shop_discount')}}"><img src="{{asset('frontend_asset/extra-images/league/champion_league.jpg')}}" width="30px">Discount items</a></li>
                                                             <li><a href="{{route('shop_gallery')}}">Gallery</a></li>
                                                             <li><a href="{{route('contact')}}" >contact us</a></li>
                                                            
@@ -154,19 +154,19 @@
                                         <li><a href="#">MATCHES</a>
                                             <ul class="sportsmagazine-dropdown-menu">
 
-                                                <li><a href="{{route('championleague')}}">Champion league</a>
+                                                <li><a href="{{route('championleague')}}"><img src="{{asset('frontend_asset/extra-images/league/champion_league.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Champion league</a>
                                                 </li>
-                                                <li><a href="{{route('europaleague')}}">Europa league</a>
+                                                <li><a href="{{route('europaleague')}}"><img src="{{asset('frontend_asset/extra-images/league/europa_league.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Europa league</a>
                                                 </li>
-                                                <li><a href="{{route('premierleague')}}">Premier league</a>
+                                                <li><a href="{{route('premierleague')}}"><img src="{{asset('frontend_asset/extra-images/league/premier_league.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Premier league</a>
                                                 </li>
-                                                <li><a href="{{route('laliga')}}">Laliga</a>
+                                                <li><a href="{{route('laliga')}}"><img src="{{asset('frontend_asset/extra-images/league/laliga.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Laliga</a>
                                                 </li>
-                                                <li><a href="{{route('serie_a')}}">Serie A</a>
+                                                <li><a href="{{route('serie_a')}}"><img src="{{asset('frontend_asset/extra-images/league/serie_a.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Serie A</a>
                                                 </li>
-                                                <li><a href="{{route('bundesliga')}}">Bundesliga</a>
+                                                <li><a href="{{route('bundesliga')}}"><img src="{{asset('frontend_asset/extra-images/league/bundesliga.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Bundesliga</a>
                                                 </li>
-                                                <li><a href="{{route('ligue_1')}}">Ligue 1</a>
+                                                <li><a href="{{route('ligue_1')}}"><img src="{{asset('frontend_asset/extra-images/league/ligue_1.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Ligue 1</a>
                                                 </li>
 
                                             </ul>

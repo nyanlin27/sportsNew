@@ -9,12 +9,7 @@
 			<div class="sportsmagazine-main-section">
 				<div class="container">
 					<div class="row">
-                        <!--// Fixture Slider \\-->
-
-                        <!--// Fixture Slider \\-->
-                        <!--// SideBar \\-->
-
-                        <!--// SideBar \\-->
+                       
                         <!--// Content \\-->
                         <div class="col-md-8">
 
@@ -70,19 +65,18 @@
                                             </ul>
                                         </div> -->
                                     </li>
-<<<<<<< HEAD
+
                                 @endforeach
 
-=======
-                                    @endforeach
->>>>>>> b28aeb65ed71e8feb681d41ae1ac39a48a6cf918
+
+                                 
+
                                 </ul>
                                
                             </div>
-<<<<<<< HEAD
+
                          
-=======
-                            {{-- <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-md-6">
                                     <div class="sportsmagazine-blog sportsmagazine-blog-grid">
                                         <ul class="row">
@@ -137,8 +131,8 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div> --}}
->>>>>>> b28aeb65ed71e8feb681d41ae1ac39a48a6cf918
+                            </div> --> 
+
                             <!--// Blog's \\-->
 
 
