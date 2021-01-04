@@ -5,8 +5,8 @@
 
 <!--// Main Content \\-->
 <div class="sportsmagazine-main-content sportsmagazine-main-contentminus">
-            
-          
+
+
 			<!--// Main Section \\-->
 			<div style="margin-top:30px;" class="sportsmagazine-main-section">
 				<div class="container">
@@ -14,17 +14,16 @@
 
                         <div class="col-md-9">
                             <div class="sportsmagazine-rich-editor">
-                               <img src="{{asset('frontend_asset/extra-images/news/new2.jpg')}}" style="width:100%;height:400px;">
-                                <h2 style="color:#2f2f2f;font-weight: bold;text-transform: uppercase;line-height: 1.1;font-family: 'Open Sans', sans-serif;font-style: normal;margin-top:20px;margin-bottom:20px;">THE NEW ECO FRIENDLY STADIUM WON A LEAFY AWARD IN 2016</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus tempor consectet Sed vitae dignissim purus, eget aliquam libero. Duis et arcu a erat venenatis ornare eget nec urna. Nulla volutpat luctus venen Aliquam tellus dui, luctus nec ornare at, aliquet ac nulla. Quisque vitae feugiat eros. Pellentesque tempus tortor nec tellus elp ifend, id dictum nibh volutpat.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus tempor consectet Sed vitae dignissim purus, eget aliquam libero. Duis et arcu a erat venenatis ornare eget nec urna. Nulla volutpat luctus venen Aliquam tellus dui, luctus nec ornare at, aliquet ac nulla. Quisque vitae feugiat eros. Pellentesque tempus tortor nec tellus elp ifend, id dictum nibh volutpat.</p>
-                                <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
+                               <img src="{{asset($post->photo)}}" style="width:100%;height:400px;">
+                                <h2 style="color:#2f2f2f;font-weight: bold;text-transform: uppercase;line-height: 1.1;font-family: 'Open Sans', sans-serif;font-style: normal;margin-top:20px;margin-bottom:20px;">{{ $post->name }}</h2>
+                                <p>{{$post->description}}</p>
+                                {{-- <p>{{$post->description}}</p> --}}
+                                <blockquote>{{$post->description}}
                                 <span></span>
                                 </blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus tempor consectet Sed vitae dignissim purus, eget aliquam libero. Duis et arcu a erat venenatis ornare eget nec urna. Nulla volutpat luctus venen Aliquam tellus dui, luctus nec ornare at, aliquet ac nulla. Quisque vitae feugiat eros. Pellentesque tempus tortor nec tellus elp ifend, id dictum nibh volutpat.</p>
-                                <p>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condimentum odio. Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna eu orci. Phasellus tempor consectetur magna, at efficiat est malesuada ac. Phasellus non ipsum diam. Suspendisse potenti.</p>
-                               
-                              
+                                <p>{{$post->description}}</p>
+
+
                                 <div class="sportsmagazine-post-tags">
                                   <!-- <div class="sportsmagazine-tags">
                                      <a href="404.html">#Playoffs</a>
@@ -41,15 +40,15 @@
                                   </div>
                                </div>
                             </div>
-                         
+
 
                         </div>
-                        
+
                         <!--// SideBar \\-->
                         <aside class="col-md-3">
                         <div class="sportsmagazine-fancy-title"><h2>Related News</h2></div>
                             <!--// Widget Popular Post \\-->
-                            
+
                             <div class="widget widget_popular_post">
                                 <ul>
                                     <li>
@@ -65,7 +64,7 @@
                                     <li>
                                         <div class="sportsmagazine-popular-post">
                                         <img src="{{asset('frontend_asset/extra-images/news/new2.jpg')}}" alt="">
-                                            
+
                                             <div class="sportsmagazine-popular-post-text">
                                                 <h5><a href="blog-detail.html">Mark Johnson has as acture and is gona  a the Mark Johnson has as</a></h5>
                                                 <time datetime="2008-02-14 20:00">August 23rd, 2016</time>
@@ -76,7 +75,7 @@
                                     <li>
                                         <div class="sportsmagazine-popular-post">
                                         <img src="{{asset('frontend_asset/extra-images/news/new3.jpg')}}" alt="">
-                                           
+
                                             <div class="sportsmagazine-popular-post-text">
                                                 <h5><a href="blog-detail.html">Mark Johnson has as acture and is gona  a the Mark Johnson has as</a></h5>
                                                 <time datetime="2008-02-14 20:00">August 23rd, 2016</time>
@@ -95,8 +94,8 @@
                                             <span></span>
                                         </div>
                                     </li>
-                                  
-                                   
+
+
                                 </ul>
                             </div>
                             <!--// Widget Popular Post \\-->
@@ -113,5 +112,5 @@
 		</div>
 		<!--// Main Content \\-->
 
-        
+
 @endsection

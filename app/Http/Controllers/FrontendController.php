@@ -7,16 +7,24 @@ use App\League;
 use App\Team;
 use App\Match;
 use App\Result;
+use App\Item;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\Match_;
 
 class FrontendController extends Controller
 {
     public function index($value = '')
     {
-        $posts = Post::all();
+        // $posts = Post::all();
+        $posts = Post::take(6)->get();
+        $leagues = League::all();
+        $teams = Team::all();
         $matches = Match::all();
-        return view('frontend.home', compact('posts', 'matches'));
+        $items = Item::orderBy('id', 'desc')->take(3)->get();
+
+        return view('frontend.home', compact('posts', 'matches', 'leagues', 'teams','items'));
     }
+
 
     public function championleague($value = '')
     {
@@ -65,7 +73,9 @@ class FrontendController extends Controller
 
     public function shop_gallery($value = '')
     {
-        return view('frontend.shop_gallery');
+        $items = Item::orderBy('id', 'desc')->get();
+        dd($items);
+        return view('frontend.shop_gallery', compact($items));
     }
     public function shop_discount($value = '')
     {
@@ -116,8 +126,14 @@ class FrontendController extends Controller
         return view('frontend.europa_league_table');
     }
 
-    public function news_details($value = '')
+    // public function news_details($value = '')
+    // {
+    //     return view('frontend.news_details');
+    // }
+    public function news_details($id)
     {
-        return view('frontend.news_details');
+        // dd($id);
+        $post = Post::find($id);
+        return view('frontend.news_details', compact('post'));
     }
 }

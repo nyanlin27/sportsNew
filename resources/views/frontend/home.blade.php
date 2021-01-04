@@ -50,18 +50,20 @@
                                     @foreach($posts as $post)
                                     <li class="col-md-6">
                                         <figure>
-                                            <a href="{{route('news_details')}}"><img src="{{ $post->photo }}" alt=""></a>
+                                            <a href=""><img src="{{ $post->photo }}" alt=""></a>
+
                                             <figcaption>
                                                 <span><small>Featured</small></span>
-                                                <a href="{{route('news_details')}}" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
+                                                <a href="{{ route('news_details', $post->id) }}" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
                                             </figcaption>
                                         </figure>
+                                        {{-- <a href="" class="btn btn-danger">Details</a> --}}
                                         <section>
-                                            <h2><a href="{{route('news_details')}}">{{ $post->name }}</a></h2>
+                                            <h2><a href="{{route('news_details', $post->id)}}">{{ $post->name }}</a></h2>
                                                 <p>{{ Str::limit($post->description, 200) }}</p>
                                         </section>
                                         <div class="sportsmagazine-blog-grid-options">
-                                            <a href="{{route('news_details')}}" class="sportsmagazine-blog-grid-thumb"><img src="{{ asset ('frontend_asset/extra-images/blog-thumb-1.jpg ')}}" alt=""> Julia Martyn</a>
+                                            <a href="{{route('news_details', $post->id)}}" class="sportsmagazine-blog-grid-thumb"><img src="{{ asset ('frontend_asset/extra-images/blog-thumb-1.jpg ')}}" alt=""> Julia Martyn</a>
                                             <ul>
                                                 <li><i class="fa fa-thumbs-o-up"></i> <a href="404.html">320</a></li>
                                                 <li><i class="fa fa-eye"></i> <a href="404.html">840</a></li>
@@ -131,8 +133,7 @@
                             <!--// Blog's \\-->
 
 
-                            <!--// Fancy Title \\-->
-                             <div class="sportsmagazine-fancy-title"><h2>Legend Players in History</h2></div> <!--// Fancy Title \\-->
+                            <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Legend Players in History</h2></div> <!--// Fancy Title \\-->
                             <div class="sportsmagazine-player-slider">
 
                                 <div class="sportsmagazine-player-slider-image">
@@ -231,20 +232,24 @@
 
                             </div>
 
-                            <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Store Gallery</h2></div> <!--// Fancy Title \\-->
+                            <!--// Fancy Title \\-->
+                            <div class="sportsmagazine-fancy-title"><h2>Store Gallery</h2></div> <!--// Fancy Title \\-->
                             <div class="sportsmagazine-gallery sportsmagazine-fixture-gallery">
                                 <ul>
+                                    @foreach($items as $item)
+
                                     <li>
                                         <figure>
-                                            <a data-fancybox-group="group" href="extra-images/gallery-modren-img1.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/shop-grid-img1.jpg')}}" alt=""><i class="icon-signs23"></i></a>
+                                            <a data-fancybox-group="group" href="extra-images/gallery-modren-img1.jpg" class="fancybox"><img src="{{ asset ($item->photo)}}" alt=""><i class="icon-signs23"></i></a>
                                             <span>Add to cart</span>
                                             <figcaption>
-                                                <h6><a href="#">The Champion Final will be played</a></h6>
+                                                <h6><a href="#">{{ $item->name }}</a></h6>
                                                 <a href=""><time datetime="2008-02-14 20:00">Add to cart</time></a>
                                             </figcaption>
                                         </figure>
                                     </li>
-                                    <li>
+                                    @endforeach
+                                    {{-- <li>
                                         <figure>
                                             <a data-fancybox-group="group" href="extra-images/gallery-modren-img2.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/shop-grid-img2.jpg')}}" alt=""><i class="icon-signs23"></i></a>
                                             <span>Add to cart</span>
@@ -263,7 +268,7 @@
                                                 <time datetime="2008-02-14 20:00">Add to cart</time>
                                             </figcaption>
                                         </figure>
-                                    </li>
+                                    </li> --}}
 
                                 </ul>
                             </div>
@@ -474,7 +479,11 @@
 			<!--// Main Section \\-->
 
 		</div>
-		<!--// Main Content \\-->
+        <!--// Main Content \\-->
+
+
+
+
 
 
 @endsection

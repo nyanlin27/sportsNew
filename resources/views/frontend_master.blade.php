@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,16 +18,16 @@
     <link href="{{ asset ('frontend_asset/css/color.css        ') }}"  rel="stylesheet">
     <link href="{{ asset ('frontend_asset/css/responsive.css   ') }}"  rel="stylesheet">
 
-   
+
   </head>
   <body>
-	
+
     <!--// Main Wrapper \\-->
     <div class="sportsmagazine-main-wrapper">
 
         <!--// Header \\-->
         <header id="sportsmagazine-header" class="sportsmagazine-header-one">
-            
+
             <!--// TopStrip \\-->
             <div class="sportsmagazine-topstrip">
                 <div class="container">
@@ -39,10 +39,8 @@
                                 <li><a href="https://pk.linkedin.com/" class="sportsmagazine-colorhover fa fa-linkedin-square"></a></li>
                                 <li><a href="https://plus.google.com/" class="sportsmagazine-colorhover fa fa-google-plus-square"></a></li>
                             </ul>
-
-                            <h4 style="color: #b5b2b2;font-family: 'Open Sans', sans-serif;text-align:center;" class="class="sportsmagazine-user-section"">#BLACK LIVES MATTER</h4>
                         </aside>
-                     
+
                         <aside class="col-md-6">
                             <ul class="sportsmagazine-user-section">
                                 <li><i class="fa fa-globe"></i> <a href="404.html">Support</a></li>
@@ -76,8 +74,37 @@
                                         <div class="sportsmagazine-cart-link"><a href="checkout.html" class="sportsmagazine-cartbox-btn sportsmagazine-bgcolorhover"><i class="flaticon-tool"></i> Go to Checkout</a></div>
                                     </div>
                                 </li>
-                                <li><i class="fa fa-user"></i> <a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
-                                <li><i class="fa fa-sign-in"></i> <a href="#" data-toggle="modal" data-target="#signupModal">Sign Up</a></li>
+                                {{-- <li><i class="fa fa-user"></i> <a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+                                <li><i class="fa fa-sign-in"></i> <a href="#" data-toggle="modal" data-target="#signupModal">Sign Up</a></li> --}}
+                                <!-- Authentication Links -->
+                                @guest
+                                    <li class="nav-item">
+                                        <i class="fa fa-user"></i>
+                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    </li>
+                                    @if (Route::has('register'))
+                                        <li class="nav-item">
+                                            <i class="fa fa-sign-in"></i>
+                                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                        </li>
+                                    @endif
+                                @else
+                                    <li class="nav-item dropdown">
+                                            <a class="dropdown-item" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                {{ Auth::user()->name }}
+                                            </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                            {{-- <a href="" class="dropdown-item">Order history</a> --}}
+                                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                             document.getElementById('logout-form').submit();">
+                                                <i class="fa fa-logout"></i>{{ __('Logout') }}
+                                            </a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>
+                                        </div>
+                                    </li>
+                                @endguest
                             </ul>
                         </aside>
                     </div>
@@ -104,13 +131,8 @@
                                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
                                       <ul class="nav navbar-nav">
                                         <li class="active"><a href="{{route('homepage')}}">Home</a>
-                                            <!-- <ul class="sportsmagazine-dropdown-menu">
-                                                <li><a href="index-2.html">Home One</a></li>
-                                                <li><a href="index-two.html">Home Two</a></li>
-                                                
-                                            </ul> -->
                                         </li>
-                                        
+
                                         <li class="sportsmagazine-megamenu-li"><a href="#">Our News</a>
                                             <ul class="sportsmagazine-megamenu">
                                                 <li class="row">
@@ -120,7 +142,7 @@
                                                             <li><a href="{{route('modern_news')}}">Modern</a></li>
                                                             <li><a href="{{route('blog_news')}}">Blogs</a></li>
                                                             <li><a href="{{route('grid_news')}}">Grid</a></li>
-                                                           
+
                                                         </ul>
                                                     </div>
                                                     <div class="col-md-2">
@@ -129,9 +151,6 @@
                                                             <li><a href="{{route('shop_discount')}}">Discount items</a></li>
                                                             <li><a href="{{route('shop_gallery')}}">Gallery</a></li>
                                                             <li><a href="{{route('contact')}}" >contact us</a></li>
-                                                           
-                                                            
-                                                            
                                                         </ul>
                                                     </div>
                                                     <div class="col-md-2">
@@ -140,7 +159,7 @@
                                                             <li><a href="gallery-modren-wrs.html">Regiester </a></li>
                                                             <li><a href="login-register.html">Login</a></li>
                                                             <li><a href="{{route('faq')}}">FAQ</a></li>
-                                                           
+
                                                         </ul>
                                                     </div>
                                                     <div class="col-md-6">
@@ -187,8 +206,8 @@
                                                 </li>
                                                 <li><a href="{{route('ligue_1_table')}}">Ligue 1</a>
                                                 </li>
-                                                
-                        
+
+
                                             </ul>
                                         </li>
                                         <li><a href="#">OUR SHOP</a>
@@ -198,7 +217,7 @@
                                                 <li><a href="{{route('shop_gallery')}}">Gallery</a>
                                                 </li>
                                             </ul>
-                                                
+
                                         </li>
                                         <li class="sportsmagazine-megamenu-li"><a href="#">Contact us</a>
                                             <ul class="sportsmagazine-megamenu">
@@ -206,7 +225,7 @@
                                                     <div class="col-md-2">
                                                         <h4>About</h4>
                                                         <ul class="sportsmagazine-megalist">
-                                                           
+
                                                             <li><a href="faq.html" >Regiester</a></li>
                                                             <li><a href="login-register.html" data-toggle="modal" data-target="#loginModal">Login</a></li>
                                                             <li><a href="{{route('faq')}}">FAQ</a></li>
@@ -221,7 +240,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-5">
-                                                       
+
                                                         <a href="#" class="sportsmagazine-thumbnail">
                                                             <img src="{{ asset ('frontend_asset/extra-images/mega-menuadd.jpg')}}" alt="" />
                                                         </a>
@@ -240,15 +259,15 @@
             </div>
             <!--// MainSection \\-->
 
-           
+
         </header>
         <!--// Header \\-->
-        
+
 
 	  @yield('content')
 		<!--// Footer \\-->
 		<footer id="sportsmagazine-footer" class="sportsmagazine-footer-one">
-            
+
             <!--// Footer Widget \\-->
             <div class="sportsmagazine-footer-widget">
                 <div class="container">

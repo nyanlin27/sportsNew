@@ -11,22 +11,27 @@
         <div class="row">
 
             <div class="col-md-12"><h2>Shop Gallery Mart</h2></div>
-            
+
             <div class="col-md-12">
                 <div class="sportsmagazine-shop sportsmagazine-shop-grid">
                     <ul class="row">
-                        <li class="col-md-3">
+                        @foreach($items as $item)
+                        
+                        <h1>{{ $item->name }}</h1>
+                        @endforeach
+
+                        {{-- <li class="col-md-3">
                             <figure>
-                                <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img1.jpg ')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                <a href="shop-detail.html"><img src="{{asset($item->photo)}}" alt=""><i class="fa fa-shopping-cart"></i></a>
                                 <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
                             </figure>
                             <section>
-                                <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                <span class="price-cart"><del>$ 30.00</del> $19.00</span>
+                                <h5><a href="shop-detail.html">{{ $item->name }}</a></h5>
+                                <span class="price-cart"><del>$ 30.00</del> $ {{ $item->price }}</span>
                                 <span></span>
                             </section>
-                        </li>
-                        <li class="col-md-3">
+                        </li> --}}
+                        {{-- <li class="col-md-3">
                             <figure>
                                 <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img2.jpg ')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
                                 <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
@@ -146,7 +151,7 @@
                                 <span class="price-cart"><del>$ 30.00</del> $19.00</span>
                                 <span></span>
                             </section>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
                 <!--// Pagination \\-->
@@ -162,8 +167,6 @@
                 </div>
                 <!--// Pagination \\-->
             </div>
-
-
         </div>
     </div>
 </div>
