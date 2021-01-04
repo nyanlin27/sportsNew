@@ -16,13 +16,14 @@ class FrontendController extends Controller
     public function index($value = '')
     {
         // $posts = Post::all();
-        $posts = Post::take(6)->get();
+        $posts = Post::take(2)->get();
+        $theteams = Post::orderBy('id','desc')->take(2)->get();
         $leagues = League::all();
         $teams = Team::all();
         $matches = Match::all();
         $items = Item::orderBy('id', 'desc')->take(3)->get();
 
-        return view('frontend.home', compact('posts', 'matches', 'leagues', 'teams','items'));
+        return view('frontend.home', compact('posts', 'matches', 'leagues', 'teams','items','theteams'));
     }
 
 
@@ -73,9 +74,11 @@ class FrontendController extends Controller
 
     public function shop_gallery($value = '')
     {
-        $items = Item::orderBy('id', 'desc')->get();
-        dd($items);
-        return view('frontend.shop_gallery', compact($items));
+        // $posts = Post::latest()->paginate(8);
+
+        $items = Item::latest()->paginate(8);
+        // dd($items);
+        return view('frontend.shop_gallery', compact('items'));
     }
     public function shop_discount($value = '')
     {
@@ -137,3 +140,4 @@ class FrontendController extends Controller
         return view('frontend.news_details', compact('post'));
     }
 }
+
