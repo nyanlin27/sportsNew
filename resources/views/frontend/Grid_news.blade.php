@@ -18,7 +18,7 @@
                         <li class="col-md-6">
                             <figure><a href="blog-detail.html"><img src="{{$post->photo}}" alt=""></a></figure>
                             <div class="sportsmagazine-blogmedium-text">
-                                <h5><a href="blog-detail.html">{{$post->name}}</a></h5>
+                                <h5><a href="blog-detail.html">{{ Str::limit($post->name, 5) }}</a></h5>
                                 <ul class="sportsmagazine-blogmedium-option">
                                     <li>
                                         <span>Date /</span>
@@ -40,52 +40,7 @@
                         </li>
                     @endforeach
                       
-                        <!-- <li class="col-md-6">
-                            <figure><a href="blog-detail.html"><img src="{{asset('frontend_asset/extra-images/blog-medium-img3.jpg ')}}" alt=""></a><span>PLAY OFFS</span></figure>
-                            <div class="sportsmagazine-blogmedium-text">
-                                <h5><a href="blog-detail.html">United, Palace Aim To Rebound</a></h5>
-                                <ul class="sportsmagazine-blogmedium-option">
-                                    <li>
-                                        <span>Date /</span>
-                                        <time datetime="2008-02-14 20:00">21/11/2017</time>
-                                    </li>
-                                    <li>
-                                        <span>By /</span>
-                                        <small>Albert Martyn</small>
-                                    </li>
-                                </ul>
-                                <p>Lorem ipsum dolor sit amet, con ctetur adipiscing elit.</p>
-                                <ul class="sportsmagazine-blogmedium-social">
-                                    <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
-                                    <li><a href="https://twitter.com/login" class="fa fa-twitter"></a></li>
-                                    <li><a href="https://plus.google.com/" class="fa fa-google-plus"></a></li>
-                                    <li><a href="https://www.youtube.com/" class="fa fa-youtube"></a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="col-md-6">
-                            <figure><a href="blog-detail.html"><img src="{{asset('frontend_asset/extra-images/blog-medium-img4.jpg ')}}" alt=""></a></figure>
-                            <div class="sportsmagazine-blogmedium-text">
-                                <h5><a href="blog-detail.html">was understandably all about the</a></h5>
-                                <ul class="sportsmagazine-blogmedium-option">
-                                    <li>
-                                        <span>Date /</span>
-                                        <time datetime="2008-02-14 20:00">21/11/2017</time>
-                                    </li>
-                                    <li>
-                                        <span>By /</span>
-                                        <small>Albert Martyn</small>
-                                    </li>
-                                </ul>
-                                <p>Lorem ipsum dolor sit amet, con ctetur adipiscing elit.</p>
-                                <ul class="sportsmagazine-blogmedium-social">
-                                    <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
-                                    <li><a href="https://twitter.com/login" class="fa fa-twitter"></a></li>
-                                    <li><a href="https://plus.google.com/" class="fa fa-google-plus"></a></li>
-                                    <li><a href="https://www.youtube.com/" class="fa fa-youtube"></a></li>
-                                </ul>
-                            </div>
-                        </li> -->
+                        
                     </ul>
                 </div>
                 <!--// Pagination \\-->
