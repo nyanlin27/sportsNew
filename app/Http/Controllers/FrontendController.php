@@ -66,10 +66,10 @@ class FrontendController extends Controller
        
     }
 
-    public function modern_news($id)
+    public function modern_news($value = '')
     {   
-        dd($id);
-        $posts = Post::find($id);
+        // dd($id);
+        $posts = Post::all();
         
         return view('frontend.modern_news', compact('posts'));
         

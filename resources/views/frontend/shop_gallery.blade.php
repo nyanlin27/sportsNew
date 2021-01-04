@@ -24,7 +24,9 @@
                             <section>
                                 <h5><a href="{{route('item_details')}}">{{ $item->name }}</a></h5>
                                 <span class="price-cart"><del>$ 30.00</del> $ {{ $item->price }}</span>
+
                                 <span></span>
+                                <a href="{{route('item_details')}}" class="btn btn-sm btn-warning " style="display: block;">details</a>
                             </section>
                         </li>
                         @endforeach

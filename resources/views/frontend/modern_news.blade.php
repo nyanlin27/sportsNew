@@ -15,7 +15,7 @@
                     <ul class="row">
                     @foreach($posts as $post)
                         <li class="col-md-3">
-                            <figure><a href="{{ route('news_details') }}"><img src="{{$post->photo}}" alt=""><i class="fa fa-link"></i></a></figure>
+                            <figure><a href=""><img src="{{$post->photo}}" alt=""><i class="fa fa-link"></i></a></figure>
                             <div class="sportsmagazine-blogmodren-text">
                                 <ul class="sportsmagazine-blogmodren-option">
                                     <li><a href="404.html"><i class="fa fa-thumbs-o-up"></i> 32</a></li>
