@@ -9,7 +9,7 @@
 			<div class="sportsmagazine-main-section">
 				<div class="container">
 					<div class="row">
-                       
+
                         <!--// Content \\-->
                         <div class="col-md-8">
 
@@ -42,40 +42,25 @@
                             <div class="sportsmagazine-fancy-title"><h2>Latest Blogs</h2></div> <!--// Fancy Title \\-->
                             <!--// Blog's \\-->
                             <div class="sportsmagazine-blog sportsmagazine-blog-grid">
-                           
+
                                 <ul class="row">
                                 @foreach($posts as $post)
                                     <li class="col-md-6">
                                         <figure>
                                             <a href=""><img src="{{ $post->photo }}" alt=""></a>
-
                                             <figcaption>
                                                 <span><small>Featured</small></span>
                                                 <a href="{{ route('news_details', $post->id) }}" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
                                             </figcaption>
                                         </figure>
-                                      
                                         <section>
                                             <h2><a href="{{route('news_details', $post->id)}}">{{ $post->name }}</a></h2>
                                                 <p>{{ Str::limit($post->description, 200) }}</p>
                                         </section>
-
-                                      
                                     </li>
-
                                 @endforeach
-
-
-                                 
-
                                 </ul>
-                               
                             </div>
-
-<<<<<<< HEAD
-                         
-                          
-=======
                             <div class="row">
                                 @foreach($theteams as $theteam)
                                 <div class="col-md-6">
@@ -83,18 +68,18 @@
                                         <ul class="row">
                                             <li class="col-md-12 sportsmagazine-the-team">
                                                 <figure>
-                                                    <a href="blog-detail.html"><img src="{{ asset ($theteam->photo)}}" alt=""></a>
+                                                    <a href="{{route('news_details', $theteam->id)}}"><img src="{{ asset ($theteam->photo)}}" alt=""></a>
                                                     <figcaption>
                                                         <span><small>The Team</small></span>
-                                                        <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
+                                                        <a href="{{route('news_details', $theteam->id)}}" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
                                                     </figcaption>
                                                 </figure>
                                                 <section>
-                                                    <h2><a href="blog-detail.html">{{ $theteam->name }}</a></h2>
+                                                    <h2><a href="{{route('news_details', $post->id)}}">{{ $theteam->name }}</a></h2>
                                                     <p>{{ $theteam->descraption }}</p>
                                                 </section>
                                                 <div class="sportsmagazine-blog-grid-options">
-                                                    <a href="blog-detail.html" class="sportsmagazine-blog-grid-thumb"><img src="{{ asset ('frontend_asset/extra-images/blog-thumb-1.jpg ')}}" alt=""> Julia Martyn</a>
+                                                    <a href="{{route('news_details', $theteam->id)}}" class="sportsmagazine-blog-grid-thumb"><img src="{{ asset ('frontend_asset/extra-images/blog-thumb-1.jpg ')}}" alt=""> Julia Martyn</a>
                                                     <ul>
                                                         <li><i class="fa fa-thumbs-o-up"></i> <a href="404.html">320</a></li>
                                                         <li><i class="fa fa-eye"></i> <a href="404.html">840</a></li>
@@ -107,41 +92,15 @@
                                     </div>
                                 </div>
                                 @endforeach
-                                {{-- <div class="col-md-6">
-                                      <div class="sportsmagazine-blog sportsmagazine-blog-grid">
-                                        <ul class="row">
-                                            <li class="col-md-12 sportsmagazine-the-team">
-                                                <figure>
-                                                    <a href="blog-detail.html"><img src="{{ asset ('frontend_asset/extra-images/latest-blog-3.jpg')}}" alt=""></a>
-                                                    <figcaption>
-                                                        <span><small>The Team</small></span>
-                                                        <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
-                                                    </figcaption>
-                                                </figure>
-                                                <section>
-                                                    <h2><a href="blog-detail.html">The vicotory againts The Shark brings us close to the Final</a></h2>
-                                                    <p>Lorem ipsum dolor sit amet, consecttur adipis elit. Vestibulum a nunc dui. Curabitr dignissi luctus nisi id euismod. feugiat eros. Pellentesque tempus tortor.</p>
-                                                </section>
-                                                <div class="sportsmagazine-blog-grid-options">
-                                                    <a href="blog-detail.html" class="sportsmagazine-blog-grid-thumb"><img src="{{ asset ('frontend_asset/extra-images/blog-thumb-1.jpg ')}}" alt=""> Julia Martyn</a>
-                                                    <ul>
-                                                        <li><i class="fa fa-thumbs-o-up"></i> <a href="404.html">320</a></li>
-                                                        <li><i class="fa fa-eye"></i> <a href="404.html">840</a></li>
-                                                        <li><i class="fa fa-share-alt"></i> <a href="404.html">89</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div> --}}
                             </div>
->>>>>>> 85e85df5eb07a33e08549fc9ff35f26e5b974aa7
                             <!--// Blog's \\-->
 
 
-                            <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Legend Players in History</h2></div> <!--// Fancy Title \\-->
+                            <!--// Fancy Title \\-->
+                            <div class="sportsmagazine-fancy-title">
+                                <h2>Legend Players in History</h2>
+                            </div> <!--// Fancy Title \\-->
                             <div class="sportsmagazine-player-slider">
-
                                 <div class="sportsmagazine-player-slider-image">
                                     <div class="sportsmagazine-player-image-layer">
                                         <img src="{{ asset ('frontend_asset/extra-images/legend/pele.jpg')}}" style="height:396px;" alt="">
@@ -239,14 +198,18 @@
                             </div>
 
                             <!--// Fancy Title \\-->
-                            <div class="sportsmagazine-fancy-title"><h2>Store Gallery</h2></div> <!--// Fancy Title \\-->
+                            <div class="sportsmagazine-fancy-title">
+                                <h2>Store Gallery</h2>
+                            </div> <!--// Fancy Title \\-->
                             <div class="sportsmagazine-gallery sportsmagazine-fixture-gallery">
                                 <ul>
                                     @foreach($items as $item)
-
                                     <li>
                                         <figure>
-                                            <a data-fancybox-group="group" href="extra-images/gallery-modren-img1.jpg" class="fancybox"><img src="{{ asset ($item->photo)}}" alt=""><i class="icon-signs23"></i></a>
+                                            <a data-fancybox-group="group" href="{{ route('item_details', $item->id) }}" class="fancybox">
+                                                <img src="{{ asset ($item->photo)}}" alt="">
+                                                <i class="icon-signs23"></i>
+                                            </a>
                                             <span>Add to cart</span>
                                             <figcaption>
                                                 <h6><a href="#">{{ $item->name }}</a></h6>
@@ -255,27 +218,6 @@
                                         </figure>
                                     </li>
                                     @endforeach
-                                   <!--  <li>
-                                        <figure>
-                                            <a data-fancybox-group="group" href="extra-images/gallery-modren-img2.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/shop-grid-img2.jpg')}}" alt=""><i class="icon-signs23"></i></a>
-                                            <span>Add to cart</span>
-                                            <figcaption>
-                                                <h6><a href="#">The Champion Final will be played</a></h6>
-                                                <time datetime="2008-02-14 20:00">Add to cart</time>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
-                                    <li>
-                                        <figure>
-                                            <a data-fancybox-group="group" href="extra-images/gallery-modren-img3.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/shop-grid-img3.jpg')}}" alt=""><i class="icon-signs23"></i></a>
-                                            <span>Add to cart</span>
-                                            <figcaption>
-                                                <h6><a href="#">The Champion Final will be played</a></h6>
-                                                <time datetime="2008-02-14 20:00">Add to cart</time>
-                                            </figcaption>
-                                        </figure>
-                                    </li> --> 
-
                                 </ul>
                             </div>
 
@@ -284,11 +226,11 @@
 
                         <!--// SideBaar \\-->
                         <aside class="col-md-4">
-
-
                             <!--// Widget Popular News \\-->
                             <div class="widget widget_popular_news">
-                                <div class="sportsmagazine-fancy-title"><h2>Popular News</h2></div>
+                                <div class="sportsmagazine-fancy-title">
+                                    <h2>Popular News</h2>
+                                </div>
                                 <ul>
                                  @foreach($populars as $popular)
                                     <li>
@@ -296,65 +238,53 @@
                                         <!-- <span>01</span> -->
                                         <div class="popular_news_text">
                                             <small>The Team</small>
-                                            <a href="blog-detail.html">{{ Str::limit($popular->description, 100) }}</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                            <a href="{{ route('news_details', $popular->id) }}">
+                                                {{ Str::limit($popular->description, 100) }}
+                                            </a>
+                                            <time datetime="2008-02-14 20:00">
+                                                {{ $popular->updated_at->diffForHumans() }}
+                                            </time>
                                         </div>
                                     </li>
                                  @endforeach
-                                    
                                 </ul>
                             </div>
-
                             <!--// Widget Popular News \\-->
-                           <!--  <div class="widget widget_next_match">
-                                <div class="sportsmagazine-fancy-title"><h2>Next Match</h2></div>
-                                <div class="widget_next_match_title">
-                                    <h5>Championship Quarter Finals</h5>
-                                    <span>Saturday, May 17th, 2017</span>
-                                </div>
-                                <ul>
-                                    <li>
-                                        <img src="{{ asset ('frontend_asset/extra-images/widget-next-match-logo-1.png ')}}" alt="">
-                                        <h6><a href="fixture-detail.html">Basketball</a></h6>
-                                        <small>Sports And Magazine</small>
-                                    </li>
-                                    <li>
-                                        <div class="widget_next_match_option">
-                                            <h6>09:00 pm</h6>
-                                            <small>Madison Stadium</small>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="{{ asset ('frontend_asset/extra-images/widget-next-match-logo-2.png ') }}" alt="">
-                                        <h6><a href="fixture-detail.html">Combine</a></h6>
-                                        <small>ST Paddy's Institute</small>
-                                    </li>
-                                </ul>
 
-                            </div> -->
                             <!--// Widget Trending News \\-->
                             <div class="widget widget_trending_news">
                                 <ul class="nav-tabs" role="tablist">
-                                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Newset</a></li>
-                                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Most Commented</a></li>
-                                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Populer</a></li>
+                                    <li role="presentation" class="active">
+                                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Newset</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Most Commented</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Populer</a>
+                                    </li>
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="home">
                                         <div class="widget_popular_news">
                                             <ul>
-
                                             @foreach($posts as $post)
                                                 <li>
                                                     <div class="popular_news_text">
                                                         <small>The Team</small>
-                                                        <a href="blog-detail.html">{{ Str::limit($post->name, 20) }}</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>{{ Str::limit($post->description, 200) }}</p>
+                                                        <a href="blog-detail.html">
+                                                            {{ Str::limit($post->name, 20) }}
+                                                        </a>
+                                                        <time datetime="2008-02-14 20:00">
+                                                            December 21, 2017
+                                                        </time>
+                                                        <p>
+                                                            {{ Str::limit($post->description, 200) }}
+                                                        </p>
                                                     </div>
                                                 </li>
-                                             @endforeach  
+                                             @endforeach
                                             </ul>
                                         </div>
                                     </div>
@@ -365,12 +295,18 @@
                                                 <li class="widget-injuries">
                                                     <div class="popular_news_text">
                                                         <small>Injuries</small>
-                                                        <a href="blog-detail.html">{{ Str::limit($post->name, 20) }}</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>{{ Str::limit($post->description, 200) }}</p>
+                                                        <a href="blog-detail.html">
+                                                            {{ Str::limit($post->name, 20) }}
+                                                        </a>
+                                                        <time datetime="2008-02-14 20:00">
+                                                            December 21, 2017
+                                                        </time>
+                                                        <p>
+                                                            {{ Str::limit($post->description, 200) }}
+                                                        </p>
                                                     </div>
                                                 </li>
-                                             @endforeach  
+                                             @endforeach
                                             </ul>
                                         </div>
                                     </div>
@@ -381,12 +317,18 @@
                                                 <li class="widget-theleague">
                                                     <div class="popular_news_text">
                                                         <small>The League</small>
-                                                        <a href="blog-detail.html">{{ Str::limit($post->name, 20) }}</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>{{ Str::limit($post->description, 730) }}</p>
+                                                        <a href="blog-detail.html">
+                                                            {{ Str::limit($post->name, 20) }}
+                                                        </a>
+                                                        <time datetime="2008-02-14 20:00">
+                                                            December 21, 2017
+                                                        </time>
+                                                        <p>
+                                                            {{ Str::limit($post->description, 730) }}
+                                                        </p>
                                                     </div>
                                                 </li>
-                                             @endforeach  
+                                             @endforeach
                                             </ul>
                                         </div>
                                     </div>
@@ -410,18 +352,10 @@
                             </div>
                         </div>
 
-
 					</div>
 				</div>
 			</div>
 			<!--// Main Section \\-->
-
 		</div>
         <!--// Main Content \\-->
-
-
-
-
-
-
 @endsection

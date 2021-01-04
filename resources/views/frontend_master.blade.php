@@ -116,7 +116,7 @@
             <div class="sportsmagazine-main-header">
                 <div class="container">
                     <div class="row">
-                        <aside class="col-md-2"><a href="index-2.html" class="sportsmagazine-logo"><img src="{{ asset ('frontend_asset/images/logo-2.png ')}}" alt=""></a></aside>
+                        <aside class="col-md-2"><a href="{{ route('homepage') }}" class="sportsmagazine-logo"><img src="{{ asset ('frontend_asset/images/logo-2.png ')}}" alt=""></a></aside>
                         <div class="col-md-10">
                             <div class="sportsmagazine-right-section">
                                 <nav class="navbar navbar-default">
@@ -171,23 +171,35 @@
                                             </ul>
                                         </li>
                                         <li><a href="#">MATCHES</a>
-                                            
                                             <ul class="sportsmagazine-dropdown-menu">
-
-                                                <li><a href="{{route('championleague')}}"><img src="{{asset('frontend_asset/extra-images/league/champion_league.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Champion league</a>
+                                               @foreach($leagues as $league)
+                                                <li>
+                                                    <a href="{{route('championleague')}}">
+                                                        <img src="{{asset($league->photo)}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        {{ $league->name }}
+                                                    </a>
                                                 </li>
-                                                <li><a href="{{route('europaleague')}}"><img src="{{asset('frontend_asset/extra-images/league/europa_league.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Europa league</a>
+                                               @endforeach
+                                                {{-- <li>
+                                                    <a href="{{route('europaleague')}}"><img src="{{asset('frontend_asset/extra-images/league/europa_league.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Europa league
+                                                    </a>
                                                 </li>
-                                                <li><a href="{{route('premierleague')}}"><img src="{{asset('frontend_asset/extra-images/league/premier_league.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Premier league</a>
+                                                <li>
+                                                    <a href="{{route('premierleague')}}"><img src="{{asset('frontend_asset/extra-images/league/premier_league.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Premier league
+                                                    </a>
                                                 </li>
-                                                <li><a href="{{route('laliga')}}"><img src="{{asset('frontend_asset/extra-images/league/laliga.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Laliga</a>
+                                                <li>
+                                                    <a href="{{route('laliga')}}"><img src="{{asset('frontend_asset/extra-images/league/laliga.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Laliga</a>
                                                 </li>
-                                                <li><a href="{{route('serie_a')}}"><img src="{{asset('frontend_asset/extra-images/league/serie_a.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Serie A</a>
+                                                <li>
+                                                    <a href="{{route('serie_a')}}"><img src="{{asset('frontend_asset/extra-images/league/serie_a.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Serie A</a>
                                                 </li>
-                                                <li><a href="{{route('bundesliga')}}"><img src="{{asset('frontend_asset/extra-images/league/bundesliga.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Bundesliga</a>
+                                                <li>
+                                                    <a href="{{route('bundesliga')}}"><img src="{{asset('frontend_asset/extra-images/league/bundesliga.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Bundesliga</a>
                                                 </li>
-                                                <li><a href="{{route('ligue_1')}}"><img src="{{asset('frontend_asset/extra-images/league/ligue_1.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Ligue 1</a>
-                                                </li>
+                                                <li>
+                                                    <a href="{{route('ligue_1')}}"><img src="{{asset('frontend_asset/extra-images/league/ligue_1.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Ligue 1</a>
+                                                </li> --}}
 
                                             </ul>
                                         </li>

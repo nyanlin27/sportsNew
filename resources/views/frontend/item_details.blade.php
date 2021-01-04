@@ -2,30 +2,27 @@
 
 @section('content')
 
-	
-
-
 	<!--// Main Content \\-->
 		<div class="sportsmagazine-main-content sportsmagazine-main-contentminus">
-            
+
             <!--// Main Section \\-->
             <div class="sportsmagazine-main-section sportsmagazine-thumb sportsmagazine-shop-thumb">
                 <span class="thumb-transparent"></span>
                 <div class="container">
                     <div class="row">
-
                         <div class="col-md-4">
-                            <figure class="sportsmagazine-thumb-img"><img src="{{asset('frontend_asset/extra-images/shop-thumb-1.png')}}" alt=""></figure>
+                            <figure class="sportsmagazine-thumb-img">
+                                <img src="{{$items->photo}}" alt=""></figure>
                         </div>
                         <div class="col-md-8">
                             <div class="sportsmagazine-shop-summery">
-                                <h2>Sundown Sneakers</h2>
+                                <h2>{{ $items->name }}</h2>
                                 <span class="sportsmagazine-price-cartbox">
-                                    <del>$50.00</del>
-                                     $39.99
+                                    {{-- <del>$50.00</del> --}}
+                                     ${{ $items->price }}
                                 </span>
                                 <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Cura bitur lacinia diam tempus tempor consectetur. </p>
+                                <p>{{ $items->description }}</p>
                                 <ul class="sportsmagazine-summery-option">
                                     <li>
                                         <label>Quantity</label>
@@ -59,60 +56,35 @@
 					<div class="row">
 
                         <div class="col-md-12">
-                           
-                          
+
+
                             <div class="sportsmagazine-section-heading"><h2>Related Products</h2></div>
                             <div class="sportsmagazine-shop sportsmagazine-shop-grid">
                                 <ul class="row">
+                                    @foreach($resents as $resent)
                                     <li class="col-md-3">
                                         <figure>
-                                            <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img1.jpg')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
+                                            <a href="shop-detail.html">
+                                                <img src="{{$resent->photo}}" alt=""><i class="fa fa-shopping-cart"></i>
+                                            </a>
                                             <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
                                         </figure>
                                         <section>
-                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                            <span class="price-cart"><del>$ 30.00</del> $19.00</span>
+                                            <h5><a href="{{ route('item_details', $resent->id) }}">{{ $resent->name }}</a></h5>
+                                            <span class="price-cart">
+                                                <del>$ 30.00</del>
+                                                 ${{ $resent->price }}
+                                                </span>
                                             <span></span>
                                         </section>
                                     </li>
-                                    <li class="col-md-3">
-                                        <figure>
-                                            <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img2.jpg')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
-                                            <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                                        </figure>
-                                        <section>
-                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                            <span class="price-cart"><del>$ 30.00</del> $19.00</span>
-                                            <span></span>
-                                        </section>
-                                    </li>
-                                    <li class="col-md-3">
-                                        <figure>
-                                            <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img3.jpg')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
-                                            <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                                        </figure>
-                                        <section>
-                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                            <span class="price-cart"><del>$ 30.00</del> $19.00</span>
-                                            <span></span>
-                                        </section>
-                                    </li>
-                                    <li class="col-md-3">
-                                        <figure>
-                                            <a href="shop-detail.html"><img src="{{asset('frontend_asset/extra-images/shop-grid-img3.jpg')}}" alt=""><i class="fa fa-shopping-cart"></i></a>
-                                            <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
-                                        </figure>
-                                        <section>
-                                            <h5><a href="shop-detail.html">Atlantic Sneaker</a></h5>
-                                            <span class="price-cart"><del>$ 30.00</del> $19.00</span>
-                                            <span></span>
-                                        </section>
-                                    </li>
+                                    @endforeach
+
                                 </ul>
                             </div>
                         </div>
-                        
-                        
+
+
 
 
 					</div>

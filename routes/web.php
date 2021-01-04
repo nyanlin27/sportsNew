@@ -39,6 +39,7 @@ Route::get('news_details/{id}', 'FrontendController@news_details')->name('news_d
 
 //shops
 Route::get('shop_gallery', 'FrontendController@shop_gallery')->name('shop_gallery');
+Route::get('item_details/{id}', 'FrontendController@item_details')->name('item_details');
 Route::get('shop_discount', 'FrontendController@shop_discount')->name('shop_discount');
 Route::get('example', 'FrontendController@example')->name('example');
 
@@ -55,7 +56,6 @@ Route::get('bundesliga_table', 'FrontendController@bundesliga_table')->name('bun
 Route::get('champion_league_table', 'FrontendController@champion_league_table')->name('champion_league_table');
 Route::get('europa_league_table', 'FrontendController@europa_league_table')->name('europa_league_table');
 
-Route::get('item_details', 'FrontendController@item_details')->name('item_details');
 
 
 
@@ -78,4 +78,3 @@ Route::middleware('role:admin')->group(function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
