@@ -18,6 +18,9 @@
     <link href="{{ asset ('frontend_asset/css/color.css        ') }}"  rel="stylesheet">
     <link href="{{ asset ('frontend_asset/css/responsive.css   ') }}"  rel="stylesheet">
 
+    
+
+  
 
   </head>
   <body>
@@ -172,15 +175,8 @@
                                         </li>
                                         <li><a href="#">MATCHES</a>
                                             <ul class="sportsmagazine-dropdown-menu">
-                                               @foreach($leagues as $league)
-                                                <li>
-                                                    <a href="{{route('championleague')}}">
-                                                        <img src="{{asset($league->photo)}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        {{ $league->name }}
-                                                    </a>
-                                                </li>
-                                               @endforeach
-                                                {{-- <li>
+                                             
+                                              <li>
                                                     <a href="{{route('europaleague')}}"><img src="{{asset('frontend_asset/extra-images/league/europa_league.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Europa league
                                                     </a>
                                                 </li>
@@ -199,7 +195,7 @@
                                                 </li>
                                                 <li>
                                                     <a href="{{route('ligue_1')}}"><img src="{{asset('frontend_asset/extra-images/league/ligue_1.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Ligue 1</a>
-                                                </li> --}}
+                                                </li> 
 
                                             </ul>
                                         </li>
@@ -432,6 +428,9 @@
     </div>
 
 
+
+
+
     <!-- jQuery (necessary for JavaScript plugins) -->
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/jquery.js               ') }}"></script>
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/bootstrap.min.js        ') }}"></script>
@@ -443,6 +442,9 @@
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/counter.js              ') }}"></script>
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/functions.js            ') }}"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+
+
 
   </body>
 

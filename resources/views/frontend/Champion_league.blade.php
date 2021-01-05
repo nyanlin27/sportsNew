@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Champion League</h1>
+                        <!-- <h1>Champion League</h1> -->
                     </div>
                     <div class="col-md-12">
                         <ul class="sportsmagazine-breadcrumb">
@@ -44,12 +44,159 @@
                                                 </section>
                                             </div>
                                             <div class="sportsmagazine-classic-match-text">
-                                                <h5>Pool Match # 1</h5>
-                                                <time datetime="2008-02-14 20:00">August 21st, 2017</time>
+                                                <img src="{{asset('frontend_asset/extra-images/league/champion_league.jpg')}}" width="50px" alt="">
+                                                <h6>Champion League</h6>
+                                              
                                                 <div class="clearfix"></div>
-                                                <span>VS</span>
+                                                <span style="margin-top: 10px;">VS</span>
                                                 <h6>Country Durham, UK</h6>
-                                                <a href="fixture.html" class="ticket-buy-btn">Buy Ticket</a>
+                                                  <time datetime="2008-02-14 20:00">August 21st, 2017</time>
+                                                
+                                            </div>
+                                            <div class="sportsmagazine-classic-team-two">
+                                                <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img2.png')}}" alt=""></figure>
+                                                <section>
+                                                    <h6><a href="fixture-detail.html">Sharks Club</a></h6>
+                                                    <span>Icarus College</span>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="col-md-6">
+                                        <div class="sportsmagazine-classic-fixture-wrap">
+                                            <div class="sportsmagazine-classic-team-one">
+                                                <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img1.png')}}" alt=""></figure>
+                                                <section>
+                                                    <h6><a href="fixture-detail.html">Yorkshire</a></h6>
+                                                    <span>Bepop institute</span>
+                                                </section>
+                                            </div>
+                                            <div class="sportsmagazine-classic-match-text">
+                                                <img src="{{asset('frontend_asset/extra-images/league/europa_league.jpg')}}" width="50px" alt="">
+                                                <h6>Europa League</h6>
+                                              
+                                                <div class="clearfix"></div>
+                                                <span style="margin-top: 10px;">VS</span>
+                                                <h6>Country Durham, UK</h6>
+                                                  <time datetime="2008-02-14 20:00">August 21st, 2017</time>
+                                                
+                                            </div>
+                                            <div class="sportsmagazine-classic-team-two">
+                                                <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img2.png')}}" alt=""></figure>
+                                                <section>
+                                                    <h6><a href="fixture-detail.html">Sharks Club</a></h6>
+                                                    <span>Icarus College</span>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="col-md-6">
+                                        <div class="sportsmagazine-classic-fixture-wrap">
+                                            <div class="sportsmagazine-classic-team-one">
+                                                <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img1.png')}}" alt=""></figure>
+                                                <section>
+                                                    <h6><a href="fixture-detail.html">Yorkshire</a></h6>
+                                                    <span>Bepop institute</span>
+                                                </section>
+                                            </div>
+                                            <div class="sportsmagazine-classic-match-text">
+                                                <img src="{{asset('frontend_asset/extra-images/league/premier_league.jpg')}}" width="50px" alt="">
+                                                <h6>Premier League</h6>
+                                              
+                                                <div class="clearfix"></div>
+                                                <span style="margin-top: 10px;">VS</span>
+                                                <h6>Country Durham, UK</h6>
+                                                  <time datetime="2008-02-14 20:00">August 21st, 2017</time>
+                                                
+                                            </div>
+                                            <div class="sportsmagazine-classic-team-two">
+                                                <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img2.png')}}" alt=""></figure>
+                                                <section>
+                                                    <h6><a href="fixture-detail.html">Sharks Club</a></h6>
+                                                    <span>Icarus College</span>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="col-md-6">
+                                        <div class="sportsmagazine-classic-fixture-wrap">
+                                            <div class="sportsmagazine-classic-team-one">
+                                                <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img1.png')}}" alt=""></figure>
+                                                <section>
+                                                    <h6><a href="fixture-detail.html">Yorkshire</a></h6>
+                                                    <span>Bepop institute</span>
+                                                </section>
+                                            </div>
+                                            <div class="sportsmagazine-classic-match-text">
+                                                <img src="{{asset('frontend_asset/extra-images/league/bundesliga.jpg')}}" width="50px" alt="">
+                                                <h6>Champion League</h6>
+                                              
+                                                <div class="clearfix"></div>
+                                                <span style="margin-top: 10px;">VS</span>
+                                                <h6>Country Durham, UK</h6>
+                                                  <time datetime="2008-02-14 20:00">August 21st, 2017</time>
+                                                
+                                            </div>
+                                            <div class="sportsmagazine-classic-team-two">
+                                                <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img2.png')}}" alt=""></figure>
+                                                <section>
+                                                    <h6><a href="fixture-detail.html">Sharks Club</a></h6>
+                                                    <span>Icarus College</span>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="col-md-6">
+                                        <div class="sportsmagazine-classic-fixture-wrap">
+                                            <div class="sportsmagazine-classic-team-one">
+                                                <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img1.png')}}" alt=""></figure>
+                                                <section>
+                                                    <h6><a href="fixture-detail.html">Yorkshire</a></h6>
+                                                    <span>Bepop institute</span>
+                                                </section>
+                                            </div>
+                                            <div class="sportsmagazine-classic-match-text">
+                                                <img src="{{asset('frontend_asset/extra-images/league/laliga.jpg')}}" width="50px" alt="">
+                                                <h6>Champion League</h6>
+                                              
+                                                <div class="clearfix"></div>
+                                                <span style="margin-top: 10px;">VS</span>
+                                                <h6>Country Durham, UK</h6>
+                                                  <time datetime="2008-02-14 20:00">August 21st, 2017</time>
+                                                
+                                            </div>
+                                            <div class="sportsmagazine-classic-team-two">
+                                                <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img2.png')}}" alt=""></figure>
+                                                <section>
+                                                    <h6><a href="fixture-detail.html">Sharks Club</a></h6>
+                                                    <span>Icarus College</span>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="col-md-6">
+                                        <div class="sportsmagazine-classic-fixture-wrap">
+                                            <div class="sportsmagazine-classic-team-one">
+                                                <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img1.png')}}" alt=""></figure>
+                                                <section>
+                                                    <h6><a href="fixture-detail.html">Yorkshire</a></h6>
+                                                    <span>Bepop institute</span>
+                                                </section>
+                                            </div>
+                                            <div class="sportsmagazine-classic-match-text">
+                                                <img src="{{asset('frontend_asset/extra-images/league/serie_a.jpg')}}" width="50px" alt="">
+                                                <h6>Champion League</h6>
+                                              
+                                                <div class="clearfix"></div>
+                                                <span style="margin-top: 10px;">VS</span>
+                                                <h6>Country Durham, UK</h6>
+                                                  <time datetime="2008-02-14 20:00">August 21st, 2017</time>
+                                                
                                             </div>
                                             <div class="sportsmagazine-classic-team-two">
                                                 <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img2.png')}}" alt=""></figure>
@@ -63,22 +210,24 @@
                                     <li class="col-md-6">
                                         <div class="sportsmagazine-classic-fixture-wrap">
                                             <div class="sportsmagazine-classic-team-one">
-                                                <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img3.png')}}" alt=""></figure>
+                                                <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img1.png')}}" alt=""></figure>
                                                 <section>
                                                     <h6><a href="fixture-detail.html">Yorkshire</a></h6>
                                                     <span>Bepop institute</span>
                                                 </section>
                                             </div>
                                             <div class="sportsmagazine-classic-match-text">
-                                                <h5>Pool Match # 1</h5>
-                                                <time datetime="2008-02-14 20:00">August 21st, 2017</time>
+                                                <img src="{{asset('frontend_asset/extra-images/league/ligue_1.jpg')}}" width="50px" alt="">
+                                                <h6>Champion League</h6>
+                                              
                                                 <div class="clearfix"></div>
-                                                <span>VS</span>
+                                                <span style="margin-top: 10px;">VS</span>
                                                 <h6>Country Durham, UK</h6>
-                                                <a href="fixture.html" class="ticket-buy-btn">Buy Ticket</a>
+                                                  <time datetime="2008-02-14 20:00">August 21st, 2017</time>
+                                                
                                             </div>
                                             <div class="sportsmagazine-classic-team-two">
-                                                <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img4.png')}}" alt=""></figure>
+                                                <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img2.png')}}" alt=""></figure>
                                                 <section>
                                                     <h6><a href="fixture-detail.html">Sharks Club</a></h6>
                                                     <span>Icarus College</span>
@@ -86,7 +235,8 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="col-md-6">
+                                    
+                                   <!--  <li class="col-md-6">
                                         <div class="sportsmagazine-classic-fixture-wrap">
                                             <div class="sportsmagazine-classic-team-one">
                                                 <figure><img src="{{asset('frontend_asset/extra-images/fixture-classic-img5.png')}}" alt=""></figure>
@@ -241,7 +391,7 @@
                                                 </section>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                             <!--// Pagination \\-->

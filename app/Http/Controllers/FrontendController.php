@@ -36,9 +36,9 @@ class FrontendController extends Controller
     }
     public function premierleague($value = '')
     {
-        $matches = Match::all();
-        return view('frontend.premier_league', compact('matches'));
-        // return view('frontend.premier_league');
+        // $matches = Match::all();
+        // return view('frontend.premier_league', compact('matches'));
+        return view('frontend.premier_league');
     }
 
     public function laliga($value = '')
@@ -55,8 +55,10 @@ class FrontendController extends Controller
     }
     public function ligue_1($value = '')
     {
-        $matches = Match::all();
-        return view('frontend.ligue_1', compact('matches'));
+        // $matches = Match::all();
+        // return view('frontend.ligue_1', compact('matches'));
+        return view('frontend.ligue_1');
+
 
     }
 
@@ -158,5 +160,13 @@ class FrontendController extends Controller
         $leagues = League::all();
         return view('frontend.item_details', compact('items', 'resents', 'leagues'));
     }
-}
+
+      public function shopping_cart($value = '')
+    {
+        return view('frontend.shopping_cart');
+    }
+
+
+
+}//end of controller
 
