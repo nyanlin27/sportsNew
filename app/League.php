@@ -13,4 +13,8 @@ class League extends Model
     {
         return $this->hasMany('App\Team');
     }
+    public function matches()
+    {
+        return $this->hasManyThrough('App\Match', 'App\Team');
+    }
 }

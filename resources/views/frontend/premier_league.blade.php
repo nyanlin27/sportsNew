@@ -21,7 +21,7 @@
                                    font-style: normal;
                                    line-height: 1.5;
                                    margin: 0 0 8px;
-}">
+                                }">
                                Premier League</h1>
 
 
