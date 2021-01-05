@@ -42,6 +42,8 @@ Route::get('shop_gallery', 'FrontendController@shop_gallery')->name('shop_galler
 Route::get('item_details/{id}', 'FrontendController@item_details')->name('item_details');
 Route::get('shop_discount', 'FrontendController@shop_discount')->name('shop_discount');
 Route::get('example', 'FrontendController@example')->name('example');
+Route::get('shoping_cart/{id}', 'FrontendController@shoping_cart')->name('shoping_cart');
+
 
 //contact
 Route::get('contact', 'FrontendController@contact')->name('contact');
@@ -59,17 +61,11 @@ Route::get('europa_league_table', 'FrontendController@europa_league_table')->nam
 //Matches
 Route::get('match/{id}', 'FrontendController@match')->name('matchpage');
 
-
-
-
-
-
-
-
 // For Backend
 
 Route::middleware('role:admin')->group(function () {
     Route::get('dashboard', 'BackendController@dashboard')->name('dashboardpage');
+    Route::get('match_result', 'BackendController@match_result')->name('match_resultpage');
     Route::resource('posts', 'PostController');
     Route::resource('leagues', 'LeagueController');
     Route::resource('teams', 'TeamController');

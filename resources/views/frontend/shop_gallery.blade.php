@@ -16,8 +16,8 @@
                         @foreach($items as $item)
                             <li class="col-md-3">
                                 <figure>
-                                    <a href="{{route('item_details', $item->id)}}">
-                                        <img src="{{asset($item->photo)}}" alt="">
+                                    <a href="{{route('shoping_cart', $item->id)}}">
+                                    <img src="{{asset($item->photo)}}" alt="">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
                                     <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>

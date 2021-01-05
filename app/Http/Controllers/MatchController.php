@@ -32,6 +32,7 @@ class MatchController extends Controller
         // dd($teams);
         return view('backend.matches.create', compact('teams'));
     }
+   
 
     /**
      * Store a newly created resource in storage.

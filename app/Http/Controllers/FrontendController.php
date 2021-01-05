@@ -156,5 +156,12 @@ class FrontendController extends Controller
         $leagues = League::find($id);
         return view('frontend.match', compact('leagues'));
     }
+
+    //Shoping Cart
+    public function shoping_cart($id)
+    {
+        $items = Item::find($id);
+        return view('frontend.shoping_cart', compact('items'));
+    }
 }
 
