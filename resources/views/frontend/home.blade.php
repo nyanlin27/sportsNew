@@ -21,18 +21,18 @@
                                 </div>
                                 <ul>
                                     <li>
-                                       <img src="{{ asset ('frontend_asset/extra-images/manunited.jpg')}}"  width="100px" alt="">
-                                        <h4><a href="fixture-detail.html">Yorkshire</a></h4>
-                                        <span>03 Mark Baily (21)</span>
+                                       <img src="{{ asset ('frontend_asset/extra-images/liv.png')}}"  width="100px" alt="">
+                                        <h4><a href="fixture-detail.html">Liverpool</a></h4>
+                                        <span>03 Mark Baily (21, 30, 57)</span>
                                     </li>
                                     <li class="sportsmagazine-match-score">
                                         <h5>FINAL SCORE</h5>
-                                        <p><strong class="sportsmagazine-color">79</strong> <small>:</small> 73</p>
+                                        <p><strong class="sportsmagazine-color">3</strong> <small>:</small> 0</p>
                                     </li>
                                     <li>
-                                        <img src="{{ asset ('frontend_asset/extra-images/mancity.jpg')}}"  width="100px" alt="">
-                                        <h4><a href="fixture-detail.html">Sharks Club</a></h4>
-                                        <span>03 Mark Baily (21)</span>
+                                        <img src="{{ asset ('frontend_asset/extra-images/man.png')}}"  width="100px" alt="">
+                                        <h4><a href="fixture-detail.html">Manchester United</a></h4>
+                                        {{-- <span>03 Mark Baily (21)</span> --}}
                                     </li>
                                 </ul>
                             </div>
@@ -199,7 +199,7 @@
 
                             <!--// Fancy Title \\-->
                             <div class="sportsmagazine-fancy-title">
-                                <h2>Store Gallery</h2>
+                                <h2>Store </h2>
                             </div> <!--// Fancy Title \\-->
                             <div class="sportsmagazine-gallery sportsmagazine-fixture-gallery">
                                 <ul>
@@ -352,10 +352,13 @@
                             </div>
                         </div>
 
-					</div>
+                    </div>
 				</div>
 			</div>
 			<!--// Main Section \\-->
 		</div>
         <!--// Main Content \\-->
+
+
+
 @endsection

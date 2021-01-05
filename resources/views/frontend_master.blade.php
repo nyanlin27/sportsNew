@@ -8,6 +8,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>SportsMagazine Home Page</title>
 
+    
+
     <!-- Css Files -->
     <link href="{{ asset ('frontend_asset/css/bootstrap.css    ') }}"  rel="stylesheet">
     <link href="{{ asset ('frontend_asset/css/font-awesome.css ') }}"  rel="stylesheet">
@@ -172,14 +174,7 @@
                                         </li>
                                         <li><a href="#">MATCHES</a>
                                             <ul class="sportsmagazine-dropdown-menu">
-                                               @foreach($leagues as $league)
-                                                <li>
-                                                    <a href="{{route('championleague')}}">
-                                                        <img src="{{asset($league->photo)}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        {{ $league->name }}
-                                                    </a>
-                                                </li>
-                                               @endforeach
+                                               <x-match-component></x-match-component>
                                                 {{-- <li>
                                                     <a href="{{route('europaleague')}}"><img src="{{asset('frontend_asset/extra-images/league/europa_league.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Europa league
                                                     </a>

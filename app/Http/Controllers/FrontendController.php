@@ -64,23 +64,19 @@ class FrontendController extends Controller
     {
         // dd($id);
         $posts = Post::latest()->paginate(8);
-        $leagues = League::all();
-        return view('frontend.modern_news', compact('posts', 'leagues'));
-
+        return view('frontend.modern_news', compact('posts'));
     }
     public function blog_news($value = '')
     {
         $posts = Post::all();
-        $leagues = League::all();
-        return view('frontend.blog_news', compact('posts', 'leagues'));
+        return view('frontend.blog_news', compact('posts'));
 
     }
     public function grid_news($value = '')
     {
         $posts = Post::all();
         $matches = Match::all();
-        $leagues = League::all();
-        return view('frontend.Grid_news', compact('posts', 'matches', 'leagues'));
+        return view('frontend.Grid_news', compact('posts', 'matches'));
 
     }
 
@@ -90,20 +86,17 @@ class FrontendController extends Controller
     {
         // $posts = Post::latest()->paginate(8);
         $items = Item::latest()->paginate(8);
-        $leagues = League::all();
         // dd($items);
-        return view('frontend.shop_gallery', compact('items', 'leagues'));
+        return view('frontend.shop_gallery', compact('items'));
     }
     public function shop_discount($value = '')
     {
-        $leagues = League::all();
-        return view('frontend.shop_discount', compact('leagues'));
+        return view('frontend.shop_discount');
     }
 
     public function contact($value = '')
     {
-        $leagues = League::all();
-        return view('frontend.contact', compact('leagues'));
+        return view('frontend.contact');
     }
 
     public function faq($value = '')
@@ -148,15 +141,20 @@ class FrontendController extends Controller
     {
         // dd($id);
         $post = Post::find($id);
-        $leagues = League::all();
-        return view('frontend.news_details', compact('post', 'leagues'));
+        return view('frontend.news_details', compact('post'));
     }
      public function item_details($id)
     {
         $items = Item::find($id);
         $resents = Item::take(4)->get();
-        $leagues = League::all();
-        return view('frontend.item_details', compact('items', 'resents', 'leagues'));
+        return view('frontend.item_details', compact('items', 'resents'));
+    }
+
+    //match
+    public function match($id)
+    {
+        $leagues = League::find($id);
+        return view('frontend.match', compact('leagues'));
     }
 }
 

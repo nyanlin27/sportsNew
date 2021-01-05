@@ -21,11 +21,11 @@
                                 </a>
                             </figure>
                             <div class="sportsmagazine-blogmodren-text">
-                                {{-- <ul class="sportsmagazine-blogmodren-option">
+                                <ul class="sportsmagazine-blogmodren-option">
                                     <li><a href="404.html"><i class="fa fa-thumbs-o-up"></i> 32</a></li>
                                     <li><a href="404.html"><i class="fa fa-eye"></i> 84</a></li>
                                     <li><a href="404.html"><i class="fa fa-share-alt"></i> 89</a></li>
-                                </ul> --}}
+                                </ul>
                                 <time datetime="2008-02-14 20:00">
                                     {{ $post->updated_at->diffForHumans() }}
                                 </time>

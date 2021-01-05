@@ -56,6 +56,10 @@ Route::get('bundesliga_table', 'FrontendController@bundesliga_table')->name('bun
 Route::get('champion_league_table', 'FrontendController@champion_league_table')->name('champion_league_table');
 Route::get('europa_league_table', 'FrontendController@europa_league_table')->name('europa_league_table');
 
+//Matches
+Route::get('match/{id}', 'FrontendController@match')->name('matchpage');
+
+
 
 
 
