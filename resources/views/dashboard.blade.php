@@ -11,7 +11,7 @@
                 <h2>Welcome back,</h2>
                 <p class="mb-md-0">Your analytics dashboard template.</p>
               </div>
-            
+
           </div>
         </div>
       </div>
@@ -296,7 +296,7 @@
     </div>
     <!-- content-wrapper ends -->
 
-
+    
 
   <!-- main-panel ends -->
 

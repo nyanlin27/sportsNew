@@ -158,10 +158,10 @@ class FrontendController extends Controller
     }
 
     //Shoping Cart
-    public function shoping_cart($id)
+    public function shoping_cart($value = '')
     {
-        $items = Item::find($id);
-        return view('frontend.shoping_cart', compact('items'));
+        // $items = Item::find($id);
+        return view('frontend.shoping_cart');
     }
 }
 

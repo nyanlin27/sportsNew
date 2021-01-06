@@ -4,20 +4,17 @@ $(document).ready(function(){
     cartnoti();
     //checkout();
         $(".addtocartBtn").click(function(){
-            //alert('ok');
+            // alert('ok');
             var id=$(this).data('id');
-            var codeno=$(this).data('codeno');
             var photo=$(this).data('photo');
             var name=$(this).data('name');
             var price=$(this).data('price');
-            var discount=$(this).data('discount');
+            var descraption = $(this).data('descraption');
 
             var item={
                 id:id,
-                codeno:codeno,
                 name:name,
                 price:price,
-                discount,discount,
                 photo:photo,
                 qty:1,
             }
@@ -53,7 +50,6 @@ $(document).ready(function(){
             //checkout();
         }) //end  add to card function
 
-
         //showdata
         function showdata(){
             //alert('ok');
@@ -68,21 +64,34 @@ $(document).ready(function(){
                     // statements
                     //if have discount
                     if(v.discount !=''){
-                        subtotal=v.qty*v.discount;
+                        subtotal=v.qty*v.price;
                         total+=subtotal;
                         html+=`<tr>
-                            <td><button class="btn btn-outline-danger remove btn-sm" style="border-radius: 50%">
-                                <i class="icofont-close-line"></i></button></td>
-                            <td><img src="${v.photo}" width="100" height="100"></td>
-                            <td><p>${v.name}</p><p>${v.codeno}</p> </td>
-                            <td><button class="btn btn-outline-secondary plus_btn" data-id="${i}">
-                                <i class="icofont-plus"></i></button></td>
-                            <td>${v.qty}</td>
-                            <td><button class="btn btn-outline-secondary minus_btn" data-id="${i}">
-                                <i class="icofont-minus"></i></button></td>
-                            <td><p class="font-weight-lighter"><del>${v.price}</del> Ks </p>
-                                <p class="text-danger">${v.discount} Ks</p></td>
-                            <td>${subtotal} Ks</td>
+                            <td>
+                                <a class="remove-line" href="#">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <img src="${v.photo}" width="100" height="100">
+                            </td>
+                            <td>
+                                <p>${v.name}</p>
+                            </td>
+
+                            <td>
+                                <button class="btn btn-outline-secondary plus_btn" data-id="${i}">
+                                <i class="icofont-plus"> + </i></button>
+                                    ${v.qty}
+                                <button class="btn btn-outline-secondary minus_btn" data-id="${i}">
+                                <i class="icofont-minus"> - </i></button>
+                            </td>
+                            <td>
+                                <p class="font-weight-lighter">${v.price} Ks </p>
+                            </td>
+                            <td>
+                                ${subtotal} Ks
+                            </td>
                             </tr>`
                     }
                     //no have discount
@@ -93,7 +102,7 @@ $(document).ready(function(){
                             <td><button class="btn btn-outline-danger remove btn-sm" style="border-radius: 50%">
                                 <i class="icofont-close-line"></i></button></td>
                             <td><img src="${v.photo}" width="100" height="100"></td>
-                            <td><p>${v.name}</p><p>${v.codeno}</p> </td>
+                            <td><p>${v.name}</p></td>
                             <td><button class="btn btn-outline-secondary plus_btn" data-id="${i}">
                                 <i class="icofont-plus"></i></button></td>
                             <td>${v.qty}</td>
@@ -210,6 +219,7 @@ $(document).ready(function(){
 
         //end noti function
         $('.checkoutBtn').on('click',function(){
+            // alert("OK");
             $.ajaxSetup({
                 headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -221,12 +231,11 @@ $(document).ready(function(){
 
             let total = cartArr.reduce((acc, row) => acc + (row.price*row.qty), 0);
                 console.log(total);
-            let notes = $('#notes').val();
-            $.post("/orders",{cart:cart,notes:notes,total:total},function (response) {
-                //console.log(response)
-                localStorage.clear();
-                $('#exampleModal').modal('show');
-            })
+            // let notes = $('#notes').val();
+            $.ajax({type: 'post', url: '/orders',data: {cart:cart,total:total},success:function (response) {
+                 //console.log(response)
+                  localStorage.clear();
+                  $('#loginModal').modal('show'); } })
         }) //checkout end
 
     }) //end ready function
