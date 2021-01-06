@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Majestic Admin</title>
+  <title>FOOTBALL</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{ asset('backend_asset/vendors/mdi/css/materialdesignicons.min.css') }}">
   <link rel="stylesheet" href="{{ asset('backend_asset/vendors/base/vendor.bundle.base.css') }}">
@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="{{ asset('backend_asset/css/style.css') }}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{ asset('backend_asset/images/favicon.png') }}" />
+  {{-- Google Font Style --}}
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container-scroller">
@@ -24,8 +27,16 @@
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex justify-content-center">
         <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-          <a class="navbar-brand brand-logo" href="index.html"><img src="{{ asset('backend_asset/images/logo.svg') }}" alt="logo"/></a>
-          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{ asset('backend_asset/images/logo-mini.svg') }}" alt="logo"/></a>
+            <a class="navbar-brand brand-logo" href="{{ route('posts.index') }}">
+              {{-- <img src="{{ asset('backend_asset/images/logo.svg') }}" alt="logo"/> --}}
+              <p style="font-family: 'Faster One', cursive; font-size:30px; padding-top:15px;">FOOTBALL</p>
+              <p style="font-size: 15px;">Sports & Magazine</p>
+            </a>
+            <a class="navbar-brand brand-logo-mini" href="index.html">
+              {{-- <img src="{{ asset('backend_asset/images/logo-mini.svg') }}" alt="logo"/> --}}
+              <p style="font-family: 'Faster One', cursive; font-size:18px;">FOB</p>
+
+            </a>
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class="mdi mdi-sort-variant"></span>
           </button>
@@ -45,7 +56,7 @@
           </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item dropdown mr-1">
+          {{-- <li class="nav-item dropdown mr-1">
             <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
               <i class="mdi mdi-message-text mx-0"></i>
               <span class="count"></span>
@@ -137,17 +148,15 @@
                 </div>
               </a>
             </div>
-          </li>
+          </li> --}}
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="{{ asset('backend_asset/images/faces/face5.jpg') }}" alt="profile"/>
-              <span class="nav-profile-name">Louis Barnett</span>
+              <img src="{{ asset('backend_asset/images/faces/emoji.png') }}" alt="profile"/>
+              {{-- <i class="mdi mdi-emoticon-cool menu-icon "></i> --}}
+              <span class="nav-profile-name">{{ Auth::user()->name }}</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
-                <i class="mdi mdi-settings text-primary"></i>
-                Settings
-              </a>
+
               <a class="dropdown-item" onclick="event.preventDefault();
               document.getElementById('logout-form').submit();" >
                 <i class="mdi mdi-logout text-primary"></i>
@@ -169,12 +178,12 @@
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <ul class="nav">
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a class="nav-link" href="{{ route('dashboardpage') }}">
                 <i class="mdi mdi-home menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
               </a>
-            </li>
+            </li> --}}
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#post" aria-expanded="false" aria-controls="post">
                 <i class="mdi mdi-newspaper menu-icon"></i>
@@ -268,7 +277,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('orders.index') }}">
                   <i class="mdi mdi-details menu-icon"></i>
                   <span class="menu-title">Order</span>
                 </a>
@@ -288,7 +297,7 @@
             <footer class="footer">
                 <div class="d-sm-flex justify-content-center justify-content-sm-between">
                   <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a href="#" target="_blank">Sports News</a>. MIC-CODERS</span>
-                  <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+                  {{-- <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span> --}}
                 </div>
               </footer>
         </div>

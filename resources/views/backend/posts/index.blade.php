@@ -12,8 +12,8 @@
                 {{ $posts->links() }}{{-- For Paginate --}}
                     <div class="row">
                         @foreach($posts as $post)
-                            <div class="col-md-3 my-2">
-                                <div class="card" style="width: 13rem;">
+                            <div class="col-md-3">
+                                <div class="card" style="width: 16rem;">
                                     <img src="{{ $post->photo }}" class="card-img-top" alt="post">
                                     <small class="text-danger pt-3"> <i class="mdi mdi-calendar-today"></i> {{ $post->updated_at->diffForHumans() }}</small>
                                     <div class="card-body">

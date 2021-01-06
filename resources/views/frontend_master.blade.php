@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>SportsMagazine Home Page</title>
 
-    
+
 
     <!-- Css Files -->
     <link href="{{ asset ('frontend_asset/css/bootstrap.css    ') }}"  rel="stylesheet">
@@ -50,37 +51,13 @@
                             <ul class="sportsmagazine-user-section">
                                 <li><i class="fa fa-globe"></i> <a href="404.html">Support</a></li>
                                 <li><i class="fa fa-dollar"></i> <a href="404.html">Currency : USD</a></li>
-                                <li><i class="fa fa-shopping-cart"></i> <a href="#" class="sportsmagazine-open-cart">Cart (0)</a>
-                                    <div class="sportsmagazine-cart-box">
-                                        <h2>You have 2 items in the cart</h2>
-                                        <ul>
-                                            <li>
-                                                <figure>
-                                                    <a href="checkout.html"><img src="{{ asset ('frontend_asset/extra-images/cartbox-1.png')}}" alt=""></a>
-                                                </figure>
-                                                <div class="sportsmagazine-cartbox-text">
-                                                    <h6><a href="checkout.html">Key Management Model The 60+ Models</a></h6>
-                                                    <div class="sportsmagazine-rating"><span class="sportsmagazine-rating-box" style="width:80%"></span></div>
-                                                    <span class="sportsmagazine-cartbox-price sportsmagazine-color">$35.99 <small>$43.00</small></span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <figure>
-                                                    <a href="checkout.html"><img src="{{ asset ('frontend_asset/extra-images/cartbox-2.png')}}" alt=""></a>
-                                                </figure>
-                                                <div class="sportsmagazine-cartbox-text">
-                                                    <h6><a href="checkout.html">Pyramid Principle: Logic Writing &amp; Thinking</a></h6>
-                                                    <div class="sportsmagazine-rating"><span class="sportsmagazine-rating-box" style="width:100%"></span></div>
-                                                    <span class="sportsmagazine-cartbox-price sportsmagazine-color">$21.00</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <h5>Subtotal <span class="sportsmagazine-color">$1343</span></h5>
-                                        <div class="sportsmagazine-cart-link"><a href="checkout.html" class="sportsmagazine-cartbox-btn sportsmagazine-bgcolorhover"><i class="flaticon-tool"></i> Go to Checkout</a></div>
-                                    </div>
+                                <li>
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <a href="{{ route('shoping_cart') }}" class="cartNoti">
+                                        Cart(0)
+                                    </a>
                                 </li>
-                                {{-- <li><i class="fa fa-user"></i> <a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
-                                <li><i class="fa fa-sign-in"></i> <a href="#" data-toggle="modal" data-target="#signupModal">Sign Up</a></li> --}}
+
                                 <!-- Authentication Links -->
                                 @guest
                                     <li class="nav-item">
@@ -146,11 +123,18 @@
                                               
                                                 </li>
                                             </ul>
-                                        </li>
+                                </li>
+       
                                         <li class="sportsmagazine-megamenu-li {{ Request::is('match') ? 'active' : '' }}">
 
                                             <a href="{{route('blog_news')}}">News</a>
                                         
+
+                                        <li><a href="#">MATCHES</a>
+                                            <ul class="sportsmagazine-dropdown-menu">
+                                               <x-match-component></x-match-component>
+                                            </ul>
+
                                         </li>
                                         <li class="{{ Request::is('tables*') ? 'active' : '' }}"><a href="#">Tables</a>
                                             <ul class="sportsmagazine-dropdown-menu">
@@ -389,6 +373,10 @@
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/progressbar.js          ') }}"></script>
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/counter.js              ') }}"></script>
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/functions.js            ') }}"></script>
+
+  
+    <script type="text/javascript" src="{{ asset ('frontend_asset/script/custom1.js ') }}"></script>
+
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
 

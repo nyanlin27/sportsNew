@@ -43,7 +43,7 @@ class LoginController extends Controller
          $roles = auth()->user()->getRoleNames();
          switch ($roles[0]){
              case 'admin':
-                 return 'dashboard';
+                 return 'posts';
              break;
              case 'customer':
                  return '/';

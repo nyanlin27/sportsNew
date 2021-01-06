@@ -369,6 +369,4 @@
 		</div>
         <!--// Main Content \\-->
 
-
-
 @endsection
