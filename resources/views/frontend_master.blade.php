@@ -8,7 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>SportsMagazine Home Page</title>
 
-    
+
 
     <!-- Css Files -->
     <link href="{{ asset ('frontend_asset/css/bootstrap.css    ') }}"  rel="stylesheet">
@@ -437,6 +437,10 @@
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/progressbar.js          ') }}"></script>
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/counter.js              ') }}"></script>
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/functions.js            ') }}"></script>
+
+    {{-- LocalStorage --}}
+    <script type="text/javascript" src="{{ asset ('frontend_asset/script/custom1.js ') }}"></script>
+
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
   </body>
