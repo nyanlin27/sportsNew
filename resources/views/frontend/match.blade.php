@@ -5,16 +5,17 @@
 
 
 
-
  <div class="sportsmagazine-main-content">
 
 			<div class="sportsmagazine-main-section">
 				<div class="container">
-					<div class="row">
+					<div class="row">	
+
 						 @foreach($leagues->matches as $match)
-					       <div class="col-md-6">
-
-
+						  
+					       <div class="col-md-6" id="col_nav">
+					      
+					       
 					       	<div class="panel panel-default">
                                <div class="panel-body " style="background-color: #ffdc11;">
                					  <aside class="" >
@@ -23,8 +24,8 @@
 		                            
 		                                <ul >
 		                                    <li>
-		                                        <img src="{{ $match->team->photo }}" width="60px;" alt="">
-		                                        <h6><a href="fixture-detail.html">{{ $match->team->name }}</a></h6>
+		                                        <a href="{{route('match_details', $match->id)}}" target="_blank"><img src="{{ $match->team->photo }}" width="60px;" alt=""></a>
+		                                        <h6><a href="{{route('match_details', $match->id)}}" target="_blank">{{ $match->team->name }}</a></h6>
 		                                        
 		                                    </li>
 		                                    <li>
@@ -35,8 +36,8 @@
 		                                        <p style="font-weight: bold;">Anfield Stadium</p>
 		                                    </li>
 		                                    <li>
-		                                        <img src="{{ $match->otherteam->photo }}" width="60px;" alt="">
-		                                        <h6><a href="fixture-detail.html">{{ $match->otherteam->name }}</a></h6>
+		                                        <a href="{{route('match_details', $match->id)}}" target="_blank"><img src="{{ $match->otherteam->photo }}" width="60px;" alt=""></a>
+		                                        <h6><a href="{{route('match_details', $match->id)}}" target="_blank">{{ $match->otherteam->name }}</a></h6>
 		                                        
 		                                    </li>
 		                                </ul>
@@ -45,15 +46,16 @@
                              
                                    </aside>
                                </div>
+                           </a>
                             </div>
 					       	
-
+                      
 					       </div>
 
-                           
+                             
                            
                          @endforeach
-
+                         
                     </div>
 
                </div>
@@ -63,5 +65,10 @@
  </div>
 
 
+
+
+
+                                        
+                                    
 
 @endsection

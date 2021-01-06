@@ -15,21 +15,15 @@
                         <div class="col-md-9">
                             <div class="sportsmagazine-rich-editor">
 
-                           <!--     <img src="{{asset('frontend_asset/extra-images/news/new2.jpg')}}" style="width:100%;height:400px;">
-                                <h2 style="color:#2f2f2f;font-weight: bold;text-transform: uppercase;line-height: 1.1;font-family: 'Open Sans', sans-serif;font-style: normal;margin-top:20px;margin-bottom:20px;">lorem</h2>
-                                <p>lorem</p>
-                               
-                                <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
-                                <span></span>
-                                </blockquote> -->
+                       
                                 
                                
                               
 
-                               <img src="{{asset($post->photo)}}" style="width:100%;height:400px;">
+                               <img src="{{asset($post->photo)}}" style="width:100%;height:500px;">
                                 <h2 style="color:#2f2f2f;font-weight: bold;text-transform: uppercase;line-height: 1.1;font-family: 'Open Sans', sans-serif;font-style: normal;margin-top:20px;margin-bottom:20px;">{{ $post->name }}</h2>
                                 <p>{{$post->description}}</p>
-                                {{-- <p>{{$post->description}}</p> --}}
+                             
                                 <blockquote>{{$post->description}}
                                 <span></span>
                                 </blockquote>
@@ -46,7 +40,7 @@
                                   </div> -->
                                   <div class="sportsmagazine-blog-social">
                                      <ul>
-                                        <li><a href="https://www.facebook.com/" class="color-one"><i class="fa fa-facebook"></i>facebook</a></li>
+                                        <li><a href="https://web.facebook.com/sharer.php?u=https%3A%2F%2Fmysportmyanmar.com%2Fbarcelona-plotting-move-for-leicester-hotshot-sidnei-tavares-19-the-cousin-of-man-utd-cult-hero-nani%2F&t=" class="color-one"><i class="fa fa-facebook"></i>facebook</a></li>
                                         <li><a href="https://twitter.com/login" class="color-two"><i class="fa fa-twitter"></i>Twitter</a></li>
                                         <li><a href="https://plus.google.com/" class="color-three"><i class="fa fa-google-plus"></i>Google+</a></li>
                                      </ul>
@@ -64,49 +58,19 @@
 
                             <div class="widget widget_popular_post">
                                 <ul>
-                                    <li>
-                                        <div class="sportsmagazine-popular-post">
-                                           <img src="{{asset('frontend_asset/extra-images/news/new1.jpg')}}" alt="">
-                                            <div class="sportsmagazine-popular-post-text">
-                                                <h5><a href="blog-detail.html">Mark Johnson has as acture and is gona  a the Mark Johnson has as</a></h5>
-                                                <time datetime="2008-02-14 20:00">August 23rd, 2016</time>
-                                            </div>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sportsmagazine-popular-post">
-                                        <img src="{{asset('frontend_asset/extra-images/news/new2.jpg')}}" alt="">
 
-                                            <div class="sportsmagazine-popular-post-text">
-                                                <h5><a href="blog-detail.html">Mark Johnson has as acture and is gona  a the Mark Johnson has as</a></h5>
-                                                <time datetime="2008-02-14 20:00">August 23rd, 2016</time>
-                                            </div>
-                                            <span></span>
-                                        </div>
-                                    </li>
+                                 @foreach($populars as $popular)
                                     <li>
                                         <div class="sportsmagazine-popular-post">
-                                        <img src="{{asset('frontend_asset/extra-images/news/new3.jpg')}}" alt="">
-
+                                           <img src="{{$popular->photo}}" alt="">
                                             <div class="sportsmagazine-popular-post-text">
-                                                <h5><a href="blog-detail.html">Mark Johnson has as acture and is gona  a the Mark Johnson has as</a></h5>
-                                                <time datetime="2008-02-14 20:00">August 23rd, 2016</time>
+                                                <h5><a href="{{ route('news_details', $popular->id) }}"> {{ Str::limit($popular->description, 100) }}</a></h5>
+                                                <time datetime="2008-02-14 20:00"> {{ $popular->updated_at->diffForHumans() }}</time>
                                             </div>
                                             <span></span>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="sportsmagazine-popular-post">
-                                        <img src="{{asset('frontend_asset/extra-images/news/new4.jpg')}}" alt="">
-                                            <!-- <figure><a href="blog-detail.html"><img src="{{asset('frontend_asset/extra-images/news/new1.jpg')}}" alt=""></a></figure> -->
-                                            <div class="sportsmagazine-popular-post-text">
-                                                <h5><a href="blog-detail.html">Mark Johnson has as acture and is gona  a the Mark Johnson has as</a></h5>
-                                                <time datetime="2008-02-14 20:00">August 23rd, 2016</time>
-                                            </div>
-                                            <span></span>
-                                        </div>
-                                    </li>
+                                 @endforeach
 
 
                                 </ul>

@@ -135,106 +135,48 @@
                                     </div>
                                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
                                       <ul class="nav navbar-nav">
-                                        <li class="active"><a href="{{route('homepage')}}">Home</a>
+                                        <li class="{{ Request::is('home') ? 'active' : '' }}"><a href="{{route('homepage')}}">Home</a>
                                         </li>
 
-                                        <li class="sportsmagazine-megamenu-li"><a href="#">Our News</a>
+                                        <li class="sportsmagazine-megamenu-li {{ Request::is('match*') ? 'active' : '' }}"><a class="#">Matches</a>
                                             <ul class="sportsmagazine-megamenu">
-                                                <li class="row">
-                                                    <div class="col-md-2">
-                                                        <h4>News</h4>
-                                                        <ul class="sportsmagazine-megalist">
-                                                            <li><a href="{{route('modern_news')}}">Modern</a></li>
-                                                            <li><a href="{{route('blog_news')}}">Blogs</a></li>
-                                                            <li><a href="{{route('grid_news')}}">Grid</a></li>
-
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <h4>Shop</h4>
-                                                        <ul class="sportsmagazine-megalist">
-                                                            <li><a href="{{route('shop_discount')}}">Discount items</a></li>
-                                                            <li><a href="{{route('shop_gallery')}}">Gallery</a></li>
-                                                            <li><a href="{{route('contact')}}" >contact us</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <h4>About us</h4>
-                                                        <ul class="sportsmagazine-megalist">
-                                                            <li><a href="gallery-modren-wrs.html">Regiester </a></li>
-                                                            <li><a href="login-register.html">Login</a></li>
-                                                            <li><a href="{{route('faq')}}">FAQ</a></li>
-
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <a href="#" class="sportsmagazine-thumbnail">
-                                                            <img src="{{ asset ('frontend_asset/extra-images/sports.jpg')}}" alt="" />
-                                                        </a>
-                                                    </div>
+                                                 <li class="row">
+                                                  
+                                                    <x-match-component></x-match-component>
+                                              
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">MATCHES</a>
+                                        <li class="sportsmagazine-megamenu-li {{ Request::is('match') ? 'active' : '' }}">
+
+                                            <a href="{{route('blog_news')}}">News</a>
+                                        
+                                        </li>
+                                        <li class="{{ Request::is('tables*') ? 'active' : '' }}"><a href="#">Tables</a>
                                             <ul class="sportsmagazine-dropdown-menu">
-
-                                             
-                                              <li>
-                                               <x-match-component></x-match-component>
-                                               <!--  <li>
-
-                                                    <a href="{{route('europaleague')}}"><img src="{{asset('frontend_asset/extra-images/league/europa_league.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Europa league
-                                                    </a>
-                                                </li> -->
-                                                <li>
-                                                    <a href="{{route('premierleague')}}"><img src="{{asset('frontend_asset/extra-images/league/premier_league.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Premier league
-                                                    </a>
+                                                <li><a href="https://www.fotmob.com/leagues/42/table/champions-league" target="_blank"><img src="{{asset('frontend_asset/extra-images/league/champion_league.jpg')}}" width="30px;">&nbsp;&nbsp;&nbsp;Champion league</a>
                                                 </li>
-                                                <li>
-                                                    <a href="{{route('laliga')}}"><img src="{{asset('frontend_asset/extra-images/league/laliga.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Laliga</a>
+                                                <li><a href="https://www.fotmob.com/leagues/73/matches/europa-league" target="_blank"><img src="{{asset('frontend_asset/extra-images/league/europa_league.jpg')}}" width="30px;">&nbsp;&nbsp;&nbsp;Europa league</a>
                                                 </li>
-                                                <li>
-                                                    <a href="{{route('serie_a')}}"><img src="{{asset('frontend_asset/extra-images/league/serie_a.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Serie A</a>
+                                                <li><a href="https://www.fotmob.com/leagues/47/table/premier-league" target="_blank"><img src="{{asset('frontend_asset/extra-images/league/premier_league.jpg')}}" width="30px;">&nbsp;&nbsp;&nbsp;Premier league</a>
                                                 </li>
-                                                <li>
-                                                    <a href="{{route('bundesliga')}}"><img src="{{asset('frontend_asset/extra-images/league/bundesliga.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Bundesliga</a>
+                                                <li><a href="https://www.fotmob.com/leagues/87/table/laliga" target="_blank"><img src="{{asset('frontend_asset/extra-images/league/laliga.jpg')}}" width="30px;">&nbsp;&nbsp;&nbsp;Laliga</a>
                                                 </li>
-                                                <li>
-                                                    <a href="{{route('ligue_1')}}"><img src="{{asset('frontend_asset/extra-images/league/ligue_1.jpg')}}" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;Ligue 1</a>
-                                                </li> 
-
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Tables</a>
-                                            <ul class="sportsmagazine-dropdown-menu">
-                                                <li><a href="{{route('champion_league_table')}}">Champion league</a>
+                                                <li><a href="https://www.fotmob.com/leagues/55/table/serie-a" target="_blank"><img src="{{asset('frontend_asset/extra-images/league/serie_a.jpg')}}" width="30px;">&nbsp;&nbsp;&nbsp;Serie A</a>
                                                 </li>
-                                                <li><a href="{{route('europa_league_table')}}">Europa league</a>
+                                                <li><a href="https://www.fotmob.com/leagues/54/table/1.-bundesliga" target="_blank"><img src="{{asset('frontend_asset/extra-images/league/bundesliga.jpg')}}" width="30px;">&nbsp;&nbsp;&nbsp;Bundesliga</a>
                                                 </li>
-                                                <li><a href="{{route('premier_league_table')}}">Premier league</a>
-                                                </li>
-                                                <li><a href="{{route('laliga_table')}}">Laliga</a>
-                                                </li>
-                                                <li><a href="{{route('serie_a_table')}}">Serie A</a>
-                                                </li>
-                                                <li><a href="{{route('bundesliga_table')}}">Bundesliga</a>
-                                                </li>
-                                                <li><a href="{{route('ligue_1_table')}}">Ligue 1</a>
+                                                <li><a href="https://www.fotmob.com/leagues/53/table/l" target="_blank"><img src="{{asset('frontend_asset/extra-images/league/ligue_1.jpg')}}" width="30px;">&nbsp;&nbsp;&nbsp;Ligue 1</a>
                                                 </li>
 
 
                                             </ul>
                                         </li>
-                                        <li><a href="#">OUR SHOP</a>
-                                            <ul class="sportsmagazine-dropdown-menu">
-                                                <li><a href="{{route('shop_discount')}}">Discount Item</a>
-                                                </li>
-                                                <li><a href="{{route('shop_gallery')}}">Gallery</a>
-                                                </li>
-                                            </ul>
+                                        <li class="{{ Request::is('ourshop*') ? 'active' : '' }}"><a href="{{route('shop_gallery')}}">OUR SHOP</a>
+                                           
 
                                         </li>
-                                        <li class="sportsmagazine-megamenu-li"><a href="#">Contact us</a>
+                                        <li class="sportsmagazine-megamenu-li {{ Request::is('contact us*') ? 'active' : '' }}"><a href="#">Contact us</a>
                                             <ul class="sportsmagazine-megamenu">
                                                 <li class="row">
                                                     <div class="col-md-2">
@@ -298,9 +240,9 @@
                                 <li><a href="https://plus.google.com/" class="sportsmagazine-colorhover fa fa-google-plus-square"></a></li>
                             </ul>
                             <ul class="sportsmagazine-info-list">
-                                <li><i class="fa fa-map-marker"></i> <span>9907 Salford road, east London Uk 2807</span></li>
-                                <li><i class="fa fa-phone"></i> <span>(+92) 123 45 678 - 987 65 432</span></li>
-                                <li><i class="fa fa-envelope"></i> <span><a href="mailto:name@email.com">info@example.com</a></span></li>
+                                <li><i class="fa fa-map-marker"></i> <span>08 Baho Street , Hleden 2807</span></li>
+                                <li><i class="fa fa-phone"></i> <span>(+95) 752 998 113 </span></li>
+                                <li><i class="fa fa-envelope"></i> <span><a href="mailto:name@email.com">sportNews@gmail.com</a></span></li>
                             </ul>
                         </aside>
                         <!--// Widget Contact Info \\-->
@@ -309,14 +251,14 @@
                             <div class="footer-widget-title"><h2>Twitter Feeds</h2></div>
                             <ul>
                                 <li>
-                                    <i class="fa fa-twitter"></i> <span>@basketball</span>
-                                    <p>Sed gravida, urna quis tempus sollicitudin, tellus urnasuscipit nisl, id rhoncus ligula elit condimentum <a href="404.html">https://t.co/XHrPAM4ANv</a></p>
-                                    <time datetime="2008-02-14 20:00"><i class="fa fa-clock-o"></i> 2 Hours Ago</time>
+                                    <i class="fa fa-twitter"></i> <span>@football</span>
+                                    <p>Sed gravida, urna quis tempus sollicitudin, tellus urnasuscipit nisl, id rhoncus ligula elit condimentum <a href="404.html">do come & visit</a></p>
+                                    <time datetime="2008-02-14 20:00"><i class="fa fa-clock-o"></i>Always Open</time>
                                 </li>
                                 <li>
-                                    <i class="fa fa-twitter"></i> <span>@football</span>
-                                    <p>Sed gravida, urna quis tempus sollicitudin, tellus urnasuscipit nisl, id rhoncus ligula elit condimentum <a href="404.html">https://t.co/XHrPAM4ANv</a></p>
-                                    <time datetime="2008-02-14 20:00"><i class="fa fa-clock-o"></i> 4 Hours Ago</time>
+                                    <i class="fa fa-twitter"></i> <span>@Sports</span>
+                                    <p>Sed gravida, urna quis tempus sollicitudin, tellus urnasuscipit nisl, id rhoncus ligula elit condimentum <a href="404.html">News</a></p>
+                                    <time datetime="2008-02-14 20:00"><i class="fa fa-clock-o"></i>Always Open</time>
                                 </li>
                             </ul>
                         </aside>
@@ -325,7 +267,7 @@
                         <aside class="col-md-4 widget widget_gallery">
                             <div class="footer-widget-title"><h2>Flicker Photos</h2></div>
                             <ul>
-                                <li><a data-fancybox-group="group" href="extra-images/widget-gallery-1.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/widget-gallery-1.jpg')}}" alt=""></a></li>
+                                <li><a data-fancybox-group="group" href="extra-images/widget-gallery-1.jpg" class="fancybox"><img src="https://pin.it/42zXu6C" alt=""></a></li>
                                 <li><a data-fancybox-group="group" href="extra-images/widget-gallery-1.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/widget-gallery-2.jpg')}}" alt=""></a></li>
                                 <li><a data-fancybox-group="group" href="extra-images/widget-gallery-1.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/widget-gallery-3.jpg')}}" alt=""></a></li>
                                 <li><a data-fancybox-group="group" href="extra-images/widget-gallery-1.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/widget-gallery-4.jpg')}}" alt=""></a></li>
@@ -350,8 +292,8 @@
                         <aside class="col-md-6 sportsmagazine-copyright-left"><p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p></aside>
                         <aside class="col-md-6 sportsmagazine-copyright-right">
                             <ul class="sportsmagazine-copyright-link">
-                                <li><a href="404.html" class="sportsmagazine-colorhover">Terms And Condition</a></li>
-                                <li><a href="404.html" class="sportsmagazine-colorhover">Privacy Policy</a></li>
+                                <li><a href="https://www.sky.com/help/articles/skycom-terms-and-conditions" class="sportsmagazine-colorhover">Terms And Condition</a></li>
+                                <li><a href="https://www.sky.com/help/articles/skycom-terms-and-conditions" class="sportsmagazine-colorhover">Privacy Policy</a></li>
                             </ul>
                         </aside>
                     </div>

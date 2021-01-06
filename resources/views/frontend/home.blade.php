@@ -32,7 +32,7 @@
                                     <li>
                                         <img src="{{ asset ('frontend_asset/extra-images/man.png')}}"  width="100px" alt="">
                                         <h4><a href="fixture-detail.html">Manchester United</a></h4>
-                                        {{-- <span>03 Mark Baily (21)</span> --}}
+                                        
                                     </li>
                                 </ul>
                             </div>
@@ -56,7 +56,16 @@
                                         <section>
                                             <h2><a href="{{route('news_details', $post->id)}}">{{ $post->name }}</a></h2>
                                                 <p>{{ Str::limit($post->description, 200) }}</p>
+                                                <time datetime="2008-02-14 20:00"><i>{{ $post->updated_at->diffForHumans() }}</i> </time>
                                         </section>
+                                        <div class="sportsmagazine-blog-grid-options">
+                                            <a href="https://web.facebook.com/sharer.php?u=https%3A%2F%2Fmysportmyanmar.com%2Fbarcelona-plotting-move-for-leicester-hotshot-sidnei-tavares-19-the-cousin-of-man-utd-cult-hero-nani%2F&t=" ><img src="{{ asset ('frontend_asset/extra-images/facebook.jpg')}}" width="34px;" alt="">
+                                            <img src="{{ asset ('frontend_asset/extra-images/instagram.jpg')}}" width="30px;" alt=""></a> <img src="{{ asset ('frontend_asset/extra-images/twitter.jpg')}}" width="30px;" alt=""></a> 
+                                              <ul>
+                                                 <li><i>share</i></li>
+                                                       
+                                              </ul>
+                                        </div>
                                     </li>
                                 @endforeach
                                 </ul>
@@ -77,13 +86,14 @@
                                                 <section>
                                                     <h2><a href="{{route('news_details', $post->id)}}">{{ $theteam->name }}</a></h2>
                                                     <p>{{ $theteam->descraption }}</p>
+                                                     <time datetime="2008-02-14 20:00"><i>{{ $post->updated_at->diffForHumans() }}</i> </time>
                                                 </section>
                                                 <div class="sportsmagazine-blog-grid-options">
-                                                    <a href="{{route('news_details', $theteam->id)}}" class="sportsmagazine-blog-grid-thumb"><img src="{{ asset ('frontend_asset/extra-images/blog-thumb-1.jpg ')}}" alt=""> Julia Martyn</a>
+                                                    <a href="https://web.facebook.com/sharer.php?u=https%3A%2F%2Fmysportmyanmar.com%2Fbarcelona-plotting-move-for-leicester-hotshot-sidnei-tavares-19-the-cousin-of-man-utd-cult-hero-nani%2F&t=" ><img src="{{ asset ('frontend_asset/extra-images/facebook.jpg')}}" width="34px;" alt="">
+                                                    <img src="{{ asset ('frontend_asset/extra-images/instagram.jpg')}}" width="30px;" alt=""></a> <img src="{{ asset ('frontend_asset/extra-images/twitter.jpg')}}" width="30px;" alt=""></a> 
                                                     <ul>
-                                                        <li><i class="fa fa-thumbs-o-up"></i> <a href="404.html">320</a></li>
-                                                        <li><i class="fa fa-eye"></i> <a href="404.html">840</a></li>
-                                                        <li><i class="fa fa-share-alt"></i> <a href="404.html">89</a></li>
+                                                        <li><i>share</i></li>
+                                                       
                                                     </ul>
                                                 </div>
                                             </li>

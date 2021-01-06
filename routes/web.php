@@ -35,6 +35,9 @@ Route::get('modern_news', 'FrontendController@modern_news')->name('modern_news')
 Route::get('blog_news', 'FrontendController@blog_news')->name('blog_news');
 Route::get('grid_news', 'FrontendController@grid_news')->name('grid_news');
 Route::get('news_details/{id}', 'FrontendController@news_details')->name('news_details');
+Route::get('match_details/{id}', 'FrontendController@match_details')->name('match_details');
+
+
 
 
 //shops
@@ -42,6 +45,8 @@ Route::get('shop_gallery', 'FrontendController@shop_gallery')->name('shop_galler
 Route::get('item_details/{id}', 'FrontendController@item_details')->name('item_details');
 Route::get('shop_discount', 'FrontendController@shop_discount')->name('shop_discount');
 Route::get('example', 'FrontendController@example')->name('example');
+Route::get('shoping_cart/{id}', 'FrontendController@shoping_cart')->name('shoping_cart');
+
 
 //contact
 Route::get('contact', 'FrontendController@contact')->name('contact');
@@ -57,12 +62,10 @@ Route::get('champion_league_table', 'FrontendController@champion_league_table')-
 Route::get('europa_league_table', 'FrontendController@europa_league_table')->name('europa_league_table');
 
 
-Route::get('shopping_cart', 'FrontendController@shopping_cart')->name('shopping_cart');
+Route::get('shoping_cart/{id}', 'FrontendController@shoping_cart')->name('shoping_cart');
 
 //Matches
 Route::get('match/{id}', 'FrontendController@match')->name('matchpage');
-
-
 
 
 
@@ -74,6 +77,7 @@ Route::get('match/{id}', 'FrontendController@match')->name('matchpage');
 
 Route::middleware('role:admin')->group(function () {
     Route::get('dashboard', 'BackendController@dashboard')->name('dashboardpage');
+    Route::get('match_result', 'BackendController@match_result')->name('match_resultpage');
     Route::resource('posts', 'PostController');
     Route::resource('leagues', 'LeagueController');
     Route::resource('teams', 'TeamController');

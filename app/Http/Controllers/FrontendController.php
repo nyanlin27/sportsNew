@@ -140,11 +140,20 @@ class FrontendController extends Controller
         return view('frontend.europa_league_table');
     }
     public function news_details($id)
-    {
+    {   
+
+        $populars= Post::take(5)->get();
         // dd($id);
         $post = Post::find($id);
-        return view('frontend.news_details', compact('post'));
+        return view('frontend.news_details', compact('post','populars'));
     }
+
+    public function match_details($id)
+    {   
+        $matchs=Match::find($id);
+        return view('frontend.match_details', compact('matchs'));
+    }
+
      public function item_details($id)
     {
         $items = Item::find($id);
@@ -159,12 +168,17 @@ class FrontendController extends Controller
         return view('frontend.match', compact('leagues'));
     }
 
-      public function shopping_cart($value = '')
+
+ 
+
+
+
+    //Shoping Cart
+    public function shoping_cart($id)
     {
-        return view('frontend.shopping_cart');
+        $items = Item::find($id);
+        return view('frontend.shoping_cart', compact('items'));
     }
+}
 
-
-
-}//end of controller
 

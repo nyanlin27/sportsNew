@@ -27,13 +27,13 @@
                                 <h2><a href="blog-detail.html">{{$post->name}}</a></h2>
                                 <p>{{ Str::limit($post->description, 200) }}</p>
                             </section>
-                            <div class="sportsmagazine-blog-grid-options">
-                                <a href="blog-detail.html" class="sportsmagazine-blog-grid-thumb"><img src="{{asset('frontend_asset/extra-images/blog-thumb-1.jpg ')}}" alt=""> Julia Martyn</a>
-                                <ul>
-                                    <li><i class="fa fa-thumbs-o-up"></i> <a href="404.html">320</a></li>
-                                    <li><i class="fa fa-eye"></i> <a href="404.html">840</a></li>
-                                    <li><i class="fa fa-share-alt"></i> <a href="404.html">89</a></li>
-                                </ul>
+                             <div class="sportsmagazine-blog-grid-options">
+                                            <a href="https://web.facebook.com/sharer.php?u=https%3A%2F%2Fmysportmyanmar.com%2Fbarcelona-plotting-move-for-leicester-hotshot-sidnei-tavares-19-the-cousin-of-man-utd-cult-hero-nani%2F&t=" ><img src="{{ asset ('frontend_asset/extra-images/facebook.jpg')}}" width="34px;" alt="">
+                                            <img src="{{ asset ('frontend_asset/extra-images/instagram.jpg')}}" width="30px;" alt=""></a> <img src="{{ asset ('frontend_asset/extra-images/twitter.jpg')}}" width="30px;" alt=""></a> 
+                                              <ul>
+                                                 <li>share</li>
+                                                       
+                                              </ul>
                             </div>
                         </li>
                     @endforeach
