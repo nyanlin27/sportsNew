@@ -1,24 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<<<<<<< HEAD
-<div class="container mt-5 " >
-    <div class="row justify-content-center">
-        <div class="col-md-8" >
-            <div class="card" style="background-color: ">
-                <div class="card-header  text-center" style="font-weight: bold;">{{ __('LOGIN TO YOUR ACCOUNT') }}</div>
-=======
+
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-8 p-5" style="border: 4px solid yellow; border-radius:20px;">
+        <div class="col-md-8 p-5" style="border: 4px solid yellow; border-radius:20px; ">
             <div class="card text-white"  style="background:black">
                 <div class="card-header text-center" style="font-size:30px;">{{ __('Login') }}</div>
->>>>>>> 49b15f5de50d3748db06a89a4705809cfae4fc37
+
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right text-center">{{ __('E-Mail Address') }}</label>
 
@@ -32,12 +25,11 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right  text-center">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input  id="password" type="password" class="bg-dark form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -46,6 +38,7 @@
                                 @enderror
                             </div>
                         </div>
+
 
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
@@ -61,11 +54,9 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-<<<<<<< HEAD
-                                <button type="submit" class="btn btn-dark">
-=======
+
+
                                 <button type="submit" class="btn btn-danger float-right">
->>>>>>> 49b15f5de50d3748db06a89a4705809cfae4fc37
                                     {{ __('Login') }}
                                 </button>
 

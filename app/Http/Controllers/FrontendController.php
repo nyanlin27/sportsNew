@@ -15,14 +15,16 @@ class FrontendController extends Controller
 {
     public function index($value = '')
     {
-        $posts = Post::take(2)->get();
+        // $posts = Post::take(2)->get();
+        $posts = Post::all()->random(2);
         $populars= Post::take(5)->get();
         $theteams = Post::orderBy('id','desc')->take(2)->get();
         $leagues = League::all();
         $teams = Team::all();
         $matches = Match::all();
         $items = Item::orderBy('id', 'desc')->take(3)->get();
-        return view('frontend.home', compact('posts', 'matches', 'leagues', 'teams','items','theteams','populars'));
+        $results = Result::all()->random(1);
+        return view('frontend.home', compact('posts', 'matches', 'leagues', 'teams','items','theteams','populars', 'results'));
     }
 
 
@@ -70,7 +72,7 @@ class FrontendController extends Controller
     }
     public function blog_news($value = '')
     {
-        $posts = Post::all();
+        $posts = Post::latest()->paginate(6);
         return view('frontend.blog_news', compact('posts'));
 
     }
@@ -81,6 +83,15 @@ class FrontendController extends Controller
         return view('frontend.Grid_news', compact('posts', 'matches'));
 
     }
+
+    public function allmatches($value = '')
+    {
+        $matches = Match::all();
+        return view('frontend.allmatches', compact('matches'));
+
+    }
+
+
 
 
 
@@ -101,9 +112,9 @@ class FrontendController extends Controller
         return view('frontend.contact');
     }
 
-    public function faq($value = '')
+    public function Faq($value = '')
     {
-        return view('frontend.faq');
+        return view('frontend.Faq');
     }
     public function example($value = '')
     {
@@ -140,7 +151,7 @@ class FrontendController extends Controller
         return view('frontend.europa_league_table');
     }
     public function news_details($id)
-    {   
+    {
 
         $populars= Post::take(5)->get();
         // dd($id);
@@ -149,7 +160,7 @@ class FrontendController extends Controller
     }
 
     public function match_details($id)
-    {   
+    {
         $matchs=Match::find($id);
         return view('frontend.match_details', compact('matchs'));
     }
@@ -169,7 +180,7 @@ class FrontendController extends Controller
     }
 
 
- 
+
 
 
 

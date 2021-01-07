@@ -8,9 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>SportsMagazine Home Page</title>
-
-
-
     <!-- Css Files -->
     <link href="{{ asset ('frontend_asset/css/bootstrap.css    ') }}"  rel="stylesheet">
     <link href="{{ asset ('frontend_asset/css/font-awesome.css ') }}"  rel="stylesheet">
@@ -21,9 +18,9 @@
     <link href="{{ asset ('frontend_asset/css/color.css        ') }}"  rel="stylesheet">
     <link href="{{ asset ('frontend_asset/css/responsive.css   ') }}"  rel="stylesheet">
 
-    
 
-  
+
+
 
   </head>
   <body>
@@ -49,8 +46,8 @@
 
                         <aside class="col-md-6">
                             <ul class="sportsmagazine-user-section">
-                                <li><i class="fa fa-globe"></i> <a href="404.html">Support</a></li>
-                                <li><i class="fa fa-dollar"></i> <a href="404.html">Currency : USD</a></li>
+                                <li><i class="fa fa-globe"></i> <a href="https://gol.kooralive.info/" target="_blank">Matches Live</a></li>
+                                <li><i class="fa fa-dollar"></i> <a href="https://forex.cbm.gov.mm/index.php/fxrate" target="_blank">Currency : USD</a></li>
                                 <li>
                                     <i class="fa fa-shopping-cart"></i>
                                     <a href="{{ route('shoping_cart') }}" class="cartNoti">
@@ -117,25 +114,14 @@
 
                                         <li class="sportsmagazine-megamenu-li {{ Request::is('match*') ? 'active' : '' }}"><a class="#">Matches</a>
                                             <ul class="sportsmagazine-megamenu">
-                                                 <li class="row">
-                                                  
                                                     <x-match-component></x-match-component>
-                                              
-                                                </li>
                                             </ul>
                                 </li>
-       
+
                                         <li class="sportsmagazine-megamenu-li {{ Request::is('match') ? 'active' : '' }}">
 
                                             <a href="{{route('blog_news')}}">News</a>
-                                        
 
-                                        <li><a href="#">MATCHES</a>
-                                            <ul class="sportsmagazine-dropdown-menu">
-                                               <x-match-component></x-match-component>
-                                            </ul>
-
-                                        </li>
                                         <li class="{{ Request::is('tables*') ? 'active' : '' }}"><a href="#">Tables</a>
                                             <ul class="sportsmagazine-dropdown-menu">
                                                 <li><a href="https://www.fotmob.com/leagues/42/table/champions-league" target="_blank"><img src="{{asset('frontend_asset/extra-images/league/champion_league.jpg')}}" width="30px;">&nbsp;&nbsp;&nbsp;Champion league</a>
@@ -157,9 +143,10 @@
                                             </ul>
                                         </li>
                                         <li class="{{ Request::is('ourshop*') ? 'active' : '' }}"><a href="{{route('shop_gallery')}}">OUR SHOP</a>
-                                           
-
                                         </li>
+
+
+
                                         <li class="sportsmagazine-megamenu-li {{ Request::is('contact us*') ? 'active' : '' }}"><a href="#">Contact us</a>
                                             <ul class="sportsmagazine-megamenu">
                                                 <li class="row">
@@ -167,9 +154,9 @@
                                                         <h4>About</h4>
                                                         <ul class="sportsmagazine-megalist">
 
-                                                            <li><a href="faq.html" >Regiester</a></li>
-                                                            <li><a href="login-register.html" data-toggle="modal" data-target="#loginModal">Login</a></li>
-                                                            <li><a href="{{route('faq')}}">FAQ</a></li>
+                                                            <li><a href="{{ route('register') }}" >Register</a></li>
+                                                            <li><a href="{{ route('login') }}" >Login</a></li>
+                                                            <li><a href="{{route('Faq')}}">FAQ</a></li>
                                                             <li><a href="{{route('contact')}}">Contact us</a></li>
                                                         </ul>
                                                     </div>
@@ -374,7 +361,7 @@
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/counter.js              ') }}"></script>
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/functions.js            ') }}"></script>
 
-  
+
     <script type="text/javascript" src="{{ asset ('frontend_asset/script/custom1.js ') }}"></script>
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>

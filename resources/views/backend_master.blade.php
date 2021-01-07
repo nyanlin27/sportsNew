@@ -29,7 +29,7 @@
         <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
             <a class="navbar-brand brand-logo" href="{{ route('posts.index') }}">
               {{-- <img src="{{ asset('backend_asset/images/logo.svg') }}" alt="logo"/> --}}
-              <p style="font-family: 'Faster One', cursive; font-size:30px; padding-top:15px;">FOOTBALL</p>
+              <p style="font-family: 'Faster One', cursive; font-size:30px; padding-top:15px;">FootBall</p>
               <p style="font-size: 15px;">Sports & Magazine</p>
             </a>
             <a class="navbar-brand brand-logo-mini" href="index.html">

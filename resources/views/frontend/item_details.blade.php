@@ -23,25 +23,11 @@
                                 </span>
                                 <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
                                 <p>{{ $items->description }}</p>
-                                <ul class="sportsmagazine-summery-option">
-                                    <li>
-                                        <label>Quantity</label>
-                                        <input name="quantity" min="01" max="10" type="number" value="1">
-                                    </li>
-                                    <li>
-                                        <label>Size</label>
-                                        <input name="quantity" min="5" max="40" type="number" value="5">
-                                    </li>
-                                    <li>
-                                        <label>Size</label>
-                                        <a href="#" class="white-color"></a>
-                                        <a href="#" class="red-color"></a>
-                                        <a href="#" class="yellow-color"></a>
-                                        <a href="#" class="orange-color"></a>
-                                    </li>
-                                </ul>
+
                                 <div class="clearfix"></div>
-                                <a href="shopping-cart.html" class="sportsmagazine-banner-btn">Add To Cart <span></span></a>
+                                <a href="javascript:void(0)" class="addtocartBtn text-decoration-none sportsmagazine-banner-btn" data-id='{{ $items->id }}' data-name='{{ $items->name }}' data-photo='{{ $items->photo }}'  data-price='{{ $items->price }}' data-descraption="{{ $items->descraption }}">
+                                    Add To Cart
+                                </a>
                             </div>
                         </div>
 
@@ -64,9 +50,10 @@
                                     @foreach($resents as $resent)
                                     <li class="col-md-3">
                                         <figure>
-                                            <a href="shop-detail.html">
-                                                <img src="{{$resent->photo}}" alt=""><i class="fa fa-shopping-cart"></i>
-                                            </a>
+                                            <a href="javascript:void(0)" class="addtocartBtn text-decoration-none" data-id='{{ $resent->id }}' data-name='{{ $resent->name }}' data-photo='{{ $resent->photo }}'  data-price='{{ $resent->price }}' data-descraption="{{ $resent->descraption }}">
+                                                <img src="{{asset($resent->photo)}}" alt="">
+                                                    <i class="fa fa-shopping-cart"></i>
+                                                </a>
                                             <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
                                         </figure>
                                         <section>

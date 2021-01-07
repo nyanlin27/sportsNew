@@ -29,6 +29,8 @@ Route::get('laliga', 'FrontendController@laliga')->name('laliga');
 Route::get('bundesliga', 'FrontendController@bundesliga')->name('bundesliga');
 Route::get('serie_a', 'FrontendController@serie_a')->name('serie_a');
 Route::get('ligue_1', 'FrontendController@ligue_1')->name('ligue_1');
+Route::get('allmatches', 'FrontendController@allmatches')->name('allmatches');
+
 
 //News
 Route::get('modern_news', 'FrontendController@modern_news')->name('modern_news');
@@ -50,7 +52,7 @@ Route::get('shoping_cart', 'FrontendController@shoping_cart')->name('shoping_car
 
 //contact
 Route::get('contact', 'FrontendController@contact')->name('contact');
-Route::get('faq', 'FrontendController@faq')->name('faq');
+Route::get('Faq', 'FrontendController@Faq')->name('Faq');
 Route::get('premier_league_table', 'FrontendController@premier_league_table')->name('premier_league_table');
 Route::get('laliga_table', 'FrontendController@laliga_table')->name('laliga_table');
 Route::get('laliga_table', 'FrontendController@laliga_table')->name('laliga_table');
@@ -62,7 +64,7 @@ Route::get('champion_league_table', 'FrontendController@champion_league_table')-
 Route::get('europa_league_table', 'FrontendController@europa_league_table')->name('europa_league_table');
 
 
-Route::get('shoping_cart/{id}', 'FrontendController@shoping_cart')->name('shoping_cart');
+Route::get('shoping_cart', 'FrontendController@shoping_cart')->name('shoping_cart');
 
 //Matches
 Route::get('match/{id}', 'FrontendController@match')->name('matchpage');
@@ -84,8 +86,8 @@ Route::middleware('role:admin')->group(function () {
     Route::resource('matches', 'MatchController');
     Route::resource('results', 'ResultController');
     Route::resource('items', 'ItemController');
-    Route::resource('orders', 'OrderController');
 });
+Route::resource('orders', 'OrderController');
 
 
 Auth::routes();

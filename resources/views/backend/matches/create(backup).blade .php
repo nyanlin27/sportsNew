@@ -18,11 +18,10 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="exampleSelectGender">Match Name</label>
-                                
-                                  {{-- <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="eg, Arsenal Vs Chelsea" value="{{ old('name') }}">
+                                  <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="eg, Arsenal Vs Chelsea" value="{{ old('name') }}">
                                   @error('name')
                                   <div class="alert alert-danger">{{ $message }}</div>
-                                  @enderror --}}                                
+                                  @enderror
                             </div>
                         </div>
                     </div>

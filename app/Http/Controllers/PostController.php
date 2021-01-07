@@ -43,7 +43,7 @@ class PostController extends Controller
         $request->validate([
             'name' => 'required|min:3',
             'description' => 'required|min:3',
-            'photo' => 'required|mimes:png,jpg,jpeg'
+            'photo' => 'required|mimes:png,jpg,jpeg,webp'
         ]);
         //  Upload
         if ($request->file()) {
@@ -100,7 +100,7 @@ class PostController extends Controller
         $request->validate([
             'name' => 'required|min:3',
             'description' => 'required|min:3',
-            'photo' => 'sometimes|mimes:png,jpg,jpeg'
+            'photo' => 'sometimes|mimes:png,jpg,jpeg,webp'
         ]);
         //  Upload
         if ($request->file()) {

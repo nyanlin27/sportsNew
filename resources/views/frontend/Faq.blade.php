@@ -9,7 +9,7 @@
 <div class="sportsmagazine-main-section sportsmagazine-faq-full">
     <div class="container">
         <div class="row">
-            
+
             <div class="col-md-12">
                 <div class="sportsmagazine-fancy-title-two"><h2>Our FAQ <span></span></h2></div>
                 <div class="panel-group sportsmagazine-accordion" id="accordion" role="tablist" aria-multiselectable="true">
@@ -96,7 +96,7 @@
 <div class="sportsmagazine-main-section">
     <div class="container">
         <div class="row">
-            
+
             <div class="col-md-12">
                 <!--// Partner \\-->
                 <div class="sportsmagazine-fancy-title-two"><h2>Our Partners <span></span></h2></div>

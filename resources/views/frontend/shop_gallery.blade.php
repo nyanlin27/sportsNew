@@ -16,15 +16,12 @@
                         @foreach($items as $item)
                             <li class="col-md-3">
                                 <figure>
-                                    {{-- <a href="{{route('shoping_cart', $item->id)}}" >
-                                    <img src="{{asset($item->photo)}}" alt="">
-                                        <i class="fa fa-shopping-cart"></i>
-                                    </a> --}}
+
                                     <a href="javascript:void(0)" class="addtocartBtn text-decoration-none" data-id='{{ $item->id }}' data-name='{{ $item->name }}' data-photo='{{ $item->photo }}'  data-price='{{ $item->price }}' data-descraption="{{ $item->descraption }}">
                                         <img src="{{asset($item->photo)}}" alt="">
                                             <i class="fa fa-shopping-cart"></i>
                                         </a>
-                                    </a>
+
 
 
                                     <div class="star-rating"><span class="star-rating-box" style="width:69%"></span></div>
@@ -41,7 +38,7 @@
                                     </span>
 
                                     <span></span>
-                                    <a href="{{route('item_details', $item->id)}}" class="btn btn-sm btn-warning " style="display: block;">details</a>
+                                    <a href="{{route('item_details', $item->id)}}" class="btn btn-sm btn-default " style="display: block; background-color:#FFDD38;">details</a>
                                 </section>
                             </li>
                         @endforeach

@@ -25,20 +25,15 @@
                         $i = 1;
                     @endphp
                     @foreach($orders as $order)
-                        <th>{{ $i++ }}</th>
-                        <th>{{ $order->orderdate }}</th>
-                        <th>{{ $order->user_id }}</th>
-                        <th>{{ $order->total }}</th>
-                        <th>{{ $order->orderno }}</th>
-                        <th>{{ $order->status }}</th>
+                        <tr>
+                            <th>{{ $i++ }}</th>
+                            <th>{{ $order->orderdate }}</th>
+                            <th>{{ $order->user->name }}</th>
+                            <th>{{ $order->total }}</th>
+                            <th>{{ $order->orderno }}</th>
+                            <th>{{ $order->status }}</th>
+                        </tr>
                     @endforeach
-                  {{-- <tr>
-                      <th>1</th>
-                      <td>12 May 2017</td>
-                    <td>Jacob</td>
-                    <td>53275531</td>
-                    <td><label class="badge badge-danger">Pending</label></td>
-                  </tr> --}}
                 </tbody>
               </table>
             </div>

@@ -12,28 +12,27 @@
 
                         <!--// Content \\-->
                         <div class="col-md-8">
-
                             <!--// Latest Match Result \\-->
                             <div class="sportsmagazine-match-result">
                                 <div class="sportsmagazine-match-title">
+                                    @foreach($results as $result)
                                     <h4>Latest Match Result</h4>
-                                    <span>Saturday, March 24th, 2016</span>
+                                    <span>{{ $result->match->match_date}}</span>
                                 </div>
                                 <ul>
                                     <li>
-                                       <img src="{{ asset ('frontend_asset/extra-images/liv.png')}}"  width="100px" alt="">
-                                        <h4><a href="fixture-detail.html">Liverpool</a></h4>
-                                        <span>03 Mark Baily (21, 30, 57)</span>
-                                    </li>
-                                    <li class="sportsmagazine-match-score">
-                                        <h5>FINAL SCORE</h5>
-                                        <p><strong class="sportsmagazine-color">3</strong> <small>:</small> 0</p>
-                                    </li>
-                                    <li>
-                                        <img src="{{ asset ('frontend_asset/extra-images/man.png')}}"  width="100px" alt="">
-                                        <h4><a href="fixture-detail.html">Manchester United</a></h4>
-                                        
-                                    </li>
+                                        <img src="{{ $result->match->team->photo }}"  width="100px" alt="">
+                                         <h4><a href="#">{{ $result->match->team->name }}</a></h4>
+                                     </li>
+                                     <li class="sportsmagazine-match-score">
+                                         <h5>FINAL SCORE</h5>
+                                         <p><strong class="sportsmagazine-color">{{ $result->home_goal }}</strong> <small>:</small> {{ $result->away_goal }}</p>
+                                     </li>
+                                     <li>
+                                         <img src="{{ $result->match->otherteam->photo }}"  width="100px" alt="">
+                                         <h4><a href="fixture-detail.html">{{ $result->match->otherteam->name }}</a></h4>
+                                     </li>
+                                    @endforeach
                                 </ul>
                             </div>
                             <!--// Latest Match Result \\-->
@@ -60,10 +59,10 @@
                                         </section>
                                         <div class="sportsmagazine-blog-grid-options">
                                             <a href="https://web.facebook.com/sharer.php?u=https%3A%2F%2Fmysportmyanmar.com%2Fbarcelona-plotting-move-for-leicester-hotshot-sidnei-tavares-19-the-cousin-of-man-utd-cult-hero-nani%2F&t=" ><img src="{{ asset ('frontend_asset/extra-images/facebook.jpg')}}" width="34px;" alt="">
-                                            <img src="{{ asset ('frontend_asset/extra-images/instagram.jpg')}}" width="30px;" alt=""></a> <img src="{{ asset ('frontend_asset/extra-images/twitter.jpg')}}" width="30px;" alt=""></a> 
+                                            <img src="{{ asset ('frontend_asset/extra-images/instagram.jpg')}}" width="30px;" alt=""></a> <img src="{{ asset ('frontend_asset/extra-images/twitter.jpg')}}" width="30px;" alt=""></a>
                                               <ul>
                                                  <li><i>share</i></li>
-                                                       
+
                                               </ul>
                                         </div>
                                     </li>
@@ -90,10 +89,10 @@
                                                 </section>
                                                 <div class="sportsmagazine-blog-grid-options">
                                                     <a href="https://web.facebook.com/sharer.php?u=https%3A%2F%2Fmysportmyanmar.com%2Fbarcelona-plotting-move-for-leicester-hotshot-sidnei-tavares-19-the-cousin-of-man-utd-cult-hero-nani%2F&t=" ><img src="{{ asset ('frontend_asset/extra-images/facebook.jpg')}}" width="34px;" alt="">
-                                                    <img src="{{ asset ('frontend_asset/extra-images/instagram.jpg')}}" width="30px;" alt=""></a> <img src="{{ asset ('frontend_asset/extra-images/twitter.jpg')}}" width="30px;" alt=""></a> 
+                                                    <img src="{{ asset ('frontend_asset/extra-images/instagram.jpg')}}" width="30px;" alt=""></a> <img src="{{ asset ('frontend_asset/extra-images/twitter.jpg')}}" width="30px;" alt=""></a>
                                                     <ul>
                                                         <li><i>share</i></li>
-                                                       
+
                                                     </ul>
                                                 </div>
                                             </li>
@@ -223,7 +222,11 @@
                                             <span>Add to cart</span>
                                             <figcaption>
                                                 <h6><a href="#">{{ $item->name }}</a></h6>
-                                                <a href=""><time datetime="2008-02-14 20:00">Add to cart</time></a>
+                                                <a href="javascript:void(0)" class="addtocartBtn" data-id='{{ $item->id }}' data-name='{{ $item->name }}' data-photo='{{ $item->photo }}'  data-price='{{ $item->price }}' data-descraption="{{ $item->descraption }}">
+                                                    <time datetime="2008-02-14 20:00">
+                                                        Add to cart
+                                                    </time>
+                                                </a>
                                             </figcaption>
                                         </figure>
                                     </li>
@@ -351,10 +354,27 @@
                             <div class="sportsmagazine-fixture-slider">
                                 @foreach($matches as $match)
                                     <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
-                                        <time datetime="2008-02-14 20:00">{{ $match->match_date }}</time>
+                                        <a href="{{ route('allmatches') }}">
+                                        <time datetime="2008-02-14 20:00">
+                                            {{ $match->match_date }}
+                                        </time>
+                                        </a>
                                         <ul class="sportsmagazine-bgcolor">
-                                            <li class="first-child"><small><img src="{{ $match->team->photo }}" alt="Team Logo" width="50px" height="50px"></small> VS <span><img src="{{$match->otherteam->photo}}" alt="Team Logo" width="50px" height="50px"></span></li>
-                                            <li>{{ $match->match_time }}</li>
+                                            <li class="first-child">
+                                                <a href="{{ route('allmatches') }}">
+                                                    <small>
+                                                        <img src="{{ $match->team->photo }}" alt="Team Logo" width="50px" height="50px">
+                                                    </small> VS
+                                                    <span>
+                                                        <img src="{{$match->otherteam->photo}}" alt="Team Logo" width="50px" height="50px">
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ $match->match_time }}">
+                                                    {{ $match->match_time }}
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 @endforeach

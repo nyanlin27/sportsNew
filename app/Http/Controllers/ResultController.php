@@ -6,6 +6,7 @@ use App\Result;
 use App\Match;
 use App\Team;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\Match_;
 
 class ResultController extends Controller
 {
@@ -86,7 +87,9 @@ class ResultController extends Controller
      */
     public function edit(Result $result)
     {
-        //
+        $matches = Match::all();
+        $teams = Team::all();
+        return view('backend.results.edit', compact('result', 'teams', 'matches'));
     }
 
     /**
@@ -98,7 +101,25 @@ class ResultController extends Controller
      */
     public function update(Request $request, Result $result)
     {
-        //
+        //    dd($request);
+        // Validation
+        $request->validate([
+            'match_id' => 'required',
+            'hometeam_id' => 'required',
+            'awayteam_id' => 'required',
+            'home_goal'=>'required',
+            'away_goal'=>'required',
+        ]);
+
+        // Store Data
+        $result->match_id = $request->match_id;
+        $result->hometeam_id = $request->hometeam_id;
+        $result->awayteam_id = $request->awayteam_id;
+        $result->home_goal = $request->home_goal;
+        $result->away_goal = $request->away_goal;
+        $result->save();
+        // redirect
+        return redirect()->route('results.index');
     }
 
     /**
@@ -109,6 +130,7 @@ class ResultController extends Controller
      */
     public function destroy(Result $result)
     {
-        //
+        $result->delete();
+        return redirect()->route('results.index');
     }
 }
