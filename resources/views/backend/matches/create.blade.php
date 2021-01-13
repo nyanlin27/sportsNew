@@ -18,11 +18,11 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="exampleSelectGender">Match Name</label>
-                                
-                                  {{-- <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="eg, Arsenal Vs Chelsea" value="{{ old('name') }}">
+
+                                  <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="eg, Arsenal Vs Chelsea" value="{{ old('name') }}">
                                   @error('name')
                                   <div class="alert alert-danger">{{ $message }}</div>
-                                  @enderror --}}                                
+                                  @enderror
                             </div>
                         </div>
                     </div>
@@ -81,33 +81,6 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="form-group">
-                        <label for="exampleInputName1">League Name</label>
-                        <input type="text" class="form-control @error('name') is-invalid @enderror" type="text" placeholder="Enter Post Title" name="name" value="{{ old('name') }}" id="exampleInputName1" placeholder="league name" name="name">
-                            @error('name')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                    </div> --}}
-                    {{-- <div class="form-group">
-                        <label for="exampleInputName1">Country</label>
-                        <input type="text" class="form-control @error('country') is-invalid @enderror" type="text" placeholder="Enter Post Title" name="country" value="{{ old('country') }}" id="exampleInputName1" placeholder="league name" name="country">
-                            @error('country')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                    </div> --}}
-                    {{-- <div class="form-group">
-                        <label>League Photo</label>
-                        <input type="file" name="photo" class="file-upload-default @error('photo') is-invalid @enderror" type="text" placeholder="Enter Post Photo" name="photo" value="{{ old('photo') }}">
-                        <div class="input-group col-xs-12">
-                            <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-                            <span class="input-group-append">
-                            <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                            </span>
-                        </div>
-                        @error('photo')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div> --}}
                     <button type="submit" class="btn btn-primary mr-2">Save</button>
                     <button class="btn btn-light">Cancel</button>
                 </form>
@@ -117,5 +90,4 @@
     </div>
 </div>
 <!-- content-wrapper ends -->
-
 @endsection

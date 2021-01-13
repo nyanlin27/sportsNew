@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Post;
 use App\League;
 use App\Team;
@@ -90,11 +88,6 @@ class FrontendController extends Controller
         return view('frontend.allmatches', compact('matches'));
 
     }
-
-
-
-
-
     public function shop_gallery($value = '')
     {
         // $posts = Post::latest()->paginate(8);
